@@ -46,7 +46,11 @@ en el I.E.S Ramón del Valle Inclán.
 # ACTIVIDAD 1 Y  2
 <a name="4"></a>
 ### <b>TÍTULO:</b>
-*Torge: Comunicación Alumno/Profesor.*
+
+<b>*Torge*</b>
+
+El nombre de nuestra APP nace de la combinacion de los nombres de los desarrolladores; Vic<b>TOR</b> + Jor<b>GE</b>.
+
 
 <a name="5"></a>
 ### <b> RESUMEN: </b>
@@ -74,7 +78,7 @@ Por otra parte, la aplicación deberá implementar un servidor web.*
 *&nbsp;&nbsp;&nbsp;&nbsp;5. Finalmente, nuestra aplicación dispondrá de algún servicio implementado en la nube haciendo uso de la tecnologia de microservicios.*
 
 
-Por ello, hemos desarrollo un grupo de ideas que pueden llegar a satisfacer dichos requisitos funcionales:
+Por ello, hemos desarrollado un grupo de ideas que pueden llegar a satisfacer dichos requisitos funcionales:
 
 1. Versión de escritorio y otra en red (web).
 2. Un formulario de registro de usuario.
