@@ -6,6 +6,10 @@
 ## <p align="center">Torge: Comunicación</p>
 
 <p align="center">
+<img src="/resources/cabeies.png"/>
+</p>
+
+<p align="center">
 <img src="/resources/comuheader1.png" width="700" height="350"/>
 </p>
 
@@ -26,6 +30,12 @@
 > **[&nbsp;&nbsp;&nbsp;&nbsp; Título](#3):**<br>
 > **[&nbsp;&nbsp;&nbsp;&nbsp; Resumen](#4):**<br>
 >> **[2. Actividad 1](#2):**<br>
+
+# <p align="center">Índice:</p>
+> **[1. Presentación](#1):**<br>
+> **[2. Actividad 1](#2):**<br>
+>> **[Título](#3):**<br>
+>> **[Resumen](#4):**<br>
 
 <br>
 
