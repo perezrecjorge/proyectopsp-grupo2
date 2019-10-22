@@ -1,3 +1,7 @@
+<p align="center">
+<img src="/resources/cabezeraies.png"/>
+</p>
+
 # <p align="center">PROYECTO PSP 19/20</p>
 ## <p align="center">Torge: Comunicación</p>
 
