@@ -1,29 +1,9 @@
 <p align="center">
-<img src="/resources/cabezeraies.PNG"/>
+<img src="/resources/cabeies5.PNG"/>
 </p>
 
 # <p align="center">PROYECTO PSP 19/20</p>
 ## <p align="center">Torge: Comunicación</p>
-
-<p align="center">
-<img src="/resources/cabeies.PNG" width="300"/>
-</p>
-
-<p align="center">
-<img src="/resources/cabeies2.PNG"/>
-</p>
-
-<p align="center">
-<img src="/resources/cabeies3.JPG"/>
-</p>
-
-<p align="center">
-<img src="/resources/cabeies4.PNG"/>
-</p>
-
-<p align="center">
-<img src="/resources/cabeies5.PNG"/>
-</p>
 
 <p align="center">
 <img src="/resources/comuheader1.png" width="700" height="350"/>
