@@ -2,19 +2,21 @@
 ### <p align="center">Torge: Comunicación</p>
 
 <p align="center">
-<img src="/resources/comuheader1.png"/>
+<img src="/resources/comuheader1.png" size="200%"/>
 </p>
 
 #### Author
 &nbsp;&nbsp;&nbsp;  Este material ha sido producido por <b>Jorge Perez</b> y <b>Victor Ruiz</b> bajo licencia Creative Commons.  
 
+<br>
+
 <p align="center">
-<img src="/resources/LicenciaCC.png" height="50" width="150"/>  
+<img src="/resources/LicenciaCC.png" height="100" width="300"/>  
 </p>
 
 # <p align="center">Índice:</p>
-> **[1. Presentación](#1):**
-> **[2. Actividad 1](#2):**
+> **[1. Presentación](#1):**<br>
+> **[2. Actividad 1](#2):**<br>
 >
 
 <br>
