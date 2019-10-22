@@ -2,7 +2,7 @@
 ### <p align="center">Torge: Comunicación</p>
 
 <p align="center">
-<img src="/resources/comuheader1.png" size="200%"/>
+<img src="/resources/comuheader1.png" width="200" height="80"/>
 </p>
 
 #### Author
@@ -11,13 +11,13 @@
 <br>
 
 <p align="center">
-<img src="/resources/LicenciaCC.png" height="100" width="300"/>  
+<img src="/resources/LicenciaCC.png" height="80" width="280"/>  
 </p>
 
 # <p align="center">Índice:</p>
 > **[1. Presentación](#1):**<br>
 > **[2. Actividad 1](#2):**<br>
->
+> ***[2. Actividad 1](#2):***<br>
 
 <br>
 
