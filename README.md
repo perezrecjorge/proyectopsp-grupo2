@@ -6,12 +6,21 @@
 ## <p align="center">Torge: Comunicación</p>
 
 <p align="center">
-<img src="/resources/cabeies.png"/>
+<img src="/resources/cabeies.png" width="300"/>
+</p>
+
+<p align="center">
+<img src="/resources/cabeies2.png"/>
+</p>
+
+<p align="center">
+<img src="/resources/cabeies3.jpg"/>
 </p>
 
 <p align="center">
 <img src="/resources/comuheader1.png" width="700" height="350"/>
 </p>
+
 
 #### Author
 &nbsp;&nbsp;&nbsp;&nbsp; Este material ha sido producido por <b>Jorge Perez</b> y <b>Victor Ruiz</b> bajo licencia Creative Commons.  
@@ -33,7 +42,7 @@
 
 # <p align="center">Índice:</p>
 > **[1. Presentación](#1):**<br>
-> **[2. Actividad 1](#2):**<br>
+> **[2. Actividad 1](#2):**
 >> **[Título](#3):**<br>
 >> **[Resumen](#4):**<br>
 
