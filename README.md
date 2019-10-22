@@ -9,9 +9,22 @@
 <img src="/resources/comuheader1.png" width="700" height="350"/>
 </p>
 
+<br>
+<br>
 
-#### Author
-&nbsp;&nbsp;&nbsp;&nbsp; Este material ha sido producido por <b>Jorge Perez</b> y <b>Victor Ruiz</b> bajo licencia Creative Commons.  
+# <p align="center">Índice:</p>
+> **[1. Licencia y Autores](#1):**<br>
+> **[1. Presentación](#2):**<br>
+> **[2. Actividad 1](#3):**<br>
+> **[&nbsp;&nbsp;&nbsp;&nbsp; Título](#4):**<br>
+> **[&nbsp;&nbsp;&nbsp;&nbsp; Resumen](#5):**<br>
+
+<br>
+
+<a name="1"></a>
+# LICENCIA Y AUTORES
+
+Este material ha sido producido por <b>Jorge Perez</b> y <b>Victor Ruiz</b> bajo licencia Creative Commons.  
 
 <br>
 
@@ -21,22 +34,7 @@
 
 <br>
 
-# <p align="center">Índice:</p>
-> **[1. Presentación](#1):**<br>
-> **[2. Actividad 1](#2):**<br>
-> **[&nbsp;&nbsp;&nbsp;&nbsp; Título](#3):**<br>
-> **[&nbsp;&nbsp;&nbsp;&nbsp; Resumen](#4):**<br>
->> **[2. Actividad 1](#2):**<br>
-
-# <p align="center">Índice:</p>
-> **[1. Presentación](#1):**<br>
-> **[2. Actividad 1](#2):**
->> **[Título](#3):**<br>
->> **[Resumen](#4):**<br>
-
-<br>
-
-<a name="1"></a>
+<a name="2"></a>
 # PRESENTACIÓN
 ¡Hola! Somos el grupo 2, formado por los alumnos Jorge Perez y Victor Ruiz, 
 nos encargaremos de realizar un proyecto de la asignatura de PSP de 2ºDAM 
@@ -44,13 +42,13 @@ en el I.E.S Ramón del Valle Inclán.
 
 <br>
 
-<a name="2"></a>
-# ACTIVIDAD 1 Y  2
 <a name="3"></a>
+# ACTIVIDAD 1 Y  2
+<a name="4"></a>
 ### <b>TÍTULO:</b>
 *Torge: Comunicación Alumno/Profesor.*
 
-<a name="4"></a>
+<a name="5"></a>
 ### <b> RESUMEN: </b>
 
 Nuestro proyecto se basa en la creación de una aplicación basada en Java, que consiste en la comunicación alumno/profesor y comunicación grupal de clase.
