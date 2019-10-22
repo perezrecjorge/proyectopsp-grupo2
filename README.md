@@ -1,8 +1,8 @@
 # <p align="center">PROYECTO PSP 19/20</p>
-### <p align="center">Torge: Comunicación</p>
+## <p align="center">Torge: Comunicación</p>
 
 <p align="center">
-<img src="/resources/comuheader1.png" width="700" height="400"/>
+<img src="/resources/comuheader1.png" width="700" height="350"/>
 </p>
 
 #### Author
@@ -19,7 +19,9 @@
 # <p align="center">Índice:</p>
 > **[1. Presentación](#1):**<br>
 > **[2. Actividad 1](#2):**<br>
-> **[&nbsp;&nbsp;2. Actividad 1](#2):**<br>
+> **[&nbsp;&nbsp;&nbsp;&nbsp; Título](#3):**<br>
+> **[&nbsp;&nbsp;&nbsp;&nbsp; Resumen](#4):**<br>
+>> **[2. Actividad 1](#2):**<br>
 
 <br>
 
@@ -33,9 +35,11 @@ en el I.E.S Ramón del Valle Inclán.
 
 <a name="2"></a>
 # ACTIVIDAD 1 Y  2
+<a name="3"></a>
 ### <b>TÍTULO:</b>
 *Torge: Comunicación Alumno/Profesor.*
 
+<a name="4"></a>
 ### <b> RESUMEN: </b>
 
 Nuestro proyecto se basa en la creación de una aplicación basada en Java, que consiste en la comunicación alumno/profesor y comunicación grupal de clase.
