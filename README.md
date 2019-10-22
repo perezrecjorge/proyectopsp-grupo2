@@ -44,13 +44,16 @@ en el I.E.S Ramón del Valle Inclán.
 
 <a name="3"></a>
 # ACTIVIDAD 1 Y  2
+
 <a name="4"></a>
 ### <b>TÍTULO:</b>
 
-<b>*Torge*</b>
+*<b>Torge:</b> Comunicación.*
 
-El nombre de nuestra APP nace de la combinacion de los nombres de los desarrolladores; Vic<b>TOR</b> + Jor<b>GE</b>.
-
+El nombre de nuestra APP nace de la combinacion de los nombres de los desarrolladores.
+<p align="center">
+	Vic<b>TOR</b> + Jor<b>GE</b> = <b>TORGE</b>
+</p>
 
 <a name="5"></a>
 ### <b> RESUMEN: </b>
