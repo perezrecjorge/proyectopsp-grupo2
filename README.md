@@ -58,12 +58,28 @@ El diseño de nuestra APP estará basado en la arquitectura MVC (Modelo - Vista 
 
 Todo la documentación y desarrollo de la misma estará presente en este repositorio de GitHub.
 
-La aplicación contará con:
+Los requisitos funcionales que envolveran la APP, asi mismo, que estan requeridos por el profesor y que se realizaran durante curso (Fecha de Entrega preestablecida: 12/Noviembre/2019) son:
 
-1. Versión de escritorio y otra en red (web)
+*1. La aplicación debe programarse usando hilos, de forma que las funcionalidades a implementar puedan ser ejecutadas de forma concurrente. 
+De esta forma, tendremos hilos para la interfaz gräfica, hilos para la comunicación en red, hilos para el acceso a soportes de almacenamiento como ficheros o base de datos, etc.*
+
+*2. Tendrá funcionalidades de red a través de sockets que use los protocolos TCP /UDP. La app permitirá conexiones unicast y multicast. 
+Por otra parte, deberás diseñar tu propio protocolo de red para el intercambio de los datos que maneje tu aplicación.*
+
+*3. La aplicación implementará clientes de protocolos standard como correo, FTP etc. Integrará un servidor de chat para la comunicación entre los usuarios. 
+Por otra parte, la aplicación deberá implementar un servidor web.*
+
+*4. Por otra parte, habilitaremos nuestra aplicación con una capa de segurdad (criptografia, politica de acceso a usuarios, roles tanto para el acceso a la información como la transmision de la misma).*
+
+*5. Finalmente, nuestra aplicación dispondrá de algún servicio implementado en la nube haciendo uso de la tecnologia de microservicios.
+
+
+Por ello, hemos desarrollo un grupo de ideas que pueden llegar a satisfacer dichos requisitos funcionales:
+
+1. Versión de escritorio y otra en red (web).
 2. Un formulario de registro de usuario.
 3. La comunicación será: 
-	- Privada entre alumno y profesor(admin)
+	- Privada entre alumno y profesor(admin).
 	- Pública (y sólo pública) de forma grupal entre los alumnos. 
 4. El admin tendrá acceso en cualquier caso de todos los mensajes.
 5. El admin recibirá los mensajes y responderá según le parezca. Los que no responda se quedan en espera.
