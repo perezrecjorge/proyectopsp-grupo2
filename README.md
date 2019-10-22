@@ -1,12 +1,12 @@
-# <p align="center">PROYECTO PSP</p>
+# <p align="center">PROYECTO PSP 19/20</p>
 ### <p align="center">Torge: Comunicación</p>
 
 <p align="center">
-<img src="/resources/comuheader1.png" width="200" height="80"/>
+<img src="/resources/comuheader1.png" width="700" height="400"/>
 </p>
 
 #### Author
-&nbsp;&nbsp;&nbsp;  Este material ha sido producido por <b>Jorge Perez</b> y <b>Victor Ruiz</b> bajo licencia Creative Commons.  
+&nbsp;&nbsp;&nbsp;&nbsp; Este material ha sido producido por <b>Jorge Perez</b> y <b>Victor Ruiz</b> bajo licencia Creative Commons.  
 
 <br>
 
@@ -14,10 +14,12 @@
 <img src="/resources/LicenciaCC.png" height="80" width="280"/>  
 </p>
 
+<br>
+
 # <p align="center">Índice:</p>
 > **[1. Presentación](#1):**<br>
 > **[2. Actividad 1](#2):**<br>
-> ***[2. Actividad 1](#2):***<br>
+> **[&nbsp;&nbsp;2. Actividad 1](#2):**<br>
 
 <br>
 
