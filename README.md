@@ -1,20 +1,20 @@
 <p align="center">
-<img src="/resources/cabezeraies.png"/>
+<img src="/resources/cabezeraies.PNG"/>
 </p>
 
 # <p align="center">PROYECTO PSP 19/20</p>
 ## <p align="center">Torge: Comunicación</p>
 
 <p align="center">
-<img src="/resources/cabeies.png" width="300"/>
+<img src="/resources/cabeies.PNG" width="300"/>
 </p>
 
 <p align="center">
-<img src="/resources/cabeies2.png"/>
+<img src="/resources/cabeies2.PNG"/>
 </p>
 
 <p align="center">
-<img src="/resources/cabeies3.jpg"/>
+<img src="/resources/cabeies3.JPG"/>
 </p>
 
 <p align="center">
