@@ -63,7 +63,7 @@ Nuestro proyecto se basa en la creación de una aplicación basada en Java, que 
 Para la realización de dicha aplicación utilizaremos el entorno de desarrollo IntelliJ, basado en lenguaje Java como hemos mencionado anteriormente.
 El diseño de nuestra APP estará basado en la arquitectura MVC (Modelo - Vista - Controlador).
 
-Todo la documentación y desarrollo de la misma estará presente en este repositorio de GitHub.
+<b>Todo la documentación y desarrollo de la misma estará presente en este repositorio de GitHub.</b>
 
 Los requisitos funcionales que envolveran la APP, asi mismo, que estan requeridos por el profesor y que se realizaran durante curso (Fecha de Entrega preestablecida: 12/Noviembre/2019) son:
 
