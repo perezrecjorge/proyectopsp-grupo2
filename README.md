@@ -93,6 +93,40 @@ Por ello, hemos desarrollado un grupo de ideas que pueden llegar a satisfacer di
 6. Los mensajes que comiencen a redactar los alumnos y no se envíen se guardarán como un borrador. Cada alumno solo podrá guardar dos borradores.
 7. La comunicación y los mensajes tendrán un cifrado de extremo a extremo.
 
+<br>
 
+<a name="6"></a>
+# ACTIVIDAD 3
+
+<a name="7"></a>
+### <b>CASOS DE USOS</b>
+
+<p align="center">
+<img src="/resources/esquemacasosdeusos.png"/>
+</p>
+
+<br>
+
+<p align="center">
+<img src="/resources/tabla1casosdeuso.PNG"/>
+</p>
+
+<br>
+
+<p align="center">
+<img src="/resources/tabla2casosdeuso.PNG"/>
+</p>
+
+<br>
+
+<p align="center">
+<img src="/resources/tabla3casosdeuso.PNG"/>
+</p>
+
+<br>
+
+<p align="center">
+<img src="/resources/tabla4casosdeuso.PNG"/>
+</p>
 
 
