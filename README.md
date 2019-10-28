@@ -101,6 +101,8 @@ Por ello, hemos desarrollado un grupo de ideas que pueden llegar a satisfacer di
 <a name="7"></a>
 ### <b>CASOS DE USOS</b>
 
+<br>
+
 <p align="center">
 <img src="/resources/esquemacasosdeusos.png"/>
 </p>
