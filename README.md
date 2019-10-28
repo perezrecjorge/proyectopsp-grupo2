@@ -14,10 +14,12 @@
 
 # <p align="center">Índice:</p>
 > **[1. Licencia y Autores](#1):**<br>
-> **[1. Presentación](#2):**<br>
-> **[2. Actividad 1](#3):**<br>
+> **[2. Presentación](#2):**<br>
+> **[3. Actividad 1 y 2](#3):**<br>
 > **[&nbsp;&nbsp;&nbsp;&nbsp; Título](#4):**<br>
 > **[&nbsp;&nbsp;&nbsp;&nbsp; Resumen](#5):**<br>
+> **[4. Actividad 3](#6):**<br>
+> **[&nbsp;&nbsp;&nbsp;&nbsp; Casos de Usos](#7):**<br>
 
 <br>
 
