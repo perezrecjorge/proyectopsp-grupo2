@@ -106,7 +106,7 @@ Por ello, hemos desarrollado un grupo de ideas que pueden llegar a satisfacer di
 <br>
 
 <p align="center">
-<img src="/resources/esquemacasosdeusos.png"/>
+<img src="/resources/diagramacasosdeuso.png"/>
 </p>
 
 <br>
