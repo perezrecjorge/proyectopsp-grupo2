@@ -20,6 +20,7 @@
 > **[&nbsp;&nbsp;&nbsp;&nbsp; Resumen](#5):**<br>
 > **[4. Actividad 3](#6):**<br>
 > **[&nbsp;&nbsp;&nbsp;&nbsp; Casos de Usos](#7):**<br>
+> **[&nbsp;&nbsp;&nbsp;&nbsp; Anexo](#8):**<br>
 
 <br>
 
@@ -31,7 +32,7 @@ Este material ha sido producido por <b>Jorge Perez</b> y <b>Victor Ruiz</b> bajo
 <br>
 
 <p align="center">
-<img src="/resources/LicenciaCC.png" height="80" width="280"/>  
+<img src="/resources/LicenciaCC.png" height="40" width="140"/>  
 </p>
 
 <br>
@@ -108,6 +109,11 @@ Por ello, hemos desarrollado un grupo de ideas que pueden llegar a satisfacer di
 <p align="center">
 <img src="/resources/diagramacasosdeuso.png"/>
 </p>
+
+<br>
+
+<a name="8"></a>
+### <b>ANEXO</b>
 
 <br>
 
