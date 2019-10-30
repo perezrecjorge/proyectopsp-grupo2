@@ -19,7 +19,7 @@
 > **[&nbsp;&nbsp;&nbsp;&nbsp; Título](#4):**<br>
 > **[&nbsp;&nbsp;&nbsp;&nbsp; Resumen](#5):**<br>
 > **[4. Actividad 3](#6):**<br>
-> **[&nbsp;&nbsp;&nbsp;&nbsp; Casos de Usos](#7):**<br>
+> **[&nbsp;&nbsp;&nbsp;&nbsp; Diagrama - Casos de uso](#7):**<br>
 > **[&nbsp;&nbsp;&nbsp;&nbsp; Anexo](#8):**<br>
 
 <br>
@@ -102,7 +102,7 @@ Por ello, hemos desarrollado un grupo de ideas que pueden llegar a satisfacer di
 # ACTIVIDAD 3
 
 <a name="7"></a>
-### <b>CASOS DE USOS</b>
+### <b>DIAGRAMA CASOS DE USO</b>
 
 <br>
 
