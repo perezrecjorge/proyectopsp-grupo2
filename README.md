@@ -144,6 +144,30 @@ Por ello, hemos desarrollado un grupo de ideas que pueden llegar a satisfacer di
 
 <br>
 
+<p align="center">
+<img src="/resources/tabla5casosdeuso.PNG"/>
+</p>
+
+<br>
+
+<p align="center">
+<img src="/resources/tabla6casosdeuso.PNG"/>
+</p>
+
+<br>
+
+<p align="center">
+<img src="/resources/tabla7casosdeuso.PNG"/>
+</p>
+
+<br>
+
+<p align="center">
+<img src="/resources/tabla8casosdeuso.PNG"/>
+</p>
+
+<br>
+
 <a name="9"></a>
 # ACTIVIDAD 4
 
