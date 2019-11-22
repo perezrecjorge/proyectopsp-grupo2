@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="332.0" prefWidth="438.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="78.0" layoutY="25.0" text="MENU PRINCIPAL">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Button layoutX="76.0" layoutY="123.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="283.0" text="TABLÓN DE NOTICIAS" />
+      <Button layoutX="76.0" layoutY="187.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="283.0" text="CHAT PRIVADO ALUMNO" />
+      <Button layoutX="78.0" layoutY="251.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="283.0" text="MODIFICAR PERFIL" />
+      <Line endX="100.0" fill="BLACK" layoutX="118.0" layoutY="95.0" startX="-100.0" stroke="#8d8d8d" strokeLineCap="BUTT" />
+      <Line endX="100.0" fill="BLACK" layoutX="318.0" layoutY="95.0" startX="-100.0" stroke="#8d8d8d" strokeLineCap="BUTT" />
+   </children>
+</AnchorPane>

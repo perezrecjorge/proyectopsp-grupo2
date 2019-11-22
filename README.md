@@ -1,2 +1,4 @@
 # proyectopsp-grupo2
 Repositorio del proyecto de PSP realizado por el GRUPO 2 (Jorge Perez y Victor Ruiz).
+
+ESTA RAMA CONTIENE LA ESTRUCTURA DEL PROYECTO Y DONDE SE REALIZARAN CAMBIOS CONFORME VAYAMOS AVANZANDO EN LA ASIGNATURA DE PSP.
