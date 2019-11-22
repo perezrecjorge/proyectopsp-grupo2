@@ -24,6 +24,7 @@
 > **[5. Actividad 4](#9):**<br>
 > **[&nbsp;&nbsp;&nbsp;&nbsp; Diagrama de Clases](#10):**<br>
 > **[&nbsp;&nbsp;&nbsp;&nbsp; Modelo Entidad - Relación](#11):**<br>
+> **[6. Actividad 5](#12):**<br>
 
 <br>
 
@@ -190,5 +191,58 @@ Por ello, hemos desarrollado un grupo de ideas que pueden llegar a satisfacer di
 <p align="center">
 <img src="/resources/modeloER.png"/>
 </p>
+
+<br>
+
+<a name="12"></a>
+# ACTIVIDAD 5
+
+### <b>VISTA INICIO</b>
+<p align="center">
+<img src="/resources/vistas/VistaInicio.png"/>
+</p>
+
+### <b>VISTA INICIAR SESIÓN</b>
+<p align="center">
+<img src="/resources/vistas/VistaIniciarSesion.png"/>
+</p>
+
+### <b>VISTA REGISTRO</b>
+<p align="center">
+<img src="/resources/vistas/VistaRegistro.png"/>
+</p>
+
+### <b>VISTA MENU PRINCIPAL DE ALUMNOS</b>
+<p align="center">
+<img src="/resources/vistas/VistaMenuAlumno.png"/>
+</p>
+
+### <b>VISTA MENU PRINCIPAL DE PROFESORES</b>
+<p align="center">
+<img src="/resources/vistas/VistaMenuProfesor.png"/>
+</p>
+
+### <b>VISTA NOTICIAS</b>
+<p align="center">
+<img src="/resources/vistas/VistaNoticias.png"/>
+</p>
+
+### <b>VISTA CHAT GRUPAL</b>
+<p align="center">
+<img src="/resources/vistas/VistaChatGrupal.png"/>
+</p>
+
+### <b>VISTA CHAT PRIVADO</b>
+<p align="center">
+<img src="/resources/vistas/VistaChatPrivado.png"/>
+</p>
+
+### <b>VISTA MODIFICAR PERFIL</b>
+<p align="center">
+<img src="/resources/vistas/VistaModificarPerfil.png"/>
+</p>
+
+
+
 
 
