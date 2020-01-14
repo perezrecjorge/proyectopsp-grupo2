@@ -39,6 +39,8 @@ Este material ha sido producido por <b>Jorge Perez</b> y <b>Victor Ruiz</b> bajo
 <img src="/resources/LicenciaCC.png" height="40" width="140"/>  
 </p>
 
+
+
 <br>
 
 <a name="2"></a>
@@ -121,51 +123,411 @@ Por ello, hemos desarrollado un grupo de ideas que pueden llegar a satisfacer di
 
 <br>
 
-<p align="center">
-<img src="/resources/tabla1casosdeuso.PNG"/>
-</p>
+<table style="width:100%">
+  <tr>
+    <td><b>ID: </b></td>
+    <td>CU-1</td>
+  </tr>
+  <tr>
+    <td><b>Nombre: </b></td>
+    <td>Inicio de sesion.</td>
+  </tr>
+  <tr>
+    <td><b>Descripción:</b></td>
+    <td>Se abre la pantalla de inicio de sesión para acceder a la cuenta.</td>
+
+  </tr>
+  <tr>
+    <td><b>Actores:</b></td>
+    <td>Profesor (admin), alumno(s)</td>
+  </tr>
+  <tr>
+  <td><b>Precondiciones:</b></td>
+  <td>El usuario se ha registrado previamente.</td>
+  </tr>
+    <tr>
+  <td><b>Curso normal:</b></td>
+  <td>1. Usuario introduce sus datos nombre de usuario y contraseña
+2. en los campos correspondientes.<br>
+3. Usuario pulsa botón acceder.<br>
+4. El sistema valida la cuenta y verifica que existe.<br>
+5. El sistema comprueba si el usuario es el administrador o es 6. alumno. Si es profesor, accede a la vista específica de admin.<br>
+7. Usuario accede a su cuenta. Podrá visualizar y acceder a: <br>
+7.1 Consulta listado de noticias.<br>
+7.2 Chat alumno.<br>
+7.3 Cuenta bancaria / Excursiones.<br>
+7.4 Modificar perfil.<br>
+7.5 Crear nueva noticia.
+<br>
+  </td>
+  </tr>
+  <tr>
+  <td><b>Postcondiciones:</b></td>
+  <td>El usuario ha iniciado sesión.<br>
+  </td>
+</td>
+  </tr>
+  <tr>
+  <td><b>Alternativas/Excepciones:</b></td>
+  <td>Nombre de usuario y/o contraseña erróneo(s). Se vuelve a la pantalla de inicio o se solicita recuperar cuenta.
+Usuario no registrado.
+</td>
+
+</table>
 
 <br>
-
-<p align="center">
-<img src="/resources/tabla2casosdeuso.PNG"/>
-</p>
-
 <br>
 
-<p align="center">
-<img src="/resources/tabla3casosdeuso.PNG"/>
-</p>
+<table style="width:100%">
+  <tr>
+    <td><b>ID: </b></td>
+    <td>CU-2</td>
+  </tr>
+  <tr>
+    <td><b>Nombre: </b></td>
+    <td>Recuperar cuenta</td>
+  </tr>
+  <tr>
+    <td><b>Descripción:</b></td>
+    <td>- Se accede a un formulario en el que se pide el correo o algún medio que el usuario pueda verificar para recuperar su cuenta.</td>
+
+  </tr>
+  <tr>
+    <td><b>Actores:</b></td>
+    <td>Profesor (admin), alumno(s)</td>
+  </tr>
+  <tr>
+  <td><b>Precondiciones:</b></td>
+  <td>El usuario se ha registrado previamente.</td>
+  </tr>
+    <tr>
+  <td><b>Curso normal:</b></td>
+  <td>1. Introducir un dato de verificación: correo eléctronico o nº de teléfono.<br>
+2. El usuario accede a la vista de recuperación de la cuenta si ha habido un error o no recuerda algún dato o ambos.<br>
+3. La persona elige entre el e-mail o teléfono para recibir un código de verificación, que el profesor (admin) tiene que corroborar.<br>
+4. En el caso de que sea el Profesor (admin) quien tenga que recuperar su cuenta, lo hará por un medio alternativo que el resto de usuarios.<br>
+5. Tras verse cumplido lo anterior, la persona puede cambiar su contraseña.
+<br>
+  </td>
+  </tr>
+  <tr>
+  <td><b>Postcondiciones:</b></td>
+  <td>La persona recupera su cuenta, y vuelve a la vista de inicio de sesión.<br>
+  </td>
+</td>
+  </tr>
+  <tr>
+  <td><b>Alternativas/Excepciones:</b></td>
+  <td>Error en el código de recuperación.
+Los datos facilitados para la recuperación son erróneos o no corresponden con ninguno de los almacenados en el sistema.
+
+</td>
+
+</table>
 
 <br>
-
-<p align="center">
-<img src="/resources/tabla4casosdeuso.PNG"/>
-</p>
-
 <br>
 
-<p align="center">
-<img src="/resources/tabla5casosdeuso.PNG"/>
-</p>
+<table style="width:100%">
+  <tr>
+    <td><b>ID: </b></td>
+    <td>CU-3</td>
+  </tr>
+  <tr>
+    <td><b>Nombre: </b></td>
+    <td>Registro del usuario</td>
+  </tr>
+  <tr>
+    <td><b>Descripción:</b></td>
+    <td>- Se accede a un formulario en el que el usuario tiene que aportar datos. Algunos datos son obligatorios, otros no.</td>
+
+  </tr>
+  <tr>
+    <td><b>Actores:</b></td>
+    <td>Profesor (admin), alumno(s)</td>
+  </tr>
+  <tr>
+  <td><b>Precondiciones:</b></td>
+  <td>Rellenar, al menos, todos los campos obligatorios.</td>
+  </tr>
+    <tr>
+  <td><b>Curso normal:</b></td>
+  <td>1. El usuario accede a la vista del formulario de registro.<br>
+2. El usuario introduce sus datos, se verifica que al menos sean los obligatorios.<br>
+3. Se comprueba que no existe ya un usuario en el sistema con igual nick de usuario o correo electrónico.<br>
+4. Se comprueba que la contraseña sea una cadena alfanumérica de al menos 8 caracteres.<br>
+5. Se accede a la vista del perfil del usuario.<br>
 
 <br>
+  </td>
+  </tr>
+  <tr>
+  <td><b>Postcondiciones:</b></td>
+  <td>La persona ya tiene una cuenta creada. Se abre la vista de inicio de sesión.<br>
+  </td>
+</td>
+  </tr>
+  <tr>
+  <td><b>Alternativas/Excepciones:</b></td>
+  <td>Ya existe un usuario con el mismo nombre o correo electrónico.
+Algún campo obligatorio está vacío o tiene datos erróneos. Se vuelve a ese campo para corregirlo.
 
-<p align="center">
-<img src="/resources/tabla6casosdeuso.PNG"/>
-</p>
+</td>
+
+</table>
 
 <br>
-
-<p align="center">
-<img src="/resources/tabla7casosdeuso.PNG"/>
-</p>
-
 <br>
 
-<p align="center">
-<img src="/resources/tabla8casosdeuso.PNG"/>
-</p>
+<table style="width:100%">
+  <tr>
+    <td><b>ID: </b></td>
+    <td>CU-4</td>
+  </tr>
+  <tr>
+    <td><b>Nombre: </b></td>
+    <td>Consulta listado de noticias</td>
+  </tr>
+  <tr>
+    <td><b>Descripción:</b></td>
+    <td>-El o los alumnos acceden al tablón principal de publicaciones.</td>
+
+  </tr>
+  <tr>
+    <td><b>Actores:</b></td>
+    <td> Alumno</td>
+  </tr>
+  <tr>
+  <td><b>Precondiciones:</b></td>
+  <td>- Haber iniciado sesión.</td>
+  </tr>
+    <tr>
+  <td><b>Curso normal:</b></td>
+  <td>1. Se abre la vista de publicaciones del profesor.<br>
+
+<br>
+  </td>
+  </tr>
+  <tr>
+  <td><b>Postcondiciones:</b></td>
+  <td>El sistema carga todas las noticias del profesor.<br>
+  </td>
+</td>
+  </tr>
+  <tr>
+  <td><b>Alternativas/Excepciones:</b></td>
+  <td>Los alumnos no pueden visualizar las publicaciones por problemas con el servidor.<br>
+
+</td>
+
+</table>
+
+<br>
+<br>
+
+
+<table style="width:100%">
+  <tr>
+    <td><b>ID: </b></td>
+    <td>CU-5</td>
+  </tr>
+  <tr>
+    <td><b>Nombre: </b></td>
+    <td>Chat alumno</td>
+  </tr>
+  <tr>
+    <td><b>Descripción:</b></td>
+    <td>-Sala de chat público con la que los alumnos pueden enviarse mensajes.</td>
+
+  </tr>
+  <tr>
+    <td><b>Actores:</b></td>
+    <td> Alumno</td>
+  </tr>
+  <tr>
+  <td><b>Precondiciones:</b></td>
+  <td>- Haber iniciado sesión.</td>
+  </tr>
+    <tr>
+  <td><b>Curso normal:</b></td>
+  <td>1. El alumno entra en el chat grupal.<br>
+2. El alumno envía mensajes a sus compañeros y a la vez recibe mensajes de los mismos.
+<br>
+
+<br>
+  </td>
+  </tr>
+  <tr>
+  <td><b>Postcondiciones:</b></td>
+  <td>Los mensajes del chat solo se mostrarán a los alumnos conectados en el chat, y se borrarán al salir de la sesión.<br>
+  </td>
+</td>
+  </tr>
+  <tr>
+  <td><b>Alternativas/Excepciones:</b></td>
+  <td>Los mensajes no llegan al usuario alumno (error del servidor).<br>
+
+</td>
+
+</table>
+
+<br>
+<br>
+
+<table style="width:100%">
+  <tr>
+    <td><b>ID: </b></td>
+    <td>CU-6</td>
+  </tr>
+  <tr>
+    <td><b>Nombre: </b></td>
+    <td>Cuenta bancaria excursiones.</td>
+  </tr>
+  <tr>
+    <td><b>Descripción:</b></td>
+    <td>-Aparece el IBAN de la cuenta a la que hay ingresar el dinero para las excursiones.</td>
+
+  </tr>
+  <tr>
+    <td><b>Actores:</b></td>
+    <td> Alumnos.</td>
+  </tr>
+  <tr>
+  <td><b>Precondiciones:</b></td>
+  <td>- Haber iniciado sesión.</td>
+  </tr>
+    <tr>
+  <td><b>Curso normal:</b></td>
+  <td>1. El alumno entra a la vista de cuenta bancaria.<br><br>
+2. El alumno pulsa un botón "Ingresar" que aumentará un contador.
+	  3. Cuando el contador llegue al nº total de alumnos que van a la excursión, el profesor por su parte podrá pulsar un botón que sea "Pagar Excursión".<br>
+<br>
+
+<br>
+  </td>
+  </tr>
+  <tr>
+  <td><b>Postcondiciones:</b></td>
+  <td>- Se paga la excursión.<br>
+  </td>
+</td>
+  </tr>
+  <tr>
+  <td><b>Alternativas/Excepciones:</b></td>
+  <td>Error en el contador de los ingresos.<br>
+
+</td>
+
+</table>
+
+<br>
+<br>
+
+<table style="width:100%">
+  <tr>
+    <td><b>ID: </b></td>
+    <td>CU-7</td>
+  </tr>
+  <tr>
+    <td><b>Nombre: </b></td>
+    <td>Modificar perfil.</td>
+  </tr>
+  <tr>
+    <td><b>Descripción:</b></td>
+    <td>-Cambiar los datos del perfil del usuario alumno o del profesor (admin).</td>
+
+  </tr>
+  <tr>
+    <td><b>Actores:</b></td>
+    <td> Profesor (admin), alumno</td>
+  </tr>
+  <tr>
+  <td><b>Precondiciones:</b></td>
+  <td>- Haber iniciado sesión.</td>
+  </tr>
+    <tr>
+  <td><b>Curso normal:</b></td>
+  <td>1. Acceden a la vista de edición de perfil.<br>
+2. Modificar los datos que se quiera y guardar cambios
+.<br>
+<br>
+
+<br>
+  </td>
+  </tr>
+  <tr>
+  <td><b>Postcondiciones:</b></td>
+  <td>- Actualización directa del perfil del usuario alumno..<br>
+  </td>
+</td>
+  </tr>
+  <tr>
+  <td><b>Alternativas/Excepciones:</b></td>
+  <td>Modificación no permitida.<br>
+Error en la actualización del perfil.
+<br>
+
+</td>
+
+</table>
+
+<br>
+<br>
+
+</table>
+
+<br>
+<br>
+
+<table style="width:100%">
+  <tr>
+    <td><b>ID: </b></td>
+    <td>CU-8</td>
+  </tr>
+  <tr>
+    <td><b>Nombre: </b></td>
+    <td>Crear noticia nueva.</td>
+  </tr>
+  <tr>
+    <td><b>Descripción:</b></td>
+    <td>-El profesor redacta y publica una noticia para que la vean los alumnos.</td>
+
+  </tr>
+  <tr>
+    <td><b>Actores:</b></td>
+    <td> Profesor (admin).</td>
+  </tr>
+  <tr>
+  <td><b>Precondiciones:</b></td>
+  <td>- El profesor inicia sesión.</td>
+  </tr>
+    <tr>
+  <td><b>Curso normal:</b></td>
+  <td>1.Accede a la vista del tablón principal.<br>
+2.Escribir y publicar noticia.<br>
+
+.<br>
+<br>
+
+<br>
+  </td>
+  </tr>
+  <tr>
+  <td><b>Postcondiciones:</b></td>
+  <td>- Que la noticia se publique correctamente.<br>
+Que los alumnos puedan visualizar la noticia publicada
+.<br>
+  </td>
+</td>
+  </tr>
+  <tr>
+  <td><b>Alternativas/Excepciones:</b></td>
+  <td>Error en la publicación.
+<br>
+
+</td>
+
+</table>
 
 <br>
 
