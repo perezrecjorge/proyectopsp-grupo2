@@ -28,20 +28,4 @@ public class RootLayoutController {
 		this.modelo = m;
 	}
 
-	/**
-	 * Creates an empty address book.
-	 */
-	@FXML
-	private void manejaNuevo() { // Boton nuevo del menú
-		mainApp.muestraVistaMenuInicio();
-	}
-
-	/**
-	 * Cierra la aplicación
-	 */
-	@FXML
-	private void manejaSalir() { // Botójn salir del menú
-		System.exit(0);
-	}
-
 }

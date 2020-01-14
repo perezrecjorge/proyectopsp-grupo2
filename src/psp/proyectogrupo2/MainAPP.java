@@ -53,6 +53,7 @@ public class MainAPP extends Application {
 
 		this.primaryStage = primaryStage;
 		this.primaryStage.setTitle("Torge: Comunicación");
+		this.primaryStage.getIcons().add(new Image("file:resources/logotorgeiconoventana.png"));
 
 		// Set the application icon.
 		// this.primaryStage.getIcons().add(new
