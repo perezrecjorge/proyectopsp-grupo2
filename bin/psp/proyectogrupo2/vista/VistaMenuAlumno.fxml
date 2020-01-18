@@ -16,7 +16,7 @@
       </Label>
       <Button layoutX="158.0" layoutY="144.0" mnemonicParsing="false" onAction="#manejaTablonNoticias" prefHeight="53.0" prefWidth="283.0" text="TABLÓN DE NOTICIAS" />
       <Button layoutX="158.0" layoutY="207.0" mnemonicParsing="false" onAction="#manejaChatAlumnos" prefHeight="53.0" prefWidth="283.0" text="CHAT ALUMNOS" />
-      <Button layoutX="158.0" layoutY="270.0" mnemonicParsing="false" onAction="#manejaChatPrivado" prefHeight="53.0" prefWidth="283.0" text="CHAT PRIVADO PROFESOR" />
+      <Button layoutX="158.0" layoutY="270.0" mnemonicParsing="false" onAction="#manejaCuentaBancaria" prefHeight="53.0" prefWidth="283.0" text="CUENTA BANCARIA" />
       <Button layoutX="158.0" layoutY="333.0" mnemonicParsing="false" onAction="#manejaModificarPerfil" prefHeight="53.0" prefWidth="283.0" text="MODIFICAR PERFIL" />
       <Line endX="100.0" fill="BLACK" layoutX="200.0" layoutY="116.0" startX="-100.0" stroke="#8d8d8d" strokeLineCap="BUTT" />
       <Line endX="100.0" fill="BLACK" layoutX="400.0" layoutY="116.0" startX="-100.0" stroke="#8d8d8d" strokeLineCap="BUTT" />

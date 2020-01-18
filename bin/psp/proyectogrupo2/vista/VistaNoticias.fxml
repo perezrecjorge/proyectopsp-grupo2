@@ -6,13 +6,13 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="330.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="diu.examen.controlador.ControladorVistaPrincipal">
+<AnchorPane prefHeight="377.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="psp.proyectogrupo2.controlador.ControladorVistaNoticias">
    <children>
-      <SplitPane dividerPositions="0.4142857142857143" layoutX="14.0" layoutY="14.0" prefHeight="330.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <SplitPane dividerPositions="0.4142857142857143" layoutX="14.0" prefHeight="377.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <items>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="295.0" prefWidth="286.0">
                <children>
-                  <TableView fx:id="tablaElementos" layoutX="14.0" layoutY="14.0" prefHeight="329.0" prefWidth="286.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <TableView fx:id="tablaElementos" layoutX="14.0" layoutY="39.0" prefHeight="336.0" prefWidth="286.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="39.0">
                     <columns>
                       <TableColumn fx:id="columnaString" prefWidth="75.0" text="Profesor" />
                       <TableColumn fx:id="columnaFloat" prefWidth="75.0" text="Asignatura" />
@@ -21,6 +21,7 @@
                         <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                      </columnResizePolicy>
                   </TableView>
+                  <Button layoutY="7.0" mnemonicParsing="false" onAction="#manejaVolver" prefHeight="25.0" prefWidth="286.0" text="VOLVER AL MENU" />
                </children>
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="500.0" prefWidth="417.0" styleClass="background">
@@ -50,9 +51,9 @@
                   </GridPane>
                   <HBox layoutX="17.0" layoutY="229.0" spacing="5.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
                      <children>
-                        <Button defaultButton="true" layoutX="17.0" layoutY="229.0" mnemonicParsing="false" onAction="#manejaNuevoElemento" text="Nuevo..." />
-                        <Button layoutX="94.0" layoutY="229.0" mnemonicParsing="false" onAction="#manejaEditaElemento" text="Editar..." />
-                        <Button layoutX="183.0" layoutY="229.0" mnemonicParsing="false" onAction="#manejaBorrarElemento" text="Borrar" />
+                        <Button defaultButton="true" layoutX="17.0" layoutY="229.0" mnemonicParsing="false" text="Nuevo..." />
+                        <Button layoutX="94.0" layoutY="229.0" mnemonicParsing="false" text="Editar..." />
+                        <Button layoutX="183.0" layoutY="229.0" mnemonicParsing="false" text="Borrar" />
                      </children>
                   </HBox>
                </children>

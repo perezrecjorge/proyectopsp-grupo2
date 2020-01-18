@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="345.0" prefWidth="534.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="psp.proyectogrupo2.controlador.ControladorVistaCuentaBancaria">
+   <children>
+      <Label layoutX="150.0" layoutY="102.0" prefHeight="111.0" prefWidth="234.0" text="00,00 €">
+         <font>
+            <Font size="72.0" />
+         </font>
+      </Label>
+      <Label layoutX="191.0" layoutY="85.0" text="SALDO TOTAL">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="252.0" text="Ingresar:" />
+      <TextField layoutX="14.0" layoutY="269.0" />
+      <Label layoutX="371.0" layoutY="252.0" text="Retirar:" />
+      <TextField layoutX="371.0" layoutY="269.0" />
+      <Button layoutX="14.0" layoutY="306.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" text="INGRESAR" />
+      <Button layoutX="371.0" layoutY="306.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" text="RETIRAR" />
+   </children>
+</AnchorPane>

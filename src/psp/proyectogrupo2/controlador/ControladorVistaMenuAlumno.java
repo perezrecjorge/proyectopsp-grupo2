@@ -42,8 +42,6 @@ public class ControladorVistaMenuAlumno {
 	 * Instancia el supercontrolador Main y el modelo de la aplicación
 	 * 
 	 * @param mainApp
-	 * @param pm
-	 * @throws AddressException
 	 */
 	public void setMainApp(MainAPP mainApp, ModeloTorge m) {
 		this.mainApp = mainApp;
@@ -56,7 +54,7 @@ public class ControladorVistaMenuAlumno {
 	@FXML
 	private void manejaTablonNoticias() {
 		
-		System.out.println("NOTICIAS OK BIEN");
+		mainApp.muestraNoticias();
 			
 	}
 	
@@ -76,27 +74,27 @@ public class ControladorVistaMenuAlumno {
 	}
 	
 	/**
-	 * Botón CHAT PRIVADO PROFESOR
+	 * Botón CHAT CUENTA BANCARIA
 	 */
 	@FXML
-	private void manejaChatPrivado() {
+	private void manejaCuentaBancaria() {
 
-		boolean okClicked = mainApp.muestraVistaRegistro();
+		boolean okClicked = mainApp.muestraCuentaBancaria();
 
 		if (okClicked) {
 
-			System.out.println("CHAT PRIV OK BIEN");
+			System.out.println("CUENTA BANCARIA OK");
 			
 		}
 	}
 	
 	/**
-	 * Botón MODIFICAR
+	 * Botón MODIFICAR PERFIL
 	 */
 	@FXML
 	private void manejaModificarPerfil() {
 
-		boolean okClicked = mainApp.muestraVistaRegistro();
+		boolean okClicked = mainApp.muestraModificarPerfil();
 
 		if (okClicked) {
 

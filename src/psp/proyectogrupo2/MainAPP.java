@@ -15,12 +15,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-import psp.proyectogrupo2.controlador.ControladorVistaChatGrupal;
-import psp.proyectogrupo2.controlador.ControladorVistaIniciarSesion;
-import psp.proyectogrupo2.controlador.ControladorVistaMenuAlumno;
-import psp.proyectogrupo2.controlador.ControladorVistaMenuInicio;
-import psp.proyectogrupo2.controlador.ControladorVistaRegistro;
-import psp.proyectogrupo2.controlador.RootLayoutController;
+import psp.proyectogrupo2.controlador.*;
 import psp.proyectogrupo2.modelo.ModeloTorge;
 import psp.proyectogrupo2.modelo.tipos.UsuarioVO;
 
@@ -115,14 +110,6 @@ public class MainAPP extends Application {
 		}
 	}
 
-	/**
-	 * Opens a dialog to edit details for the specified person. If the user clicks
-	 * OK, the changes are saved into the provided person object and true is
-	 * returned.
-	 * 
-	 * @param person the person object to be edited
-	 * @return true if the user clicked OK, false otherwise.
-	 */
 	public boolean muestraVistaIniciarSesion() {
 		try {
 
@@ -134,6 +121,7 @@ public class MainAPP extends Application {
 			// Create the dialog Stage.
 			Stage dialogStage = new Stage();
 			dialogStage.setTitle("Iniciar Sesion");
+			dialogStage.getIcons().add(new Image("file:resources/logotorgeiconoventana.png"));
 			dialogStage.initModality(Modality.WINDOW_MODAL);
 			dialogStage.initOwner(primaryStage);
 			Scene scene = new Scene(page);
@@ -165,6 +153,7 @@ public class MainAPP extends Application {
 			// Create the dialog Stage.
 			Stage dialogStage = new Stage();
 			dialogStage.setTitle("Registro Usuario");
+			dialogStage.getIcons().add(new Image("file:resources/logotorgeiconoventana.png"));
 			dialogStage.initModality(Modality.WINDOW_MODAL);
 			dialogStage.initOwner(primaryStage);
 			Scene scene = new Scene(page);
@@ -207,7 +196,26 @@ public class MainAPP extends Application {
 			ioe.printStackTrace();
 		}
 	}
-	
+
+	public void muestraNoticias() {
+		try {
+			// Load person overview.
+			FXMLLoader loader = new FXMLLoader();
+			loader.setLocation(MainAPP.class.getResource("vista/VistaNoticias.fxml"));
+			AnchorPane menualumno = (AnchorPane) loader.load();
+
+			// Colocamos esta vista en el centro del rootlayout
+			rootLayout.setCenter(menualumno);
+
+			// Le pasamos al controlador de esta vista este supercontrolador
+			ControladorVistaNoticias controller = loader.getController();
+			controller.setMainApp(this, modelo);
+
+		} catch (IOException ioe) {
+			ioe.printStackTrace();
+		}
+	}
+
 	public boolean muestraVistaChatGrupal() {
 		try {
 
@@ -219,6 +227,7 @@ public class MainAPP extends Application {
 			// Create the dialog Stage.
 			Stage dialogStage = new Stage();
 			dialogStage.setTitle("CHAT GRUPAL");
+			dialogStage.getIcons().add(new Image("file:resources/logotorgeiconoventana.png"));
 			dialogStage.initModality(Modality.WINDOW_MODAL);
 			dialogStage.initOwner(primaryStage);
 			Scene scene = new Scene(page);
@@ -226,6 +235,70 @@ public class MainAPP extends Application {
 
 			// Set the person into the controller.
 			ControladorVistaChatGrupal controller = loader.getController();
+			controller.setDialogStage(dialogStage);
+
+			// Show the dialog and wait until the user closes it
+			dialogStage.showAndWait();
+
+			return controller.isOkClicked();
+
+		} catch (IOException e) {
+			e.printStackTrace();
+			return false;
+		}
+	}
+
+	public boolean muestraCuentaBancaria() {
+		try {
+
+			// Load the fxml file and create a new stage for the popup dialog.
+			FXMLLoader loader = new FXMLLoader();
+			loader.setLocation(MainAPP.class.getResource("vista/VistaCuentaBancaria.fxml"));
+			AnchorPane page = (AnchorPane) loader.load();
+
+			// Create the dialog Stage.
+			Stage dialogStage = new Stage();
+			dialogStage.setTitle("CUENTA BANCARIA");
+			dialogStage.initModality(Modality.WINDOW_MODAL);
+			dialogStage.initOwner(primaryStage);
+			dialogStage.getIcons().add(new Image("file:resources/logotorgeiconoventana.png"));
+			Scene scene = new Scene(page);
+			dialogStage.setScene(scene);
+
+			// Set the person into the controller.
+			ControladorVistaCuentaBancaria controller = loader.getController();
+			controller.setDialogStage(dialogStage);
+
+			// Show the dialog and wait until the user closes it
+			dialogStage.showAndWait();
+
+			return controller.isOkClicked();
+
+		} catch (IOException e) {
+			e.printStackTrace();
+			return false;
+		}
+	}
+
+	public boolean muestraModificarPerfil() {
+		try {
+
+			// Load the fxml file and create a new stage for the popup dialog.
+			FXMLLoader loader = new FXMLLoader();
+			loader.setLocation(MainAPP.class.getResource("vista/VistaModificarPerfil.fxml"));
+			AnchorPane page = (AnchorPane) loader.load();
+
+			// Create the dialog Stage.
+			Stage dialogStage = new Stage();
+			dialogStage.setTitle("MODIFICAR PERFIL");
+			dialogStage.getIcons().add(new Image("file:resources/logotorgeiconoventana.png"));
+			dialogStage.initModality(Modality.WINDOW_MODAL);
+			dialogStage.initOwner(primaryStage);
+			Scene scene = new Scene(page);
+			dialogStage.setScene(scene);
+
+			// Set the person into the controller.
+			ControladorVistaModificarPerfil controller = loader.getController();
 			controller.setDialogStage(dialogStage);
 
 			// Show the dialog and wait until the user closes it

@@ -25,7 +25,7 @@
       </Label>
       <TextField fx:id="nicknameField" layoutX="111.0" layoutY="80.0" prefHeight="25.0" prefWidth="256.0" />
       <TextField fx:id="contraseñaField" layoutX="111.0" layoutY="129.0" prefHeight="25.0" prefWidth="256.0" />
-      <Button layoutX="232.0" layoutY="183.0" mnemonicParsing="false" onAction="#manejaOk" prefHeight="25.0" prefWidth="62.0" text="Entrar" />
+      <Button defaultButton="true" layoutX="232.0" layoutY="183.0" mnemonicParsing="false" onAction="#manejaOk" prefHeight="25.0" prefWidth="62.0" text="Entrar" />
       <Button layoutX="303.0" layoutY="183.0" mnemonicParsing="false" onAction="#manejaCancelar" prefHeight="25.0" prefWidth="62.0" text="Cancelar" />
    </children>
 </AnchorPane>
