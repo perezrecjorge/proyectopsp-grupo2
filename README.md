@@ -604,6 +604,27 @@ Que los alumnos puedan visualizar la noticia publicada
 <img src="/resources/vistas/VistaModificarPerfil.png"/>
 </p>
 
+<br>
+
+<a name="13"></a>
+# FASE 2: ACTIVIDAD 2
+
+Las partes que requieren la aplicación de hilos son las siguientes: 
+
+<b>CU-4.</b> Consulta de listado de noticias: se realizará mediante hilos normales (clases que extiendan de Thread o implementen Runnable).
+
+<b>CU-5.</b> Chat alumno: el chat grupal de alumnos y profesor se realizará empleando sockets y múltiples hilos. Se creará una clase Profesor desde la que se iniciará el socket del servidor (ServerSocket) y clase  Alumno (Socket) y estos intercambiarán mensajes entre ellos. Se usará el protocolo UDP.
+
+<b>-6.</b> Cuenta bancaria excursiones: se realizará mediante la técnica del productor-consumidor. En este caso, habrá múltiples productores (Alumnos) que pulsarán un botón (el recurso a consumir, en este caso se trata de la cola del programa) solo una vez. Cuando todos los alumnos hayan pagado, es decir, todos hayan pulsado el botón, el profesor (consumidor) podrá realizar la acción “Pagar la excursión” pulsando otro botón. Debemos de asegurar que un alumno pueda pulsar el botón una única vez, y por otra parte que la capacidad de la cola sea igual que el nº de alumnos que vayan a asistir a la excursión.
+
+<br>
+
+<a name="13"></a>
+# FASE 2: ACTIVIDAD 3
+
+## DIAGRAMAS DE SECUENCIA
+
+
 
 
 
