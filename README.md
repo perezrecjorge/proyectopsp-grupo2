@@ -628,17 +628,17 @@ HOLA
 
 ### <b>MainApp.start()</b>
 <p align="center">
-<img src="/resources/diagramasecuancia/mainapp-start.png"/>
+<img src="/resources/diagramasecuencia/mainapp-start.png"/>
 </p>
 
 ### <b>MainApp.InitRootLayout()</b>
 <p align="center">
-<img src="/resources/diagramasecuancia/mainapp-initrootlayout.png"/>
+<img src="/resources/diagramasecuencia/mainapp-initrootlayout.png"/>
 </p>
 
 ### <b>MainApp.MuestraVistaMenuInicio()</b>
 <p align="center">
-<img src="/resources/diagramasecuancia/mainapp-muestravistamenuinicio.png"/>
+<img src="/resources/diagramasecuencia/mainapp-muestravistamenuinicio.png"/>
 </p>
 
 
