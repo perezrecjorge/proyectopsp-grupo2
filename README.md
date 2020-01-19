@@ -594,7 +594,7 @@ Que los alumnos puedan visualizar la noticia publicada
 
 ### <b>VISTA CHAT PRIVADO</b>
 <p align="center">
-<img src="/resources/vistas/VistaChatPrivado.png"/>
+<img src="/resources/vistas/VistaCuentaBancaria.png"/>
 </p>
 
 ### <b>VISTA MODIFICAR PERFIL</b>
