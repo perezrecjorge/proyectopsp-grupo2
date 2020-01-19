@@ -56,7 +56,7 @@ en el I.E.S Ramón del Valle Inclán.
 <a name="3"></a>
 # FASE 1: ACTIVIDAD 1 Y  2
 
-<i>Descripcion de actividad: Definicion del problema. Requisitos funcionales.</i><br>
+<i>Descripcion de actividad: Definicion del problema. Requisitos funcionales. Requisitos tecnicos.</i><br><br>
 
 <a name="4"></a>
 ### <b>TÍTULO:</b>
@@ -110,6 +110,8 @@ Por ello, hemos desarrollado un grupo de ideas que pueden llegar a satisfacer di
 
 <a name="6"></a>
 # FASE 1: ACTIVIDAD 3
+
+<i>Descripcion de actividad: Análisis de requisitos funcionales. Casos de Uso.</i><br><br>
 
 <a name="7"></a>
 ### <b>DIAGRAMA CASOS DE USO</b>
@@ -536,6 +538,8 @@ Que los alumnos puedan visualizar la noticia publicada
 <a name="9"></a>
 # FASE 1: ACTIVIDAD 4
 
+<i>Descripcion de actividad: Modelo de objeto de negocio.</i><br><br>
+
 <a name="10"></a>
 ### <b>DIAGRAMA DE CLASES</b>
 
@@ -560,6 +564,8 @@ Que los alumnos puedan visualizar la noticia publicada
 
 <a name="12"></a>
 # FASE 1: ACTIVIDAD 5
+
+<i>Descripcion de actividad: Interfaz grafica.</i><br><br>
 
 ### <b>VISTA INICIO</b>
 <p align="center">
@@ -611,6 +617,8 @@ Que los alumnos puedan visualizar la noticia publicada
 <a name="13"></a>
 # FASE 2: ACTIVIDAD 2
 
+<i>Descripcion de actividad: Hilos</i><br><br>
+
 Las partes que requieren la aplicación de hilos son las siguientes: 
 
 &nbsp;&nbsp;&nbsp;&nbsp;<b>CU-4. Consulta de listado de noticias:</b> se realizará mediante hilos normales (clases que extiendan de Thread o implementen Runnable).
@@ -623,6 +631,8 @@ Las partes que requieren la aplicación de hilos son las siguientes:
 
 <a name="14"></a>
 # FASE 2: ACTIVIDAD 3
+
+<i>Descripcion de actividad: Red. Analisis y Diseño.</i><br><br>
 
 ## DESCRIPCION DE CLASES, ATRIBUTOS, METODOS
 
