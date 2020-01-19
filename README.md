@@ -56,6 +56,8 @@ en el I.E.S Ramón del Valle Inclán.
 <a name="3"></a>
 # FASE 1: ACTIVIDAD 1 Y  2
 
+<i>Descripcion de actividad: Definicion del problema. Requisitos funcionales.</i><br>
+
 <a name="4"></a>
 ### <b>TÍTULO:</b>
 
