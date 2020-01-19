@@ -26,7 +26,7 @@
 > **[&nbsp;&nbsp;&nbsp;&nbsp; Modelo Entidad - Relación](#11):**<br>
 > **[6. FASE 1: Actividad 5](#12):**<br>
 > **[7. FASE 2: Actividad 2](#13):**<br>
-> **[7. FASE 2: Actividad 3](#14):**<br>
+> **[8. FASE 2: Actividad 3](#14):**<br>
 
 <br>
 
