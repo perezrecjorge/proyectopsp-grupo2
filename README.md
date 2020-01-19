@@ -471,8 +471,6 @@ Error en la actualización del perfil.
 
 </table>
 
-<br>
-<br>
 
 </table>
 
@@ -611,18 +609,37 @@ Que los alumnos puedan visualizar la noticia publicada
 
 Las partes que requieren la aplicación de hilos son las siguientes: 
 
-&nbsp;&nbsp;<b>CU-4. Consulta de listado de noticias:</b> se realizará mediante hilos normales (clases que extiendan de Thread o implementen Runnable).
+&nbsp;&nbsp;&nbsp;&nbsp;<b>CU-4. Consulta de listado de noticias:</b> se realizará mediante hilos normales (clases que extiendan de Thread o implementen Runnable).
 
-&nbsp;&nbsp;<b>CU-5. Chat alumno:</b> el chat grupal de alumnos y profesor se realizará empleando sockets y múltiples hilos. Se creará una clase Profesor desde la que se iniciará el socket del servidor (ServerSocket) y clase  Alumno (Socket) y estos intercambiarán mensajes entre ellos. Se usará el protocolo UDP.
+&nbsp;&nbsp;&nbsp;&nbsp;<b>CU-5. Chat alumno:</b> el chat grupal de alumnos y profesor se realizará empleando sockets y múltiples hilos. Se creará una clase Profesor desde la que se iniciará el socket del servidor (ServerSocket) y clase  Alumno (Socket) y estos intercambiarán mensajes entre ellos. Se usará el protocolo UDP.
 
-&nbsp;&nbsp;<b>CU-6. Cuenta bancaria excursiones:</b> se realizará mediante la técnica del productor-consumidor. En este caso, habrá múltiples productores (Alumnos) que pulsarán un botón (el recurso a consumir, en este caso se trata de la cola del programa) solo una vez. Cuando todos los alumnos hayan pagado, es decir, todos hayan pulsado el botón, el profesor (consumidor) podrá realizar la acción “Pagar la excursión” pulsando otro botón. Debemos de asegurar que un alumno pueda pulsar el botón una única vez, y por otra parte que la capacidad de la cola sea igual que el nº de alumnos que vayan a asistir a la excursión.
+&nbsp;&nbsp;&nbsp;&nbsp;<b>CU-6. Cuenta bancaria excursiones:</b> se realizará mediante la técnica del productor-consumidor. En este caso, habrá múltiples productores (Alumnos) que pulsarán un botón (el recurso a consumir, en este caso se trata de la cola del programa) solo una vez. Cuando todos los alumnos hayan pagado, es decir, todos hayan pulsado el botón, el profesor (consumidor) podrá realizar la acción “Pagar la excursión” pulsando otro botón. Debemos de asegurar que un alumno pueda pulsar el botón una única vez, y por otra parte que la capacidad de la cola sea igual que el nº de alumnos que vayan a asistir a la excursión.
 
 <br>
 
 <a name="13"></a>
 # FASE 2: ACTIVIDAD 3
 
+## DESCRIPCION DE CLASES, ATRIBUTOS, METODOS
+
+HOLA
+
 ## DIAGRAMAS DE SECUENCIA
+
+### <b>MainApp.start()</b>
+<p align="center">
+<img src="/resources/diagramasecuancia/mainapp-start.png"/>
+</p>
+
+### <b>MainApp.InitRootLayout()</b>
+<p align="center">
+<img src="/resources/diagramasecuancia/mainapp-initrootlayout.png"/>
+</p>
+
+### <b>MainApp.MuestraVistaMenuInicio()</b>
+<p align="center">
+<img src="/resources/diagramasecuancia/mainapp-muestravistamenuinicio.png"/>
+</p>
 
 
 
