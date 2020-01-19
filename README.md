@@ -15,16 +15,18 @@
 # <p align="center">Índice:</p>
 > **[1. Licencia y Autores](#1):**<br>
 > **[2. Presentación](#2):**<br>
-> **[3. Actividad 1 y 2](#3):**<br>
+> **[3. FASE 1: Actividad 1 y 2](#3):**<br>
 > **[&nbsp;&nbsp;&nbsp;&nbsp; Título](#4):**<br>
 > **[&nbsp;&nbsp;&nbsp;&nbsp; Resumen](#5):**<br>
-> **[4. Actividad 3](#6):**<br>
+> **[4. FASE 1: Actividad 3](#6):**<br>
 > **[&nbsp;&nbsp;&nbsp;&nbsp; Diagrama - Casos de uso](#7):**<br>
 > **[&nbsp;&nbsp;&nbsp;&nbsp; Anexo](#8):**<br>
-> **[5. Actividad 4](#9):**<br>
+> **[5. FASE 1: Actividad 4](#9):**<br>
 > **[&nbsp;&nbsp;&nbsp;&nbsp; Diagrama de Clases](#10):**<br>
 > **[&nbsp;&nbsp;&nbsp;&nbsp; Modelo Entidad - Relación](#11):**<br>
-> **[6. Actividad 5](#12):**<br>
+> **[6. FASE 1: Actividad 5](#12):**<br>
+> **[7. FASE 2: Actividad 2](#13):**<br>
+> **[7. FASE 2: Actividad 3](#14):**<br>
 
 <br>
 
@@ -52,7 +54,7 @@ en el I.E.S Ramón del Valle Inclán.
 <br>
 
 <a name="3"></a>
-# ACTIVIDAD 1 Y  2
+# FASE 1: ACTIVIDAD 1 Y  2
 
 <a name="4"></a>
 ### <b>TÍTULO:</b>
@@ -105,7 +107,7 @@ Por ello, hemos desarrollado un grupo de ideas que pueden llegar a satisfacer di
 <br>
 
 <a name="6"></a>
-# ACTIVIDAD 3
+# FASE 1: ACTIVIDAD 3
 
 <a name="7"></a>
 ### <b>DIAGRAMA CASOS DE USO</b>
@@ -530,7 +532,7 @@ Que los alumnos puedan visualizar la noticia publicada
 <br>
 
 <a name="9"></a>
-# ACTIVIDAD 4
+# FASE 1: ACTIVIDAD 4
 
 <a name="10"></a>
 ### <b>DIAGRAMA DE CLASES</b>
@@ -555,7 +557,7 @@ Que los alumnos puedan visualizar la noticia publicada
 <br>
 
 <a name="12"></a>
-# ACTIVIDAD 5
+# FASE 1: ACTIVIDAD 5
 
 ### <b>VISTA INICIO</b>
 <p align="center">
@@ -617,7 +619,7 @@ Las partes que requieren la aplicación de hilos son las siguientes:
 
 <br>
 
-<a name="13"></a>
+<a name="14"></a>
 # FASE 2: ACTIVIDAD 3
 
 ## DESCRIPCION DE CLASES, ATRIBUTOS, METODOS
