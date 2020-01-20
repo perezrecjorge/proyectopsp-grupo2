@@ -638,6 +638,100 @@ Las partes que requieren la aplicación de hilos son las siguientes:
 
 HOLA
 
+<br>
+
+<table>
+
+<tr> <td> Clase </td> </tr>
+
+<tr>
+
+<td>  Nombre de la clase  </td>
+<td>    </td>
+	
+</tr>
+
+<tr>
+<td>  Descripción  </td>
+<td>    </td>
+
+</tr>
+
+<tr> 
+
+<td> Relaciones </td>
+<td></td>
+
+<tr>
+	
+</table>
+
+
+<br>
+
+<br>
+
+<table>
+
+<tr> <td> Atributos </td> </tr>
+
+<tr>
+
+<td>  Atributos  </td>
+<td>    </td>
+	
+</tr>
+
+<tr>
+<td>  Atributos propios de la clase  </td>
+<td>    </td>
+
+</tr>
+
+<tr> 
+
+<td> Atributos propios de la relación </td>
+<td></td>
+
+<tr>
+	
+</table>
+
+
+<br>
+
+<br>
+
+<table>
+
+<tr> <td> Métodos </td> </tr>
+
+<tr>
+
+<td>  Métodos  </td>
+<td>    </td>
+	
+</tr>
+
+<tr>
+<td>  Función  </td>
+<td>    </td>
+
+</tr>
+
+<tr> 
+
+<td> Sintaxis del método </td>
+<td></td>
+
+<tr>
+	
+</table>
+
+
+<br>
+
+
 ## DIAGRAMAS DE SECUENCIA
 
 ### <b>MainApp.start()</b>
