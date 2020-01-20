@@ -806,7 +806,7 @@ HOLA
 
 <tr>
 <td>  Función  </td>
-<td>  *init(): método que inicializa el controlador.<br>
+<td>  ..* init(): método que inicializa el controlador.<br>
 * setDialogStage: pone la ventana en modal.<br>
 * manejaEntrar(): define la acción que se ejecuta al pulsar el botón “Entrar”. En este caso llama al método isOkClicked() y se validan los datos para inciar sesión . <br>
 * manejaCancelar(): define la acción que se ejecuta al pulsar el botón “Cancelar”. Se descartan los datos introducidos y se cierra la ventana.  </td>
