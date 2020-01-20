@@ -730,6 +730,100 @@ HOLA
 
 <br>
 
+#### ControladorIniciarSesion
+<br>
+
+<table>
+
+
+
+<tr>
+
+<td>  Nombre de la clase  </td>
+<td>  ControladorIniciarSesion  </td>
+	
+</tr>
+
+<tr>
+<td>  Descripción  </td>
+<td>  Clase controlador de la vista “VistaIniciarSesion”  </td>
+
+</tr>
+
+<tr> 
+
+<td> Relaciones </td>
+<td>Relaciones con la clase de la vista “VistaIniciarSesion”, con la clase ModeloApp y con el controlador principal MainApp.</td>
+
+<tr>
+	
+</table>
+
+
+<br>
+
+<br>
+
+<table>
+
+
+<tr>
+
+<td>  Atributos  </td>
+<td>  Los atributos de esta clase son los de los componentes (campos de texto y botones), los relacionados a sus acciones (métodos) y los que la relacionan con el resto de clases (MainApp, ModeloApp, UsuarioVO).  </td>
+	
+</tr>
+
+<tr>
+<td>  Atributos propios de la clase  </td>
+<td>  nickNameField, contraseñaField, dialogStage  </td>
+
+</tr>
+
+<tr> 
+
+<td> Atributos propios de la relación </td>
+<td>mainApp, modelo, p </td>
+
+<tr>
+	
+</table>
+
+
+<br>
+
+<br>
+
+<table>
+
+
+<tr>
+
+<td>  Métodos  </td>
+<td>  init(), setDialogStage(), isOkClicked(), manejaEntrar(), manejaCancelar()  </td>
+	
+</tr>
+
+<tr>
+<td>  Función  </td>
+<td>  * init(): método que inicializa el controlador.<br>
+* setDialogStage: pone la ventana en modal.<br>
+* manejaEntrar(): define la acción que se ejecuta al pulsar el botón “Entrar”. En este caso llama al método isOkClicked() y se validan los datos para inciar sesión . <br>
+* manejaCancelar(): define la acción que se ejecuta al pulsar el botón “Cancelar”. Se descartan los datos introducidos y se cierra la ventana.  </td>
+
+</tr>
+
+<tr> 
+
+<td> Sintaxis del método </td>
+<td>Ninguno</td>
+
+<tr>
+	
+</table>
+
+
+<br>
 
 ## DIAGRAMAS DE SECUENCIA
 
