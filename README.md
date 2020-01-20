@@ -638,7 +638,7 @@ Las partes que requieren la aplicación de hilos son las siguientes:
 
 HOLA
 
-<h1> Nombre de clase</h1>
+#### Plantilla clases
 <br>
 
 <table>
