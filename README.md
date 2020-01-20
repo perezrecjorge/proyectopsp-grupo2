@@ -636,7 +636,7 @@ Las partes que requieren la aplicación de hilos son las siguientes:
 
 ## DESCRIPCION DE CLASES, ATRIBUTOS, METODOS
 
-HOLA
+
 
 #### Plantilla clases
 <br>
@@ -806,10 +806,672 @@ HOLA
 
 <tr>
 <td>  Función  </td>
-<td>  ..* init(): método que inicializa el controlador.<br>
-* setDialogStage: pone la ventana en modal.<br>
-* manejaEntrar(): define la acción que se ejecuta al pulsar el botón “Entrar”. En este caso llama al método isOkClicked() y se validan los datos para inciar sesión . <br>
-* manejaCancelar(): define la acción que se ejecuta al pulsar el botón “Cancelar”. Se descartan los datos introducidos y se cierra la ventana.  </td>
+<td>  
+	- init(): método que inicializa el controlador.<br>
+- setDialogStage: pone la ventana en modal.<br>
+- manejaEntrar(): define la acción que se ejecuta al pulsar el botón “Entrar”. En este caso llama al método isOkClicked() y se validan los datos para inciar sesión . <br>
+- manejaCancelar(): define la acción que se ejecuta al pulsar el botón “Cancelar”. Se descartan los datos introducidos y se cierra la ventana.  </td>
+
+</tr>
+
+<tr> 
+
+<td> Sintaxis del método </td>
+<td>Ninguno</td>
+
+<tr>
+	
+</table>
+
+
+<br>
+
+
+#### ControladorVistaMenuInicio
+<br>
+
+<table>
+
+
+
+<tr>
+
+<td>  Nombre de la clase  </td>
+<td>  ControladorVistaMenuInicio  </td>
+	
+</tr>
+
+<tr>
+<td>  Descripción  </td>
+<td>  Clase controlador de la vista “VistaIniciarSesion”  </td>
+
+</tr>
+
+<tr> 
+
+<td> Relaciones </td>
+<td>Relaciones con la clase de la vista “VistaIniciarSesion”, con la clase ModeloApp y con el controlador principal MainApp.</td>
+
+<tr>
+	
+</table>
+
+
+<br>
+
+<br>
+
+<table>
+
+
+<tr>
+
+<td>  Atributos  </td>
+<td>  Los atributos de esta clase son los de los componentes (campos de texto y botones), los relacionados a sus acciones y los que la relacionan con el resto de clases (MainApp, ModeloApp, UsuarioVO).  </td>
+	
+</tr>
+
+<tr>
+<td>  Atributos propios de la clase  </td>
+<td>  ImageView  </td>
+
+</tr>
+
+<tr> 
+
+<td> Atributos propios de la relación </td>
+<td>mainAPP, modelo</td>
+
+<tr>
+	
+</table>
+
+
+<br>
+
+<br>
+
+<table>
+
+
+<tr>
+
+<td>  Métodos  </td>
+<td>  init(), setMainAPP(), manejaButton()  </td>
+	
+</tr>
+
+<tr>
+<td>  Función  </td>
+<td>  - init(): método que inicializa el controlador.<br>
+- setMainAPP: establece el controlador <br>
+- manejaButton(): Contiene un método de este tipo por cada Button en la vista. Ejecuta el codigo del boton que has pulsado.  </td>
+
+</tr>
+
+<tr> 
+
+<td> Sintaxis del método </td>
+<td>Ninguno</td>
+
+<tr>
+	
+</table>
+
+
+<br>
+
+#### ControladorVistaMenuAlumno
+<br>
+
+<table>
+
+
+
+<tr>
+
+<td>  Nombre de la clase  </td>
+<td>  ControladorVistaMenuAlumno  </td>
+	
+</tr>
+
+<tr>
+<td>  Descripción  </td>
+<td>  Clase controlador de la vista “VistaMenuAlumno”  </td>
+
+</tr>
+
+<tr> 
+
+<td> Relaciones </td>
+<td> Relaciones con la clase de la vista “VistaMenuAlumno”, con la clase ModeloApp y con el controlador principal MainApp.</td>
+
+<tr>
+	
+</table>
+
+
+<br>
+
+<br>
+
+<table>
+
+
+<tr>
+
+<td>  Atributos  </td>
+<td>  Los atributos de esta clase son los de los componentes (campos de texto y botones), los relacionados a sus acciones y los que la relacionan con el resto de clases (MainApp, ModeloApp, UsuarioVO).  </td>
+	
+</tr>
+
+<tr>
+<td>  Atributos propios de la clase  </td>
+<td>  Ninguno  </td>
+
+</tr>
+
+<tr> 
+
+<td> Atributos propios de la relación </td>
+<td>mainAPP, modelo</td>
+
+<tr>
+	
+</table>
+
+
+<br>
+
+<br>
+
+<table>
+
+
+<tr>
+
+<td>  Métodos  </td>
+<td>  init(), setDialogStage(), isOkClicked(), manejaEntrar(), manejaCancelar()  </td>
+	
+</tr>
+
+<tr>
+<td>  Función  </td>
+<td>   - init(): método que inicializa el controlador.<br>
+- setMainAPP: establece el controlador <br>
+- manejaButton(): Contiene un método de este tipo por cada Button en la vista. Ejecuta el codigo del boton que has pulsado. 
+</tr>
+
+<tr> 
+
+<td> Sintaxis del método </td>
+<td>Ninguno</td>
+
+<tr>
+	
+</table>
+
+
+<br>
+
+####ControladorVistaMenuAlumno
+
+<br>
+
+<table>
+
+
+
+<tr>
+
+<td>  Nombre de la clase  </td>
+<td>   ControladorVistaMenuAlumno</td>
+	
+</tr>
+
+<tr>
+<td>  Descripción  </td>
+<td>  Clase controlador de la vista “VistaMenuAlumno”  </td>
+
+</tr>
+
+<tr> 
+
+<td> Relaciones </td>
+<td>Relaciones con la clase de la vista “VistaMenuAlumno”, con la clase ModeloApp y con el controlador principal MainApp.</td>
+
+<tr>
+	
+</table>
+
+
+<br>
+
+<br>
+
+<table>
+
+
+<tr>
+
+<td>  Atributos  </td>
+<td>  Los atributos de esta clase son los de los componentes (campos de texto y botones), los relacionados a sus acciones y los que la relacionan con el resto de clases (MainApp, ModeloApp, UsuarioVO).  </td>
+	
+</tr>
+
+<tr>
+<td>  Atributos propios de la clase  </td>
+<td>  Ninguno  </td>
+
+</tr>
+
+<tr> 
+
+<td> Atributos propios de la relación </td>
+<td>mainAPP, modelo</td>
+
+<tr>
+	
+</table>
+
+
+<br>
+
+<br>
+
+<table>
+
+
+<tr>
+
+<td>  Métodos  </td>
+<td>  init(), setDialogStage(), isOkClicked(), manejaEntrar(), manejaCancelar()  </td>
+	
+</tr>
+
+<tr>
+<td>  Función  </td>
+<td>  - init(): método que inicializa el controlador.<br>
+- setMainAPP: establece el controlador <br>
+- manejaButton(): Contiene un método de este tipo por cada Button en la vista. Ejecuta el codigo del boton que has pulsado.   </td>
+
+</tr>
+
+<tr> 
+
+<td> Sintaxis del método </td>
+<td>Ninguno</td>
+
+<tr>
+	
+</table>
+
+
+<br>
+
+
+#### ControladorVistaNoticias
+
+<br>
+
+<table>
+
+
+
+<tr>
+
+<td>  Nombre de la clase  </td>
+<td>  ControladorVistaNoticias  </td>
+	
+</tr>
+
+<tr>
+<td>  Descripción  </td>
+<td>  Clase controlador de la vista “VistaNoticias”  </td>
+
+</tr>
+
+<tr> 
+
+<td> Relaciones </td>
+<td>Relaciones con la clase de la vista “VistaNoticias”, con la clase ModeloApp y con el controlador principal MainApp.</td>
+
+<tr>
+	
+</table>
+
+
+<br>
+
+<br>
+
+<table>
+
+
+<tr>
+
+<td>  Atributos  </td>
+<td>   Los atributos de esta clase son los de los componentes (campos de texto y botones), los relacionados a sus acciones y los que la relacionan con el resto de clases (MainApp, ModeloApp, UsuarioVO). </td>
+	
+</tr>
+
+<tr>
+<td>  Atributos propios de la clase  </td>
+<td>  Ninguno  </td>
+
+</tr>
+
+<tr> 
+
+<td> Atributos propios de la relación </td>
+<td>mainAPP, modelo</td>
+
+<tr>
+	
+</table>
+
+
+<br>
+
+<br>
+
+<table>
+
+
+<tr>
+
+<td>  Métodos  </td>
+<td>  init(), setMainApp(), manejaVolver()  </td>
+	
+</tr>
+
+<tr>
+<td>  Función  </td>
+<td>  - init(): método que inicializa el controlador.<br>
+- setMainAPP: establece el controlador<br>
+- manejaButton(): Contiene un método de este tipo por cada Button en la vista. Ejecuta el codigo del boton que has pulsado. <br></td>
+
+</tr>
+
+<tr> 
+
+<td> Sintaxis del método </td>
+<td>Ninguno</td>
+
+<tr>
+	
+</table>
+
+
+<br>
+
+#### ControladorVistaChatGrupal
+<br>
+
+<table>
+
+
+
+<tr>
+
+<td>  Nombre de la clase  </td>
+<td> ControladorVistaChatGrupal   </td>
+	
+</tr>
+
+<tr>
+<td>  Descripción  </td>
+<td>  Clase controlador de la vista “VistaChatGrupal”  </td>
+
+</tr>
+
+<tr> 
+
+<td> Relaciones </td>
+<td>Relaciones con la clase de la vista “VistaChatGrupal”.</td>
+
+<tr>
+	
+</table>
+
+
+<br>
+
+<br>
+
+<table>
+
+
+<tr>
+
+<td>  Atributos  </td>
+<td>   Los atributos de esta clase son los de los componentes (campos de texto y botones), los relacionados a sus acciones y los que la relacionan con el resto de clases (MainApp, ModeloApp, UsuarioVO). </td>
+	
+</tr>
+
+<tr>
+<td>  Atributos propios de la clase  </td>
+<td> textarea, p (UsuarioVO), okClicked   </td>
+
+</tr>
+
+<tr> 
+
+<td> Atributos propios de la relación </td>
+<td>dialogStage</td>
+
+<tr>
+	
+</table>
+
+
+<br>
+
+<br>
+
+<table>
+
+
+<tr>
+
+<td>  Métodos  </td>
+<td>  init(), setMainAPP(), manejaButton()  </td>
+	
+</tr>
+
+<tr>
+<td>  Función  </td>
+<td>  - init(): método que inicializa el controlador.<br>
+- setMainAPP: establece el controlador<br>
+- manejaButton(): Contiene un método de este tipo por cada Button en la vista. Ejecuta el codigo del boton que has pulsado. <br>  </td>
+
+</tr>
+
+<tr> 
+
+<td> Sintaxis del método </td>
+<td>Ninguno</td>
+
+<tr>
+	
+</table>
+
+
+<br>
+
+#### ControladorVistaCuentaBancaria
+<br>
+
+<table>
+
+
+
+<tr>
+
+<td>  Nombre de la clase  </td>
+<td>  ControladorVistaCuentaBancaria  </td>
+	
+</tr>
+
+<tr>
+<td>  Descripción  </td>
+<td>  Clase controlador de la vista “VistaCuentaBancaria”  </td>
+
+</tr>
+
+<tr> 
+
+<td> Relaciones </td>
+<td>Relaciones con la clase de la vista “VistaCuentaBancaria”</td>
+
+<tr>
+	
+</table>
+
+
+<br>
+
+<br>
+
+<table>
+
+
+<tr>
+
+<td>  Atributos  </td>
+<td> Los atributos de esta clase son los de los componentes (campos de texto y botones), los relacionados a sus acciones y los que la relacionan con el resto de clases (MainApp, ModeloApp, UsuarioVO).   </td>
+	
+</tr>
+
+<tr>
+<td>  Atributos propios de la clase  </td>
+<td>  p (UsuarioVO), okClicked  </td>
+
+</tr>
+
+<tr> 
+
+<td> Atributos propios de la relación </td>
+<td>dialogStage</td>
+
+<tr>
+	
+</table>
+
+
+<br>
+
+<br>
+
+<table>
+
+
+<tr>
+
+<td>  Métodos  </td>
+<td>  init(), setMainAPP(), manejaButton()  </td>
+	
+</tr>
+
+<tr>
+<td>  Función  </td>
+<td>  - init(): método que inicializa el controlador.<br>
+- setMainAPP: establece el controlador<br>
+- manejaButton(): Contiene un método de este tipo por cada Button en la vista. Ejecuta el codigo del boton que has pulsado. <br>  </td>
+
+</tr>
+
+<tr> 
+
+<td> Sintaxis del método </td>
+<td>Ninguno</td>
+
+<tr>
+	
+</table>
+
+
+<br>
+
+#### ControladorVistaModificarPerfil
+<br>
+
+<table>
+
+
+
+<tr>
+
+<td>  Nombre de la clase  </td>
+<td>   ControladorVistaModificarPerfil </td>
+	
+</tr>
+
+<tr>
+<td>  Descripción  </td>
+<td>  Clase controlador de la vista “VistaModificarPerfil”  </td>
+
+</tr>
+
+<tr> 
+
+<td> Relaciones </td>
+<td>Relaciones con la clase de la vista “VistaModificarPerfil”.</td>
+
+<tr>
+	
+</table>
+
+
+<br>
+
+<br>
+
+<table>
+
+
+<tr>
+
+<td>  Atributos  </td>
+<td>  Los atributos de esta clase son los de los componentes (campos de texto y botones), los relacionados a sus acciones y los que la relacionan con el resto de clases (MainApp, ModeloApp, UsuarioVO)  </td>
+	
+</tr>
+
+<tr>
+<td>  Atributos propios de la clase  </td>
+<td>   p (UsuarioVO), okClicked </td>
+
+</tr>
+
+<tr> 
+
+<td> Atributos propios de la relación </td>
+<td>dialogStage</td>
+
+<tr>
+	
+</table>
+
+
+<br>
+
+<br>
+
+<table>
+
+
+<tr>
+
+<td>  Métodos  </td>
+<td>  init(), setMainAPP(), manejaButton()  </td>
+	
+</tr>
+
+<tr>
+<td>  Función  </td>
+<td>  - init(): método que inicializa el controlador.<br>
+- setMainAPP: establece el controlador<br>
+- manejaButton(): Contiene un método de este tipo por cada Button en la vista. Ejecuta el codigo del boton que has pulsado. <br>  </td>
 
 </tr>
 
