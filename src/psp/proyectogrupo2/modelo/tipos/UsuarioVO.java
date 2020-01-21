@@ -1,12 +1,17 @@
 package psp.proyectogrupo2.modelo.tipos;
 
-import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.property.StringProperty;
+import javafx.beans.property.*;
+
+
+/**
+ * @author Jorge y Vic
+ */
 
 public class UsuarioVO {
 
-	private Integer id;
-	private final StringProperty n;
+	private IntegerProperty id;
+	private  StringProperty nombre , ap, nick, cont;
+	private  ObjectProperty<String> tipo;
 	// private final IntegerProperty ni;
 	// private final ObjectProperty<TipoX> tx;
 	// private final FloatProperty nf;
@@ -15,38 +20,120 @@ public class UsuarioVO {
 	 * Default constructor.
 	 */
 	public UsuarioVO() {
-		this(null);
+
 	}
 
-	public UsuarioVO(Integer id, String n) {
-		this.id = id;
+	public UsuarioVO(Integer id, String nombre, String ap, String nick, String cont, String tipo) {
+		this.id = new SimpleIntegerProperty(id);
+		this.nombre = new SimpleStringProperty(nombre);
+		this.ap = new SimpleStringProperty(ap);
+		this.nick = new SimpleStringProperty(nick);
+		this.cont = new SimpleStringProperty(cont);
+		this.tipo = new SimpleObjectProperty<String>(tipo);
 
 		// this.ni = new SimpleIntegerProperty(ni);
-		this.n = new SimpleStringProperty(n);
 		// this.tx = new SimpleObjectProperty<TipoX>(tx);
 		// this.nf = new SimpleFloatProperty(nf);
 	}
 
-	public UsuarioVO(String n) {
-		this.id = null;
-
+	/*public UsuarioVO() {
+		this.id = new SimpleIntegerProperty();
+		this.nombre = new SimpleStringProperty();
+		this.ap = new SimpleStringProperty();
+		this.nick = new SimpleStringProperty();
+		this.cont = new SimpleStringProperty();
+		this.tipo = new SimpleObjectProperty<String>();
 		// this.ni = new SimpleIntegerProperty(ni);
-		this.n = new SimpleStringProperty(n);
+
 		// this.tx = new SimpleObjectProperty<TipoX>(tx);
 		// this.nf = new SimpleFloatProperty(nf);
-	}
+	}*/
 
-	public Integer getId() {
+	public IntegerProperty getId() {
 		return id;
 	}
 
+	public int getIdUser(){
+		return this.getId().getValue();
+	}
 	public void setId(Integer id) {
-		this.id = id;
+		this.id.set(id);
 	}
 
-	public StringProperty nProperty() {
-		return n;
+
+
+	//Getters y setter del nombre del usuario
+
+	public StringProperty getNombre() {
+		return this.nombre;
 	}
+	public String getNombreUser(){
+		return this.nombre.getValue();
+	}
+
+	public void setNombre(String nombre){
+		this.nombre.set(nombre);
+	}
+
+	//Getters y setter del apellido del usuario
+	public String getApellido() {
+		return ap.getValue();
+	}
+
+	public StringProperty setApellidoProperty() {
+		return ap;
+	}
+
+	public void setAp(String ap) {
+		this.ap.set(ap);
+	}
+
+	//Getters y setter del nick del usuario
+
+	public String getNick() {
+		return nick.get();
+	}
+
+	public StringProperty getNickProperty() {
+		return nick;
+	}
+
+	public void setNick(String nick) {
+		this.nick.set(nick);
+	}
+
+	//Getters y setter de la contraseña del usuario.
+
+	public String getCont() {
+		return cont.get();
+	}
+
+	public StringProperty getContProperty() {
+		return cont;
+	}
+
+	public void setCont(String cont) {
+		this.cont.set(cont);
+	}
+
+	//Getters y setter del tipo de usuario (Alumno o profesor; solo puede haber un alumno profesor)
+
+
+	public String getTipo() {
+		return tipo.get();
+	}
+
+	public ObjectProperty<String> getTipoProperty() {
+		return tipo;
+	}
+
+	public void setTipo(String tipo) {
+		this.tipo.set(tipo);
+	}
+
+
+
+
 
 	/*
 	 * public IntegerProperty niProperty() { return ni; }
@@ -59,15 +146,6 @@ public class UsuarioVO {
 	 * 
 	 * public void setNi(Integer ni) { this.ni.set(ni); }
 	 */
-
-	public String getN() {
-		return n.get();
-	}
-
-	public void setN(String n) {
-		this.n.set(n);
-		;
-	}
 
 	/*
 	 * public Float getNf() { return nf.get(); }
