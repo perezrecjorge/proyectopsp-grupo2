@@ -6,7 +6,7 @@ import psp.proyectogrupo2.modelo.tipos.NoticiaVO;
 import psp.proyectogrupo2.modelo.tipos.UsuarioVO;
 import psp.proyectogrupo2.util.ExcepcionTorge;
 
-public interface TorgeDAO {
+public interface ModeloTorgeDAO {
 
 
 	//Métodos para implementar en la clase UsuarioVO

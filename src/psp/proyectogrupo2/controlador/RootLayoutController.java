@@ -18,10 +18,9 @@ public class RootLayoutController {
 	private ModeloTorge modelo;
 
 	/**
-	 * Is called by the main application to give a reference back to itself.
-	 * 
+	 *
 	 * @param mainApp
-	 * @param pm
+	 * @param m
 	 */
 	public void setMainApp(MainAPP mainApp, ModeloTorge m) {
 		this.mainApp = mainApp;
