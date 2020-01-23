@@ -8,13 +8,12 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Alert.AlertType;
 import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import psp.proyectogrupo2.controlador.*;
 import psp.proyectogrupo2.modelo.ModeloTorge;
 import psp.proyectogrupo2.modelo.tipos.UsuarioVO;
@@ -216,7 +215,26 @@ public class MainAPP extends Application {
 		}
 	}
 
-	public boolean muestraVistaChatGrupal() {
+	public void muestraChatGrupalInicio() {
+		try {
+			// Load person overview.
+			FXMLLoader loader = new FXMLLoader();
+			loader.setLocation(MainAPP.class.getResource("vista/VistaChatGrupalInicio.fxml"));
+			AnchorPane menualumno = (AnchorPane) loader.load();
+
+			// Colocamos esta vista en el centro del rootlayout
+			rootLayout.setCenter(menualumno);
+
+			// Le pasamos al controlador de esta vista este supercontrolador
+			ControladorVistaChatGrupalInicio controller = loader.getController();
+			controller.setMainApp(this, modelo);
+
+		} catch (IOException ioe) {
+			ioe.printStackTrace();
+		}
+	}
+
+	public void muestraVistaChatGrupal() {
 		try {
 
 			// Load the fxml file and create a new stage for the popup dialog.
@@ -240,11 +258,69 @@ public class MainAPP extends Application {
 			// Show the dialog and wait until the user closes it
 			dialogStage.showAndWait();
 
-			return controller.isOkClicked();
 
 		} catch (IOException e) {
 			e.printStackTrace();
-			return false;
+		}
+	}
+
+	public void muestraVistaChatGrupalUDPJorge() {
+		try {
+
+			// Load the fxml file and create a new stage for the popup dialog.
+			FXMLLoader loader = new FXMLLoader();
+			loader.setLocation(MainAPP.class.getResource("vista/VistaChatGrupalUDPJorge.fxml"));
+			AnchorPane page = (AnchorPane) loader.load();
+
+			// Create the dialog Stage.
+			Stage dialogStage = new Stage();
+			dialogStage.setTitle("CHAT GRUPAL JORGE");
+			dialogStage.getIcons().add(new Image("file:resources/logotorgeiconoventana.png"));
+			dialogStage.initModality(Modality.WINDOW_MODAL);
+			dialogStage.initOwner(primaryStage);
+			Scene scene = new Scene(page);
+			dialogStage.setScene(scene);
+
+			// Set the person into the controller.
+			ControladorVistaChatGrupalUDPJorge controller = loader.getController();
+			controller.setDialogStage(dialogStage);
+
+			// Show the dialog and wait until the user closes it
+			dialogStage.showAndWait();
+
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+	public void muestraVistaChatGrupalUDPVictor() {
+		try {
+
+			// Load the fxml file and create a new stage for the popup dialog.
+			FXMLLoader loader = new FXMLLoader();
+			loader.setLocation(MainAPP.class.getResource("vista/VistaChatGrupalUDPVictor.fxml"));
+			AnchorPane page = (AnchorPane) loader.load();
+
+			// Create the dialog Stage.
+			Stage dialogStage = new Stage();
+			dialogStage.setTitle("CHAT GRUPAL VICTOR");
+			dialogStage.getIcons().add(new Image("file:resources/logotorgeiconoventana.png"));
+			dialogStage.initModality(Modality.WINDOW_MODAL);
+			dialogStage.initOwner(primaryStage);
+			Scene scene = new Scene(page);
+			dialogStage.setScene(scene);
+
+			// Set the person into the controller.
+			ControladorVistaChatGrupalUDPVictor controller = loader.getController();
+			controller.setDialogStage(dialogStage);
+
+			// Show the dialog and wait until the user closes it
+			dialogStage.showAndWait();
+
+
+		} catch (IOException e) {
+			e.printStackTrace();
 		}
 	}
 

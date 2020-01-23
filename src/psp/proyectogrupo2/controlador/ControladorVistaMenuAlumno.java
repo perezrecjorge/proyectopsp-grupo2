@@ -64,13 +64,10 @@ public class ControladorVistaMenuAlumno {
 	@FXML
 	private void manejaChatAlumnos() {
 
-		boolean okClicked = mainApp.muestraVistaChatGrupal();
-		
-		if (okClicked) {
-
-			System.out.println("CHAT GRUPAL OK BIEN");
-			
-		}
+		//mainApp.muestraVistaChatGrupal();
+		//mainApp.muestraVistaChatGrupalUDPJorge();
+		//mainApp.muestraVistaChatGrupalUDPVictor();
+		mainApp.muestraChatGrupalInicio();
 	}
 	
 	/**

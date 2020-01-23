@@ -7,6 +7,7 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import psp.proyectogrupo2.MainAPP;
 import psp.proyectogrupo2.modelo.tipos.UsuarioVO;
 
 
@@ -16,9 +17,10 @@ public class ControladorVistaChatGrupal {
 	@FXML
 	private TextArea textarea;
 
+
+
 	private Stage dialogStage;
 	private UsuarioVO p;
-	private boolean okClicked = false;
 
 	/**
 	 * Initializes the controller class. This method is automatically called after
@@ -41,15 +43,6 @@ public class ControladorVistaChatGrupal {
 	}
 
 	/**
-	 * Returns true if the user clicked OK, false otherwise.
-	 * 
-	 * @return
-	 */
-	public boolean isOkClicked() {
-		return okClicked;
-	}
-
-	/**
 	 * Called when the user clicks ok.
 	 */
 	@FXML
@@ -61,8 +54,15 @@ public class ControladorVistaChatGrupal {
 
         ping.start();
         pong.start();
-        
-		okClicked = true;
+
+	}
+
+	@FXML
+	private void manejaSalir() {
+
+		dialogStage.close();
+		System.out.println("Enviar SALIR\n");
+
 	}
 	
 	public String getTextarea() {
