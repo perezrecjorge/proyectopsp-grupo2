@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="440.0" prefWidth="340.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="psp.proyectogrupo2.controlador.ControladorVistaChatGrupal">
+   <children>
+      <Label layoutX="12.0" layoutY="36.0" text="Chat Grupal Alumnos">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField layoutX="12.0" layoutY="401.0" prefHeight="25.0" prefWidth="228.0" />
+      <Button layoutX="248.0" layoutY="401.0" mnemonicParsing="false" onAction="#manejaEnviar" prefHeight="25.0" prefWidth="80.0" text="Enviar" />
+      <TextArea fx:id="textarea" layoutX="12.0" layoutY="63.0" prefHeight="330.0" prefWidth="316.0" wrapText="true" />
+      <Button layoutX="12.0" layoutY="10.0" mnemonicParsing="false" onAction="#manejaSalir" prefHeight="25.0" prefWidth="80.0" text="Salir" />
+   </children>
+</AnchorPane>
