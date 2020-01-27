@@ -91,11 +91,9 @@ public class ControladorVistaChatGrupalUDPJorge implements Runnable {
 	}
 
 	public void establecerNombre() {
-		if (modelo.getTipoconectado().equalsIgnoreCase("profesor")) {
-			this.nombre = "| PROFESOR | Jorge";
-		} else {
-			this.nombre = "Jorge";
-		}
+
+		this.nombre = "Jorge";
+
 	}
 
 	/**
