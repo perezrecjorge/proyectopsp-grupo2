@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="psp.proyectogrupo2.controlador.ControladorVistaCuentaBancaria">
+   <children>
+      <Label layoutX="147.0" layoutY="153.0" prefHeight="194.0" prefWidth="306.0" text="00,00 €">
+         <font>
+            <Font size="96.0" />
+         </font>
+      </Label>
+      <Label layoutX="224.0" layoutY="164.0" text="SALDO TOTAL">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="ingresarLabel" layoutX="14.0" layoutY="410.0" text="Ingresar:" />
+      <TextField fx:id="ingresarField" layoutX="14.0" layoutY="427.0" />
+      <Label fx:id="retirarLabel" layoutX="437.0" layoutY="407.0" text="Retirar:" />
+      <TextField fx:id="retirarField" layoutX="437.0" layoutY="424.0" />
+      <Button fx:id="btningresar" layoutX="14.0" layoutY="464.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" text="INGRESAR" />
+      <Button fx:id="btnretirar" layoutX="437.0" layoutY="461.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" text="RETIRAR" />
+      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#manejaVolver" prefHeight="25.0" prefWidth="30.0" text="&lt;-" />
+   </children>
+</AnchorPane>
