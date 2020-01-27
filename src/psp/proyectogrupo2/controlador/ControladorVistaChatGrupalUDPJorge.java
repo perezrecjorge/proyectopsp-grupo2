@@ -7,6 +7,7 @@ import javafx.scene.control.TextField;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import psp.proyectogrupo2.modelo.ModeloTorge;
 import psp.proyectogrupo2.modelo.tipos.UsuarioVO;
 
 import javax.swing.*;
@@ -20,6 +21,7 @@ import java.time.Clock;
 
 public class ControladorVistaChatGrupalUDPJorge implements Runnable {
 
+    private ModeloTorge modelo;
 	private Stage dialogStage;
 	private UsuarioVO p;
 
@@ -49,7 +51,6 @@ public class ControladorVistaChatGrupalUDPJorge implements Runnable {
 
 		try {
 			iniciarHilo();
-			this.nombre = "Jorge";
 			System.out.println("ENTRA AQUI 1");
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -81,9 +82,22 @@ public class ControladorVistaChatGrupalUDPJorge implements Runnable {
 
 	}
 
+    public void setModelo(ModeloTorge modelo) {
+        this.modelo = modelo;
+    }
+
 	public ControladorVistaChatGrupalUDPJorge(String nombre) {
 		this.nombre = nombre;
 	}
+
+    public void establecerNombre() {
+        if (modelo.getTipoconectado().equalsIgnoreCase("profesor")) {
+            this.nombre = "| PROFESOR | Jorge";
+        } else {
+            this.nombre = "Jorge";
+        }
+    }
+
 	/**
 	 * Called when the user clicks ok.
 	 */

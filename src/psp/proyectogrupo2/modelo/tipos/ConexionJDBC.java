@@ -10,7 +10,7 @@ public class ConexionJDBC {
 
 
     private Connection conn = null;
-    private String url = "jdbc:mysql://localhost/torge";
+    private String url = "jdbc:mysql://localhost/torgeapp";
     private String user = "root";
     private String psswd = "";
 
@@ -43,10 +43,8 @@ public class ConexionJDBC {
         conn.close();
     }
 
-
     public Connection openConnection() throws ExcepcionTorge {
         try {
-
             conn = DriverManager.getConnection(url, user, psswd); // TODO
         } catch (SQLException e) {
             throw new ExcepcionTorge(e.getErrorCode());

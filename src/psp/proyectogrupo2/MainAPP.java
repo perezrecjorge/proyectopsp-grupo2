@@ -8,6 +8,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
@@ -16,6 +17,7 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import psp.proyectogrupo2.controlador.*;
 import psp.proyectogrupo2.modelo.ModeloTorge;
+import psp.proyectogrupo2.modelo.tipos.NoticiaVO;
 import psp.proyectogrupo2.modelo.tipos.UsuarioVO;
 
 public class MainAPP extends Application {
@@ -23,10 +25,8 @@ public class MainAPP extends Application {
 	private Stage primaryStage; //
 	private BorderPane rootLayout; // La vista con el menú donde se van poniendo las otras vistas
 
-	private ObservableList<UsuarioVO> listaElementos = FXCollections.observableArrayList(); // Lista Observable
-																							// donde
-	// cargamos todos los datos
-	// de la BD
+	private ObservableList<UsuarioVO> listaUsuarios = FXCollections.observableArrayList();
+	private ObservableList<NoticiaVO> listaNoticias = FXCollections.observableArrayList();
 
 	private ModeloTorge modelo;
 
@@ -109,7 +109,7 @@ public class MainAPP extends Application {
 		}
 	}
 
-	public boolean muestraVistaIniciarSesion() {
+	public boolean muestraVistaIniciarSesion(UsuarioVO aux) {
 		try {
 
 			// Load the fxml file and create a new stage for the popup dialog.
@@ -129,6 +129,7 @@ public class MainAPP extends Application {
 			// Set the person into the controller.
 			ControladorVistaIniciarSesion controller = loader.getController();
 			controller.setDialogStage(dialogStage);
+			controller.setUsuarioLogin(aux);
 
 			// Show the dialog and wait until the user closes it
 			dialogStage.showAndWait();
@@ -141,7 +142,7 @@ public class MainAPP extends Application {
 		}
 	}
 
-	public boolean muestraVistaRegistro() {
+	public boolean muestraVistaRegistro(UsuarioVO aux) {
 		try {
 
 			// Load the fxml file and create a new stage for the popup dialog.
@@ -161,6 +162,7 @@ public class MainAPP extends Application {
 			// Set the person into the controller.
 			ControladorVistaRegistro controller = loader.getController();
 			controller.setDialogStage(dialogStage);
+			controller.setUsuarioNuevo(aux);
 
 			// Show the dialog and wait until the user closes it
 			dialogStage.showAndWait();
@@ -209,6 +211,7 @@ public class MainAPP extends Application {
 			// Le pasamos al controlador de esta vista este supercontrolador
 			ControladorVistaNoticias controller = loader.getController();
 			controller.setMainApp(this, modelo);
+			controller.ocultarBotonesAlumnos();
 
 		} catch (IOException ioe) {
 			ioe.printStackTrace();
@@ -284,6 +287,8 @@ public class MainAPP extends Application {
 			// Set the person into the controller.
 			ControladorVistaChatGrupalUDPJorge controller = loader.getController();
 			controller.setDialogStage(dialogStage);
+			controller.setModelo(modelo);
+			controller.establecerNombre();
 
 			// Show the dialog and wait until the user closes it
 			dialogStage.showAndWait();
@@ -314,6 +319,8 @@ public class MainAPP extends Application {
 			// Set the person into the controller.
 			ControladorVistaChatGrupalUDPVictor controller = loader.getController();
 			controller.setDialogStage(dialogStage);
+			controller.setModelo(modelo);
+			controller.establecerNombre();
 
 			// Show the dialog and wait until the user closes it
 			dialogStage.showAndWait();
@@ -324,7 +331,7 @@ public class MainAPP extends Application {
 		}
 	}
 
-	public boolean muestraCuentaBancaria() {
+	public void muestraCuentaBancaria() {
 		try {
 
 			// Load the fxml file and create a new stage for the popup dialog.
@@ -332,18 +339,42 @@ public class MainAPP extends Application {
 			loader.setLocation(MainAPP.class.getResource("vista/VistaCuentaBancaria.fxml"));
 			AnchorPane page = (AnchorPane) loader.load();
 
-			// Create the dialog Stage.
-			Stage dialogStage = new Stage();
-			dialogStage.setTitle("CUENTA BANCARIA");
-			dialogStage.initModality(Modality.WINDOW_MODAL);
-			dialogStage.initOwner(primaryStage);
-			dialogStage.getIcons().add(new Image("file:resources/logotorgeiconoventana.png"));
-			Scene scene = new Scene(page);
-			dialogStage.setScene(scene);
+			// Colocamos esta vista en el centro del rootlayout
+			rootLayout.setCenter(page);
 
 			// Set the person into the controller.
 			ControladorVistaCuentaBancaria controller = loader.getController();
+			controller.setMainApp(this, modelo);
+			controller.ocultarBotones();
+
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * ABRE LA VENTANA DE EDITAR, PARA CREAR O EDITAR UNA PERSONA
+	 *
+	 * @param
+	 * @return
+	 */
+	public boolean muestraVentanaEdicionNoticia(NoticiaVO noticia) {
+		try {
+
+			FXMLLoader loader = new FXMLLoader();
+			loader.setLocation(MainAPP.class.getResource("vista/VistaEdicionNoticia.fxml"));
+			AnchorPane page = (AnchorPane) loader.load();
+			Stage dialogStage = new Stage();
+			dialogStage.setTitle("Nueva/Editar Noticia");
+			dialogStage.initModality(Modality.WINDOW_MODAL);
+			dialogStage.initOwner(primaryStage);
+			Scene scene = new Scene(page);
+			dialogStage.setScene(scene);
+			ControladorVistaEdicionNoticia controller = loader.getController();
 			controller.setDialogStage(dialogStage);
+			controller.setMainApp(this, modelo);
+			controller.setNoticia(noticia);
 
 			// Show the dialog and wait until the user closes it
 			dialogStage.showAndWait();
@@ -397,4 +428,19 @@ public class MainAPP extends Application {
 		return primaryStage;
 	}
 
+	public ObservableList<UsuarioVO> getListaUsuarios() {
+		return listaUsuarios;
+	}
+
+	public void setListaUsuarios(ObservableList<UsuarioVO> listaUsuarios) {
+		this.listaUsuarios.addAll(listaUsuarios);
+	}
+
+	public ObservableList<NoticiaVO> getListaNoticias() {
+		return listaNoticias;
+	}
+
+	public void setListaNoticias(ObservableList<NoticiaVO> listaNoticias) {
+		this.listaNoticias = listaNoticias;
+	}
 }

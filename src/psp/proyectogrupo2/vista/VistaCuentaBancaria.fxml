@@ -6,23 +6,28 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="345.0" prefWidth="534.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="psp.proyectogrupo2.controlador.ControladorVistaCuentaBancaria">
+<AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="psp.proyectogrupo2.controlador.ControladorVistaCuentaBancaria">
    <children>
-      <Label layoutX="150.0" layoutY="102.0" prefHeight="111.0" prefWidth="234.0" text="00,00 €">
+       <Label layoutX="147.0" layoutY="153.0" prefHeight="194.0" prefWidth="306.0" text="00,00 €">
          <font>
-            <Font size="72.0" />
+             <Font size="96.0"/>
          </font>
       </Label>
-      <Label layoutX="191.0" layoutY="85.0" text="SALDO TOTAL">
+       <Label layoutX="224.0" layoutY="164.0" text="SALDO TOTAL">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
-      <Label layoutX="14.0" layoutY="252.0" text="Ingresar:" />
-      <TextField layoutX="14.0" layoutY="269.0" />
-      <Label layoutX="371.0" layoutY="252.0" text="Retirar:" />
-      <TextField layoutX="371.0" layoutY="269.0" />
-      <Button layoutX="14.0" layoutY="306.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" text="INGRESAR" />
-      <Button layoutX="371.0" layoutY="306.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" text="RETIRAR" />
+       <Label fx:id="ingresarLabel" layoutX="14.0" layoutY="410.0" text="Ingresar:"/>
+       <TextField fx:id="ingresarField" layoutX="14.0" layoutY="427.0"/>
+       <Label fx:id="retirarLabel" layoutX="437.0" layoutY="407.0" text="Retirar:"/>
+       <TextField fx:id="retirarField" layoutX="437.0" layoutY="424.0"/>
+       <Button fx:id="btningresar" layoutX="14.0" layoutY="464.0" mnemonicParsing="false" prefHeight="25.0"
+               prefWidth="149.0" text="INGRESAR"/>
+       <Button fx:id="btnretirar" layoutX="437.0" layoutY="461.0" mnemonicParsing="false" prefHeight="25.0"
+               prefWidth="149.0" text="RETIRAR"/>
+       <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#manejaVolver" prefHeight="25.0"
+               prefWidth="30.0" text="&lt;-"/>
    </children>
 </AnchorPane>

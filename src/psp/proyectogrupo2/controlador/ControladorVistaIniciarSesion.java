@@ -22,10 +22,10 @@ public class ControladorVistaIniciarSesion {
 	@FXML
 	private TextField nicknameField;
 	@FXML
-	private TextField contraseñaField;
+    private TextField contraField;
 
 	private Stage dialogStage;
-	private UsuarioVO p;
+    private UsuarioVO user;
 	private boolean okClicked = false;
 
 	/**
@@ -48,6 +48,10 @@ public class ControladorVistaIniciarSesion {
 		this.dialogStage.initModality(Modality.NONE);
 	}
 
+    public void setUsuarioLogin(UsuarioVO aux) {
+        this.user = aux;
+    }
+
 	/**
 	 * Returns true if the user clicked OK, false otherwise.
 	 * 
@@ -62,12 +66,13 @@ public class ControladorVistaIniciarSesion {
 	 */
 	@FXML
 	private void manejaOk() {
-		
-		if (nicknameField.getText().equals("admin") && contraseñaField.getText().equals("admin")) {
+
+        if (isInputValid()) {
+
+            user.setNick(nicknameField.getText());
+            user.setCont(contraField.getText());
+
 			okClicked = true;
-		    dialogStage.close();
-		} else {
-			System.out.println("MANEJA OK MAL");
 			dialogStage.close();
 		}
 	
@@ -80,5 +85,35 @@ public class ControladorVistaIniciarSesion {
 	private void manejaCancelar() {
 		dialogStage.close();
 	}
+
+    /**
+     * Validates the user input in the text fields.
+     *
+     * @return true if the input is valid
+     */
+    private boolean isInputValid() {
+        String errorMessage = "";
+
+        if (nicknameField.getText() == null || nicknameField.getText().length() == 0) {
+            errorMessage += "No valid nickname!\n";
+        }
+        if (contraField.getText() == null || contraField.getText().length() == 0) {
+            errorMessage += "No valid passw!\n";
+        }
+
+        if (errorMessage.length() == 0) {
+            return true;
+        } else {
+            // Show the error message.
+            Alert alert = new Alert(AlertType.WARNING);
+            alert.setTitle("Invalid Fields");
+            alert.setHeaderText("Please correct invalid fields");
+            alert.setContentText(errorMessage);
+
+            alert.showAndWait();
+
+            return false;
+        }
+    }
 	
 }

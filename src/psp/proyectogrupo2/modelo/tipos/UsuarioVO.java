@@ -1,7 +1,8 @@
 package psp.proyectogrupo2.modelo.tipos;
 
-import javafx.beans.property.*;
 
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
 
 /**
  * @author Jorge y Vic
@@ -9,27 +10,37 @@ import javafx.beans.property.*;
 
 public class UsuarioVO {
 
-	private IntegerProperty id;
-	private  StringProperty nombre , ap, nick, cont;
-	private  ObjectProperty<String> tipo;
-	// private final IntegerProperty ni;
-	// private final ObjectProperty<TipoX> tx;
-	// private final FloatProperty nf;
+    private Integer id;
+    private final StringProperty nombre, apellido, nick, cont;
+    private final StringProperty tipo;
 
 	/**
 	 * Default constructor.
 	 */
 	public UsuarioVO() {
+        this(0, null, null, null, null, null);
+    }
 
-	}
-
-	public UsuarioVO(Integer id, String nombre, String ap, String nick, String cont, String tipo) {
-		this.id = new SimpleIntegerProperty(id);
-		this.nombre = new SimpleStringProperty(nombre);
-		this.ap = new SimpleStringProperty(ap);
+    public UsuarioVO(Integer id, String n, String ap, String nick, String cont, String tipo) {
+        this.id = id;
+        this.nombre = new SimpleStringProperty(n);
+        this.apellido = new SimpleStringProperty(ap);
 		this.nick = new SimpleStringProperty(nick);
 		this.cont = new SimpleStringProperty(cont);
-		this.tipo = new SimpleObjectProperty<String>(tipo);
+        this.tipo = new SimpleStringProperty(tipo);
+
+        // this.ni = new SimpleIntegerProperty(ni);
+        // this.tx = new SimpleObjectProperty<TipoX>(tx);
+        // this.nf = new SimpleFloatProperty(nf);
+    }
+
+    public UsuarioVO(String n, String ap, String nick, String cont, String tipo) {
+        this.id = null;
+        this.nombre = new SimpleStringProperty(n);
+        this.apellido = new SimpleStringProperty(ap);
+        this.nick = new SimpleStringProperty(nick);
+        this.cont = new SimpleStringProperty(cont);
+        this.tipo = new SimpleStringProperty(tipo);
 
 		// this.ni = new SimpleIntegerProperty(ni);
 		// this.tx = new SimpleObjectProperty<TipoX>(tx);
@@ -49,43 +60,35 @@ public class UsuarioVO {
 		// this.nf = new SimpleFloatProperty(nf);
 	}*/
 
-	public IntegerProperty getId() {
+    public Integer getId() {
 		return id;
 	}
 
-	public int getIdUser(){
-		return this.getId().getValue();
-	}
 	public void setId(Integer id) {
-		this.id.set(id);
+        this.id = id;
 	}
-
-
 
 	//Getters y setter del nombre del usuario
 
-	public StringProperty getNombre() {
-		return this.nombre;
-	}
 	public String getNombreUser(){
-		return this.nombre.getValue();
-	}
+        return nombre.get();
+    }
 
-	public void setNombre(String nombre){
-		this.nombre.set(nombre);
+    public void setNombre(String n) {
+        this.nombre.set(n);
 	}
 
 	//Getters y setter del apellido del usuario
 	public String getApellido() {
-		return ap.getValue();
+        return apellido.getValue();
 	}
 
 	public StringProperty setApellidoProperty() {
-		return ap;
+        return apellido;
 	}
 
 	public void setAp(String ap) {
-		this.ap.set(ap);
+        this.apellido.set(ap);
 	}
 
 	//Getters y setter del nick del usuario
@@ -123,10 +126,6 @@ public class UsuarioVO {
 		return tipo.get();
 	}
 
-	public ObjectProperty<String> getTipoProperty() {
-		return tipo;
-	}
-
 	public void setTipo(String tipo) {
 		this.tipo.set(tipo);
 	}
@@ -157,4 +156,14 @@ public class UsuarioVO {
 	 * public void setTx(TipoX tx) { this.tx.set(tx); ; }
 	 */
 
+    @Override
+    public String toString() {
+        return "UsuarioVO{" +
+                "nombre=" + nombre +
+                ", apellido=" + apellido +
+                ", nick=" + nick +
+                ", cont=" + cont +
+                ", tipo=" + tipo +
+                '}';
+    }
 }

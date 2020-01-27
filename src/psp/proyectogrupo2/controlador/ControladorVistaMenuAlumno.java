@@ -76,13 +76,8 @@ public class ControladorVistaMenuAlumno {
 	@FXML
 	private void manejaCuentaBancaria() {
 
-		boolean okClicked = mainApp.muestraCuentaBancaria();
+        mainApp.muestraCuentaBancaria();
 
-		if (okClicked) {
-
-			System.out.println("CUENTA BANCARIA OK");
-			
-		}
 	}
 	
 	/**

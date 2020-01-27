@@ -13,15 +13,28 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import psp.proyectogrupo2.modelo.ModeloTorge;
 import psp.proyectogrupo2.modelo.tipos.UsuarioVO;
 import psp.proyectogrupo2.util.DateUtil;
+import psp.proyectogrupo2.util.ExcepcionTorge;
 
 
 public class ControladorVistaRegistro {
 
 	private Stage dialogStage;
-	private UsuarioVO p;
+    private UsuarioVO user;
 	private boolean okClicked = false;
+
+    @FXML
+    private TextField nombreField;
+    @FXML
+    private TextField apeField;
+    @FXML
+    private TextField nicknameField;
+    @FXML
+    private TextField contraField;
+    @FXML
+    private TextField tipoField;
 
 	/**
 	 * Initializes the controller class. This method is automatically called after
@@ -37,11 +50,16 @@ public class ControladorVistaRegistro {
 	 * 
 	 * @param dialogStage
 	 */
-	public void setDialogStage(Stage dialogStage) {
+    public void setDialogStage(Stage dialogStage) {
 
-		this.dialogStage = dialogStage;
-		this.dialogStage.initModality(Modality.NONE);
-	}
+        this.dialogStage = dialogStage;
+        this.dialogStage.initModality(Modality.NONE);
+
+    }
+
+    public void setUsuarioNuevo(UsuarioVO aux) {
+        this.user = aux;
+    }
 
 	/**
 	 * Returns true if the user clicked OK, false otherwise.
@@ -57,8 +75,26 @@ public class ControladorVistaRegistro {
 	 */
 	@FXML
 	private void manejaOk() {
-		okClicked = true;
-		dialogStage.close();
+
+		/*
+		UsuarioVO newuser = new UsuarioVO(nombreField.getText(), apeField.getText(), nicknameField.getText(), contraField.getText(), tipoField.getText());
+		newuser.setNombre(nombreField.getText());
+		newuser.setAp(apeField.getText());
+		newuser.setNick(nicknameField.getText());
+		newuser.setCont(contraField.getText());
+		newuser.setTipo(tipoField.getText());
+		 */
+
+        if (isInputValid()) {
+            user.setNombre(nombreField.getText().toString());
+            user.setAp(apeField.getText());
+            user.setNick(nicknameField.getText());
+            user.setCont(contraField.getText());
+            user.setTipo(tipoField.getText());
+
+            okClicked = true;
+            dialogStage.close();
+        }
 	}
 
 	/**
@@ -69,4 +105,42 @@ public class ControladorVistaRegistro {
 		dialogStage.close();
 	}
 
+    /**
+     * Validates the user input in the text fields.
+     *
+     * @return true if the input is valid
+     */
+    private boolean isInputValid() {
+        String errorMessage = "";
+
+        if (nombreField.getText() == null || nombreField.getText().length() == 0) {
+            errorMessage += "No valid name!\n";
+        }
+        if (apeField.getText() == null || apeField.getText().length() == 0) {
+            errorMessage += "No valid ape!\n";
+        }
+        if (nicknameField.getText() == null || nicknameField.getText().length() == 0) {
+            errorMessage += "No valid nickname!\n";
+        }
+        if (contraField.getText() == null || contraField.getText().length() == 0) {
+            errorMessage += "No valid passw!\n";
+        }
+        if (tipoField.getText() == null || tipoField.getText().length() == 0) {
+            errorMessage += "No valid tipe!\n";
+        }
+
+        if (errorMessage.length() == 0) {
+            return true;
+        } else {
+            // Show the error message.
+            Alert alert = new Alert(AlertType.WARNING);
+            alert.setTitle("Invalid Fields");
+            alert.setHeaderText("Please correct invalid fields");
+            alert.setContentText(errorMessage);
+
+            alert.showAndWait();
+
+            return false;
+        }
+    }
 }

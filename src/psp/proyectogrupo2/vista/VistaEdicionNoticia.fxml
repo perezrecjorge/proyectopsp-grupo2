@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="404.0" prefWidth="487.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="psp.proyectogrupo2.controlador.ControladorVistaEdicionNoticia">
+    <children>
+        <HBox layoutX="247.0" layoutY="360.0" spacing="5.0">
+            <children>
+                <Button defaultButton="true" layoutX="300.0" layoutY="257.0" mnemonicParsing="false"
+                        onAction="#handleOk" prefHeight="33.0" prefWidth="110.0" text="OK"
+                        AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="110.0"/>
+                <Button layoutX="334.0" layoutY="261.0" mnemonicParsing="false" onAction="#handleCancel"
+                        prefHeight="33.0" prefWidth="110.0" text="Cancel" AnchorPane.bottomAnchor="10.0"
+                        AnchorPane.rightAnchor="10.0"/>
+            </children>
+        </HBox>
+        <Label layoutX="14.0" layoutY="14.0" text="TITULO"/>
+        <TextField fx:id="tituloField" layoutX="14.0" layoutY="31.0" prefHeight="25.0" prefWidth="459.0"/>
+        <Label layoutX="14.0" layoutY="66.0" text="CUERPO"/>
+        <TextArea fx:id="cuerpoArea" layoutX="14.0" layoutY="83.0" prefHeight="267.0" prefWidth="459.0"
+                  wrapText="true"/>
+    </children>
+</AnchorPane>

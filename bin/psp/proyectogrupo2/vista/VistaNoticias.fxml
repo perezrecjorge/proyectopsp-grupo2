@@ -6,22 +6,22 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="377.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="psp.proyectogrupo2.controlador.ControladorVistaNoticias">
+<AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="psp.proyectogrupo2.controlador.ControladorVistaNoticias">
    <children>
       <SplitPane dividerPositions="0.4142857142857143" layoutX="14.0" prefHeight="377.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="295.0" prefWidth="286.0">
                <children>
-                  <TableView fx:id="tablaElementos" layoutX="14.0" layoutY="39.0" prefHeight="336.0" prefWidth="286.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="39.0">
+                  <TableView fx:id="noticiasTable" layoutX="14.0" layoutY="39.0" prefHeight="336.0" prefWidth="286.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="39.0">
                     <columns>
-                      <TableColumn fx:id="columnaString" prefWidth="75.0" text="Profesor" />
-                      <TableColumn fx:id="columnaFloat" prefWidth="75.0" text="Asignatura" />
+                      <TableColumn fx:id="autorColumn" prefWidth="75.0" text="Profesor" />
+                      <TableColumn fx:id="fechaColumn" prefWidth="75.0" text="Fecha" />
                     </columns>
                      <columnResizePolicy>
                         <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                      </columnResizePolicy>
                   </TableView>
-                  <Button layoutY="7.0" mnemonicParsing="false" onAction="#manejaVolver" prefHeight="25.0" prefWidth="286.0" text="VOLVER AL MENU" />
+                  <Button layoutY="7.0" mnemonicParsing="false" onAction="#manejaVolver" prefHeight="25.0" prefWidth="245.0" text="VOLVER AL MENU" />
                </children>
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="500.0" prefWidth="417.0" styleClass="background">
@@ -30,10 +30,9 @@
                      <font>
                         <Font size="18.0" />
                      </font></Label>
-                  <GridPane layoutX="22.0" layoutY="40.0" prefHeight="90.0" prefWidth="362.0" AnchorPane.leftAnchor="22.0" AnchorPane.rightAnchor="22.0" AnchorPane.topAnchor="40.0">
+                  <GridPane layoutX="15.0" layoutY="40.0" prefHeight="90.0" prefWidth="325.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="40.0">
                     <columnConstraints>
-                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="198.0" minWidth="10.0" prefWidth="182.0" />
                     </columnConstraints>
                     <rowConstraints>
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -41,21 +40,18 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <Label text="Profesor" />
-                        <Label text="Noticia" GridPane.rowIndex="2" />
-                        <Label fx:id="integerLabel" styleClass="label-bright" text="Label" GridPane.columnIndex="1" />
-                        <Label fx:id="stringLabel" styleClass="label-bright" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                        <Label text="Asignatura" GridPane.rowIndex="1" />
-                        <Label fx:id="integerLabel1" styleClass="label-bright" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label text="TITULO" />
+                        <Label fx:id="tituloLabel" styleClass="label-bright" text="Label" GridPane.rowIndex="1" />
+                        <Label text="CUERPO" GridPane.rowIndex="2" />
                      </children>
                   </GridPane>
-                  <HBox layoutX="17.0" layoutY="229.0" spacing="5.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
+                  <HBox layoutX="154.0" layoutY="463.0" spacing="5.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="20.0">
                      <children>
-                        <Button defaultButton="true" layoutX="17.0" layoutY="229.0" mnemonicParsing="false" text="Nuevo..." />
-                        <Button layoutX="94.0" layoutY="229.0" mnemonicParsing="false" text="Editar..." />
-                        <Button layoutX="183.0" layoutY="229.0" mnemonicParsing="false" text="Borrar" />
+                        <Button fx:id="btnnuevo" layoutX="17.0" layoutY="229.0" mnemonicParsing="false" onAction="#manejaNuevo" text="CREAR NOTICIA" />
+                        <Button fx:id="btnborrar" layoutX="183.0" layoutY="229.0" mnemonicParsing="false" onAction="#manejaBorrar" text="BORRAR" />
                      </children>
                   </HBox>
+                  <TextArea fx:id="cuerpoLabel" editable="false" layoutX="16.0" layoutY="130.0" prefHeight="326.0" prefWidth="312.0" wrapText="true" />
                </children>
             </AnchorPane>
         </items>

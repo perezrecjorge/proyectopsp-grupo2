@@ -1,54 +1,59 @@
 package psp.proyectogrupo2.modelo.tipos;
 
 import javafx.beans.property.*;
+import psp.proyectogrupo2.util.DateUtil;
 
 import java.time.LocalDate;
 
 public class NoticiaVO {
 
 
-    private IntegerProperty id;
-    private StringProperty nombre, cuerpo;
-    private ObjectProperty<LocalDate> fecha;
-
-
-    public NoticiaVO(Integer id, String nombre, String cuerpo, LocalDate fecha) {
-        this.id = new SimpleIntegerProperty(id);
-        this.nombre = new SimpleStringProperty(nombre);
-        this.cuerpo = new SimpleStringProperty(cuerpo);
-        this.fecha = new SimpleObjectProperty<LocalDate>(fecha);
-    }
+    private Integer id;
+    private final StringProperty titulo, cuerpo, autor, fecha;
 
     public NoticiaVO() {
+        this(null, null, null, null);
+    }
+
+    public NoticiaVO(String titulo, String cuerpo, String autor, String fecha) {
+        this.id = null;
+        this.titulo = new SimpleStringProperty(titulo);
+        this.cuerpo = new SimpleStringProperty(cuerpo);
+        this.autor = new SimpleStringProperty(autor);
+        this.fecha = new SimpleStringProperty(fecha);
+    }
+
+    public NoticiaVO(Integer id, String titulo, String cuerpo, String autor, String fecha) {
+        this.id = id;
+        this.titulo = new SimpleStringProperty(titulo);
+        this.cuerpo = new SimpleStringProperty(cuerpo);
+        this.autor = new SimpleStringProperty(autor);
+        this.fecha = new SimpleStringProperty(fecha);
     }
 
     //Getters y setter del id de la noticia
 
-    public int getId() {
-        return id.getValue();
-    }
-
-    public IntegerProperty getIdProperty() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
-        this.id.set(id);
+    public void setId(Integer id) {
+        this.id = id;
     }
 
-    //Getters y setters del nombre de la noticia
+    //Getters y setters del titulo de la noticia
 
 
-    public String getNombre() {
-        return nombre.get();
+    public String getTitulo() {
+        return titulo.get();
     }
 
-    public StringProperty getNombreProperty() {
-        return nombre;
+    public StringProperty getTituloProperty() {
+        return titulo;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre.set(nombre);
+    public void setTitulo(String titulo) {
+        this.titulo.set(titulo);
     }
 
     //Getters y setter del cuerpo de la noticia
@@ -66,18 +71,33 @@ public class NoticiaVO {
         this.cuerpo.set(cuerpo);
     }
 
+
+    //Getter y setter del autor
+
+    public String getAutor() {
+        return autor.get();
+    }
+
+    public StringProperty getAutorProperty() {
+        return autor;
+    }
+
+    public void setAutor(String autor) {
+        this.autor.set(autor);
+    }
+
     //Getters y setters de la fecha de publicación de la noticia
 
 
-    public LocalDate getFecha() {
+    public String getFecha() {
         return fecha.get();
     }
 
-    public ObjectProperty<LocalDate> getFechaProperty() {
+    public StringProperty getFechaProperty() {
         return fecha;
     }
 
-    public void setFecha(LocalDate fecha) {
+    public void setFecha(String fecha) {
         this.fecha.set(fecha);
     }
 }

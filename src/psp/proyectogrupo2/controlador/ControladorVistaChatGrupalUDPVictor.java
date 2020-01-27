@@ -7,6 +7,7 @@ import javafx.scene.control.TextField;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import psp.proyectogrupo2.modelo.ModeloTorge;
 import psp.proyectogrupo2.modelo.tipos.UsuarioVO;
 
 import java.io.IOException;
@@ -18,6 +19,7 @@ import java.net.SocketException;
 
 public class ControladorVistaChatGrupalUDPVictor implements Runnable {
 
+    private ModeloTorge modelo;
 	private Stage dialogStage;
 	private UsuarioVO p;
 
@@ -47,7 +49,6 @@ public class ControladorVistaChatGrupalUDPVictor implements Runnable {
 
 		try {
 			iniciarHilo();
-			this.nombre = "Victor";
 			System.out.println("ENTRA AQUI 1");
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -66,6 +67,10 @@ public class ControladorVistaChatGrupalUDPVictor implements Runnable {
 
 		new Thread(this).start();
 	}
+
+    public void setModelo(ModeloTorge modelo) {
+        this.modelo = modelo;
+    }
 
 	public void setDialogStage(Stage dialogStage) {
 
@@ -86,6 +91,14 @@ public class ControladorVistaChatGrupalUDPVictor implements Runnable {
 	public ControladorVistaChatGrupalUDPVictor(String nombre) {
 		this.nombre = nombre;
 	}
+
+    public void establecerNombre() {
+        if (modelo.getTipoconectado().equalsIgnoreCase("profesor")) {
+            this.nombre = "| PROFESOR | Victor";
+        } else {
+            this.nombre = "Victor";
+        }
+    }
 	/**
 	 * Called when the user clicks ok.
 	 */
@@ -93,7 +106,7 @@ public class ControladorVistaChatGrupalUDPVictor implements Runnable {
 	private void manejaEnviar() {
 		System.out.println("Enviar OK\n");
 
-		String texto = nombre + ">> " + mensaje.getText();
+        String texto = nombre + " >> " + mensaje.getText();
 		try {
 			// ENVIANDO mensaje al grupo
 			DatagramPacket paquete = new DatagramPacket(texto.getBytes(),

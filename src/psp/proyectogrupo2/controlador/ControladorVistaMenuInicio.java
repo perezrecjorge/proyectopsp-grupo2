@@ -1,6 +1,7 @@
 package psp.proyectogrupo2.controlador;
 
 import java.io.FileInputStream;
+import java.util.ArrayList;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -45,8 +46,6 @@ public class ControladorVistaMenuInicio {
 	 * Instancia el supercontrolador Main y el modelo de la aplicación
 	 * 
 	 * @param mainApp
-	 * @param pm
-	 * @throws AddressException
 	 */
 	public void setMainApp(MainAPP mainApp, ModeloTorge m) {
 		this.mainApp = mainApp;
@@ -62,14 +61,39 @@ public class ControladorVistaMenuInicio {
 	 */
 	@FXML
 	private void manejaIniciarSesion() {
-		
-		boolean okClicked = mainApp.muestraVistaIniciarSesion();
 
-		if (okClicked) {
+        UsuarioVO aux = new UsuarioVO();
+        boolean okClicked = mainApp.muestraVistaIniciarSesion(aux);
+
+        if (okClicked == true) {
 			
 			System.out.println("INICIAR SESION OK BIEN");
-			mainApp.muestraVistaMenuAlumnos();
-			
+            try {
+                UsuarioVO veri = modelo.getUsuario(aux.getNick());
+
+                if (veri.getCont() == null) {
+                    Alert alert = new Alert(AlertType.WARNING);
+                    alert.setTitle("LOGIN INCORRECTO");
+                    alert.setHeaderText("ERROR");
+                    alert.setContentText("Nickname o contraseña erroneos.");
+
+                    alert.showAndWait();
+                } else {
+                    modelo.setNicknameconectado(veri.getNick());
+                    modelo.setContraconectado(veri.getCont());
+                    modelo.setTipoconectado(veri.getTipo());
+
+                    System.out.println("SE HA CONECTADO EL USUARIO NICK: " + modelo.getNicknameconectado()
+                            + " CONTRA: " + modelo.getContraconectado() + " TIPO: " + modelo.getTipoconectado());
+
+                    mainApp.muestraVistaMenuAlumnos();
+
+                }
+
+            } catch (ExcepcionTorge excepcionTorge) {
+                excepcionTorge.printStackTrace();
+            }
+
 		}
 	}
 	
@@ -79,11 +103,24 @@ public class ControladorVistaMenuInicio {
 	@FXML
 	private void manejaRegistro() {
 
-		boolean okClicked = mainApp.muestraVistaRegistro();
+        UsuarioVO aux = new UsuarioVO();
+        boolean okClicked = mainApp.muestraVistaRegistro(aux);
 
 		if (okClicked) {
 
 			System.out.println("REGISTRO OK BIEN");
+            try {
+                modelo.guardarElemento(aux);
+            } catch (ExcepcionTorge e) {
+
+                Alert alert = new Alert(AlertType.WARNING);
+                alert.setTitle(e.getTitle());
+                alert.setHeaderText(e.getHeader());
+                alert.setContentText(e.getMessage());
+
+                alert.showAndWait();
+
+            }
 			
 		}
 	}
