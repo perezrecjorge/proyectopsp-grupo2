@@ -546,7 +546,7 @@ Que los alumnos puedan visualizar la noticia publicada
 <br>
 
 <p align="center">
-<img src="/resources/diagramadeclases.png"/>
+<img src="/resources/diagramaclase/DiagramaDeClasesOrdenado.PNG"/>
 </p>
 
 <br>
@@ -1489,20 +1489,12 @@ Las partes que requieren la aplicación de hilos son las siguientes:
 
 ## DIAGRAMAS DE SECUENCIA
 
-### <b>MainApp.start()</b>
+### <b>DIAGRAMA INICIAR SESIÓN</b>
 <p align="center">
-<img src="/resources/diagramasecuencia/mainapp-start.png"/>
+<img src="/resources/diagramasecuencia/DiagramaDeSecuencia.PNG"/>
 </p>
 
-### <b>MainApp.InitRootLayout()</b>
-<p align="center">
-<img src="/resources/diagramasecuencia/mainapp-initrootlayout.png"/>
-</p>
 
-### <b>MainApp.MuestraVistaMenuInicio()</b>
-<p align="center">
-<img src="/resources/diagramasecuencia/mainapp-muestravistamenuinicio.png"/>
-</p>
 
 
 
