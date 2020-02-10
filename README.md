@@ -546,7 +546,7 @@ Que los alumnos puedan visualizar la noticia publicada
 <br>
 
 <p align="center">
-<img src="/resources/diagramaclase/DiagramaDeClasesOrdenado.PNG"/>
+<img src="/resources/diagramaclase/DiagramaDeClasesOrdenado.png"/>
 </p>
 
 <br>
@@ -1491,7 +1491,7 @@ Las partes que requieren la aplicación de hilos son las siguientes:
 
 ### <b>DIAGRAMA INICIAR SESIÓN</b>
 <p align="center">
-<img src="/resources/diagramasecuencia/DiagramaDeSecuencia.PNG"/>
+<img src="/resources/diagramasecuencia/DiagramaDeSecuencia.png"/>
 </p>
 
 
