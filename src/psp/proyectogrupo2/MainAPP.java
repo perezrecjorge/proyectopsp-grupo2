@@ -368,8 +368,6 @@ public class MainAPP extends Application {
 			ControladorVistaClienteFTP controller = loader.getController();
 			controller.setMainApp(this, modelo);
 
-
-
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

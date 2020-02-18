@@ -15,37 +15,37 @@
          </font>
       </Label>
       <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#manejaVolver" prefHeight="25.0" prefWidth="30.0" text="&lt;-" />
-      <Label layoutX="16.0" layoutY="53.0" text="Servidor FTP: ">
+      <Label fx:id="labelServidor" layoutX="16.0" layoutY="53.0" text="Servidor FTP: ">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Label layoutX="341.0" layoutY="53.0" text="USUARIO: ">
+      <Label fx:id="labelUsuario" layoutX="341.0" layoutY="53.0" text="USUARIO: ">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Label layoutX="16.0" layoutY="79.0" text="DIRECTORIO RAIZ: ">
+      <Label fx:id="labelDirRaiz" layoutX="16.0" layoutY="79.0" text="DIRECTORIO RAIZ: ">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <ListView layoutX="16.0" layoutY="109.0" prefHeight="318.0" prefWidth="285.0" />
+      <ListView fx:id="listDir" layoutX="16.0" layoutY="109.0" prefHeight="318.0" prefWidth="285.0" />
       <Button layoutX="341.0" layoutY="230.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="213.0" text="SUBIR FICHERO" />
       <Button layoutX="341.0" layoutY="270.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="213.0" text="DESCAGAR FICHERO" />
       <Button layoutX="341.0" layoutY="313.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="213.0" text="ELIMINAR FICHERO" />
       <Button layoutX="341.0" layoutY="356.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="213.0" text="CREAR CARPETA" />
       <Button layoutX="341.0" layoutY="402.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="213.0" text="ELIMINAR CARPETA" />
-      <Label layoutX="16.0" layoutY="436.0" text="FICHERO SELECCIONADO: ">
+      <Label fx:id="labelFicheroSeleccionado" layoutX="16.0" layoutY="436.0" text="FICHERO SELECCIONADO: ">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Label layoutX="16.0" layoutY="463.0" text="DIRECTORIO ACTUAL: ">
+      <Label fx:id="labelDirActual" layoutX="16.0" layoutY="463.0" text="DIRECTORIO ACTUAL: ">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <ImageView fitHeight="119.0" fitWidth="133.0" layoutX="381.0" layoutY="89.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imagenView" fitHeight="119.0" fitWidth="133.0" layoutX="381.0" layoutY="89.0" pickOnBounds="true" preserveRatio="true" />
    </children>
 </AnchorPane>
