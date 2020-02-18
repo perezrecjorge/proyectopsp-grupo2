@@ -353,6 +353,28 @@ public class MainAPP extends Application {
 		}
 	}
 
+	public void muestraClienteFTP() {
+		try {
+
+			// Load the fxml file and create a new stage for the popup dialog.
+			FXMLLoader loader = new FXMLLoader();
+			loader.setLocation(MainAPP.class.getResource("vista/VistaClienteFTP.fxml"));
+			AnchorPane page = (AnchorPane) loader.load();
+
+			// Colocamos esta vista en el centro del rootlayout
+			rootLayout.setCenter(page);
+
+			// Set the person into the controller.
+			ControladorVistaClienteFTP controller = loader.getController();
+			controller.setMainApp(this, modelo);
+
+
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
 	/**
 	 * ABRE LA VENTANA DE EDITAR, PARA CREAR O EDITAR UNA PERSONA
 	 *

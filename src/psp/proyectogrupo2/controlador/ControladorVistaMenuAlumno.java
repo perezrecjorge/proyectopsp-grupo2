@@ -79,6 +79,16 @@ public class ControladorVistaMenuAlumno {
 		mainApp.muestraCuentaBancaria();
 
 	}
+
+	/**
+	 * Botón CLIENTE FTP
+	 */
+	@FXML
+	private void manejaClienteFTP() {
+
+		mainApp.muestraClienteFTP();
+
+	}
 	
 	/**
 	 * Botón MODIFICAR PERFIL
