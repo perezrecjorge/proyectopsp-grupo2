@@ -82,11 +82,79 @@ public class ControladorVistaClienteFTP {
             //Construyendo arbol de directorios, espere un momento
             llenarLista(files, direcInicial);
 
+            labelServidor.setText("Servidor FTP: "+servidor);
+            labelUsuario.setText("Usuario: "+user);
+            labelDirRaiz.setText("DIRECTORIO RAIZ: "+direcInicial);
+
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        listDir.getSelectionModel().selectedItemProperty().addListener();
+        listDir.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+
+                    ficheroSelec = "";
+
+                    //elemento seleccionado de la lista
+                    String fic = listDir.getSelectionModel().getSelectedItem().toString();
+
+                    if (listDir.getSelectionModel().getSelectedIndex() == 0) {
+                        //Se hace clic en el primer elemento del JList
+                        if (!fic.equals(direcInicial)) {
+                            //si no estamos en el dictorio inicial, hay que
+                            //subir al directorio padre
+                            try {
+                                cliente.changeToParentDirectory();
+                                direcSelec = cliente.printWorkingDirectory();
+                                cliente.changeWorkingDirectory(direcSelec);
+                                FTPFile[] ff2 = cliente.listFiles();
+                                labelFicheroSeleccionado.setText("");
+                                //se llena la lista con fich. del directorio padre
+                                llenarLista(ff2, direcSelec);
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    }
+                    //No se hace clic en el primer elemento del JList
+                    //Puede ser un fichero o un directorio
+                    else {
+                        if (fic.substring(0, 6).equals("(DIR) ")) {
+                            //SE TRATA DE UN DIRECTORIO
+                            try {
+                                fic = fic.substring(6);
+                                String direcSelec2 = "";
+                                if (direcSelec.equals("/"))
+                                    direcSelec2 = direcSelec + fic;
+                                else
+                                    direcSelec2 = direcSelec + "/" + fic;
+                                FTPFile[] ff2 = null;
+                                cliente.changeWorkingDirectory(direcSelec2);
+                                ff2 = cliente.listFiles();
+                                labelFicheroSeleccionado.setText("DIRECTORIO:  " + fic + ", "
+                                        + ff2.length + " elementos");
+                                direcSelec = direcSelec2;
+                                llenarLista(ff2, direcSelec);
+                            } catch (IOException e2) {
+                                e2.printStackTrace();
+                            }
+                        } else {
+                            // SE TRATA DE UN FICHERO
+                            ficheroSelec = direcSelec;
+                            if (direcSelec.equals("/"))
+                                ficheroSelec += fic;
+                            else
+                                ficheroSelec += "/" + fic;
+                            labelFicheroSeleccionado.setText("FICHERO seleccionado:" +
+                                    ficheroSelec);
+                            ficheroSelec = fic;
+                        }//fin else
+                    }//else de fichero o directorio
+                    labelDirActual.setText("DIRECTORIO ACTUAL: " + direcSelec);
+                }
+
+        });
 
     }
 
@@ -350,6 +418,7 @@ public class ControladorVistaClienteFTP {
         return ok;
     }// SubirFichero
 
+    /*
     private ListSelectionListener añadirListenerLista() {
         ListSelectionListener listener = new ListSelectionListener() {
             @Override
@@ -419,5 +488,7 @@ public class ControladorVistaClienteFTP {
         };
         return listener;
     }
+
+     */
 
 }
