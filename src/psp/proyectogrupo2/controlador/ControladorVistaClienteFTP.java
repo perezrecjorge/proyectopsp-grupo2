@@ -2,11 +2,14 @@ package psp.proyectogrupo2.controlador;
 
 import javafx.beans.InvalidationListener;
 import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableListValue;
 import javafx.beans.value.ObservableValue;
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import org.apache.commons.net.PrintCommandListener;
 import org.apache.commons.net.ftp.FTP;
@@ -16,10 +19,8 @@ import psp.proyectogrupo2.MainAPP;
 import psp.proyectogrupo2.modelo.ModeloTorge;
 
 import javax.swing.*;
-import javax.swing.event.ListSelectionEvent;
-import javax.swing.event.ListSelectionListener;
-import java.awt.*;
 import java.io.*;
+import java.util.List;
 
 
 public class ControladorVistaClienteFTP {
@@ -62,6 +63,11 @@ public class ControladorVistaClienteFTP {
     public ControladorVistaClienteFTP() {
 
     }
+
+    public void ponerFoto(Image imagenlogo) {
+        imagenView.setImage(imagenlogo);
+    }
+
 
     /**
      * Incializa el controlador justo depsués de que se cargue la vista .fxml
@@ -176,6 +182,7 @@ public class ControladorVistaClienteFTP {
 
         try {
             cliente.disconnect();
+            System.out.println("ENTRA SALIR CLIENTE FTP");
         } catch (IOException e1) {
             e1.printStackTrace();
         }
@@ -188,6 +195,7 @@ public class ControladorVistaClienteFTP {
      */
     @FXML
     private void manejaSubirFichero() {
+        System.out.println("ENTRA SUBIR FICHERO");
         JFileChooser f = new JFileChooser();
         f.setFileSelectionMode(JFileChooser.FILES_ONLY);
         f.setDialogTitle("Selecciona el Fichero a SUBIR AL SERVIDOR FTP");
@@ -302,7 +310,8 @@ public class ControladorVistaClienteFTP {
 
     void llenarLista(FTPFile[] files, String direc2) {
         if (files == null) return;
-        DefaultListModel modeloLista = new DefaultListModel();
+        //DefaultListModel modeloLista = new DefaultListModel();
+        ObservableList<String> modelList = FXCollections.observableArrayList();
 
         try {
             cliente.changeWorkingDirectory(direc2);
@@ -310,18 +319,21 @@ public class ControladorVistaClienteFTP {
             e.printStackTrace();
         }
         direcSelec = direc2;
-        modeloLista.addElement(direc2);
+        //modelLista.addElement(direc2);
+        modelList.add(direc2);
         for (int i = 0; i < files.length; i++) {
             if (!(files[i].getName()).equals(".")
                     && !(files[i].getName()).equals("..")) {
                 String f = files[i].getName();
                 if (files[i].isDirectory())
                     f = "(DIR) " + f;
-                modeloLista.addElement(f);
+                //modeloLista.addElement(f);
+                modelList.add(f);
             }//if
         }// fin for
         try {
-            listDir.setItems((ObservableList<String>) modeloLista);
+            //listDir.setItems((ObservableList<String>) modeloLista);
+            listDir.setItems(modelList);
 
         } catch (NullPointerException n) {
             //Al llegar al �ltimo aparece excepcion
@@ -387,7 +399,7 @@ public class ControladorVistaClienteFTP {
                             + " => No se ha podido eliminar ...");
 
             } catch (IOException e1) {
-                e1.printStackTrace();
+                System.out.println("ERROR AL ELIMINAR");
             }
         }
     }// ..BorrarFichero
