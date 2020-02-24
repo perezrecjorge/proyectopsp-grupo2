@@ -1014,6 +1014,195 @@ Las partes que requieren la aplicación de hilos son las siguientes:
 
 <br>
 
+#### UsuarioVO
+<br>
+
+<table>
+
+
+
+<tr>
+
+<td>  Nombre de la clase  </td>
+<td>  UsuarioVO  </td>
+	
+</tr>
+
+<tr>
+<td>  Descripción  </td>
+<td>  Clase que define los atributos, constructores, getter y setter de los usuarios de la aplicación.  </td>
+
+</tr>
+
+<tr> 
+
+<td> Relaciones </td>
+<td>MainApp, ModeloTorge, ControladorVistaMenuAlumno</td>
+
+<tr>
+	
+</table>
+
+
+<br>
+
+<br>
+
+<table>
+
+
+<tr>
+
+<td>  Atributos  </td>
+<td>  int id, nombre, apellido, nick, contraseña, tipo e email  </td>
+	
+</tr>
+
+<tr>
+<td>  Atributos propios de la clase  </td>
+<td>  id, nombre, apellido, nick, contraseña, tipo e email  </td>
+
+</tr>
+
+<tr> 
+
+<td> Atributos propios de la relación </td>
+<td>Ninguno</td>
+
+<tr>
+	
+</table>
+
+
+<br>
+
+<br>
+
+<table>
+
+
+<tr>
+
+<td>  Métodos  </td>
+<td>  Getters y setters de los atributos.  </td>
+	
+</tr>
+
+<tr>
+<td>  Función  </td>
+<td>  Son los modificadores y observadores de dichos atributos, en esa clase.  </td>
+
+</tr>
+
+<tr> 
+
+<td> Sintaxis del método </td>
+<td>-</td>
+
+<tr>
+	
+</table>
+
+
+<br>
+
+#### ModeloTorge
+<br>
+
+<table>
+
+
+
+<tr>
+
+<td>  Nombre de la clase  </td>
+<td>  ModeloTorge  </td>
+	
+</tr>
+
+<tr>
+<td>  Descripción  </td>
+<td>  Clase modelo de la aplicación que implementa los métodos de la clase TorgeDAOJDB, que contiene la lógica de negocio, definidos por la interfaz TorgeDAO. </td>
+
+</tr>
+
+<tr> 
+
+<td> Relaciones </td>
+<td>TorgeDAOJDBC, TorgeDAO, UsuarioVO</td>
+
+<tr>
+	
+</table>
+
+
+<br>
+
+<br>
+
+<table>
+
+
+<tr>
+
+<td>  Atributos  </td>
+<td> String nicknameconectado, String contraconectado, Stirng tipoconectado, TorgeDAO daojdbc </td>
+	
+</tr>
+
+<tr>
+<td>  Atributos propios de la clase  </td>
+<td>  String nicknameconectado, String contraconectado, Stirng tipoconectado  </td>
+
+</tr>
+
+<tr> 
+
+<td> Atributos propios de la relación </td>
+<td>TorgeDAOJDBC, UsuarioVO</td>
+
+<tr>
+	
+</table>
+
+
+<br>
+
+<br>
+
+<table>
+
+
+<tr>
+
+<td>  Métodos  </td>
+<td> cargarListaUsuarios(), guardarElemento(UsuarioVO), getUsuario(String), cargarListaNoticias()<br>
+  guardarNoticia(NoticiaVO), borrarNoticia(NoticiaVO), getters y setters de los atributos de la clase. </td>
+	
+</tr>
+
+<tr>
+<td>  Función  </td>
+<td> * cargarListaUsuarios: abre una conexión a la base de datos y recibe todos los usuarios registrados, <br>
+	que guardará en una lista. <br>
+	* guardarElemento(UsuarioVO): recibe un objeto UsuarioVO y si no hay errores, se da de alta un nuevo usuario.<br>
+	* cargarListaNoticias(): abre una conexión a la base de datos y recibe todas las noticas guardadas</td>
+	* guardNoticia(NoticiaVO): recibe un objeto NoticiaVO y da de alta una nueva noticia.
+	* borraNoticia(NoticiaVO): elimina una noticia del tablón y la base de datos.
+
+</tr>
+
+<tr> 
+
+<td> Sintaxis del método </td>
+<td>-</td>
+
+<tr>
+	
+</table>
+
+
+<br>
 
 <br>
 
