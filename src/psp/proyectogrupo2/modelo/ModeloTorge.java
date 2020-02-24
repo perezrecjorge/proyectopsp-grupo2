@@ -10,16 +10,15 @@ import java.util.List;
 
 public class ModeloTorge {
 
-	public String nicknameconectado;
-	public String contraconectado;
-	public String tipoconectado;
+	public String nicknameconectado = "";
+	public String contraconectado = "";
+	public String tipoconectado= "";
 
 	private final TorgeDAOJDBC daojdbc;
 
 	ObservableList<UsuarioVO> plist = FXCollections.observableArrayList();
 
 	public ModeloTorge() {
-
 		this.daojdbc = new TorgeDAOJDBC();
 	}
 
@@ -42,8 +41,8 @@ public class ModeloTorge {
 
 	}
 
-	public UsuarioVO getUsuario(String nick) throws ExcepcionTorge {
-		UsuarioVO user = daojdbc.getUsuario(nick);
+	public UsuarioVO getUsuario(String nick, String passw) throws ExcepcionTorge {
+		UsuarioVO user = daojdbc.getUsuario(nick, passw);
 		return user;
 	}
 

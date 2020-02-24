@@ -17,7 +17,7 @@ public class TorgeDAOJDBC implements TorgeDAO {
 
 
     private final String RETRIEVE_ALL_USERS = "SELECT id, nombre, apellido, nickname, contra, tipo FROM usuario;",
-            RETRIEVE_SINGLE_USER = "SELECT id, nombre, apellido, nickname, contra, tipo FROM usuario WHERE nickname = ?;",
+            RETRIEVE_SINGLE_USER = "SELECT id, nombre, apellido, nickname, contra, tipo FROM usuario WHERE nickname = ? and contra = ?;",
             DELETE_USER = "DELETE FROM USUARIOS WHERE id= ?",
             ADD_USER = "INSERT INTO usuario(nombre, apellido, nickname, contra, tipo) VALUES(?, ? ,?, ?, ?);",
             UPDATE_USER = "UPDATE USUARIOS SET NOMBRE=?, APELLIDO=?, NICK=?, CONT=?, TIPO=? WHERE ID=?",
@@ -71,7 +71,7 @@ public class TorgeDAOJDBC implements TorgeDAO {
 
 
     @Override
-    public UsuarioVO getUsuario(String nick) throws ExcepcionTorge {
+    public UsuarioVO getUsuario(String nick, String passw) throws ExcepcionTorge {
 
         conn.openConnection();
         UsuarioVO res = new UsuarioVO();
@@ -80,6 +80,7 @@ public class TorgeDAOJDBC implements TorgeDAO {
         try {
             comando = conn.openConnection().prepareStatement(RETRIEVE_SINGLE_USER);
             comando.setString(1, nick);
+            comando.setString(2, passw);
             ResultSet registro = comando.executeQuery();
 
             while (registro.next()) {

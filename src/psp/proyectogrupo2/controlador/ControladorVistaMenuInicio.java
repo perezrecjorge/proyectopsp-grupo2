@@ -69,7 +69,7 @@ public class ControladorVistaMenuInicio {
 			
 			System.out.println("INICIAR SESION OK BIEN");
 			try {
-				UsuarioVO veri = modelo.getUsuario(aux.getNick());
+				UsuarioVO veri = modelo.getUsuario(aux.getNick(), aux.getCont());
 
 				if (veri.getCont() == null) {
 					Alert alert = new Alert(AlertType.WARNING);

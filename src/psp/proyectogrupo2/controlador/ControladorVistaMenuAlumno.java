@@ -49,6 +49,20 @@ public class ControladorVistaMenuAlumno {
 	}
 
 	/**
+	 * Botón CERRAR SESION
+	 */
+	@FXML
+	private void manejaCerrarSesion() {
+
+		modelo.setNicknameconectado("");
+		modelo.setContraconectado("");
+		modelo.setTipoconectado("");
+
+		mainApp.muestraVistaMenuInicio();
+
+	}
+
+	/**
 	 * Botón NOTICIAS
 	 */
 	@FXML

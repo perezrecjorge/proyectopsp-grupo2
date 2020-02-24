@@ -14,7 +14,7 @@ public interface TorgeDAO {
 
 	 List<UsuarioVO> cargarListaUsuarios() throws ExcepcionTorge;
 
-	 UsuarioVO getUsuario(String nick) throws ExcepcionTorge;
+	 UsuarioVO getUsuario(String nick, String passw) throws ExcepcionTorge;
 
 	 void guardarUsuario(UsuarioVO p) throws ExcepcionTorge;
 
