@@ -142,6 +142,39 @@ public class MainAPP extends Application {
 		}
 	}
 
+	public boolean muestraVistaRecuperarCuenta(UsuarioVO aux) {
+		try {
+
+			// Load the fxml file and create a new stage for the popup dialog.
+			FXMLLoader loader = new FXMLLoader();
+			loader.setLocation(MainAPP.class.getResource("vista/VistaRecuperarCuenta.fxml"));
+			AnchorPane page = (AnchorPane) loader.load();
+
+			// Create the dialog Stage.
+			Stage dialogStage = new Stage();
+			dialogStage.setTitle("Iniciar Sesion");
+			dialogStage.getIcons().add(new Image("file:resources/logotorgeiconoventana.png"));
+			dialogStage.initModality(Modality.WINDOW_MODAL);
+			dialogStage.initOwner(primaryStage);
+			Scene scene = new Scene(page);
+			dialogStage.setScene(scene);
+
+			// Set the person into the controller.
+			ControladorVistaRecuperarCuenta controller = loader.getController();
+			controller.setDialogStage(dialogStage);
+			controller.setUsuarioLogin(aux);
+
+			// Show the dialog and wait until the user closes it
+			dialogStage.showAndWait();
+
+			return controller.isOkClicked();
+
+		} catch (IOException e) {
+			e.printStackTrace();
+			return false;
+		}
+	}
+
 	public boolean muestraVistaRegistro(UsuarioVO aux) {
 		try {
 
@@ -390,12 +423,14 @@ public class MainAPP extends Application {
 				FXMLLoader loader = new FXMLLoader();
 				loader.setLocation(MainAPP.class.getResource("vista/VistaEdicionNoticia.fxml"));
 				AnchorPane page = (AnchorPane) loader.load();
+
 				Stage dialogStage = new Stage();
 				dialogStage.setTitle("Nueva/Editar Noticia");
 				dialogStage.initModality(Modality.WINDOW_MODAL);
 				dialogStage.initOwner(primaryStage);
 				Scene scene = new Scene(page);
 				dialogStage.setScene(scene);
+
 				ControladorVistaEdicionNoticia controller = loader.getController();
 				controller.setDialogStage(dialogStage);
 				controller.setMainApp(this, modelo);
@@ -412,9 +447,8 @@ public class MainAPP extends Application {
 		}
 	}
 
-	public boolean muestraModificarPerfil() {
+	public void muestraModificarPerfil() {
 		try {
-
 			// Load the fxml file and create a new stage for the popup dialog.
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(MainAPP.class.getResource("vista/VistaModificarPerfil.fxml"));
@@ -423,7 +457,6 @@ public class MainAPP extends Application {
 			// Create the dialog Stage.
 			Stage dialogStage = new Stage();
 			dialogStage.setTitle("MODIFICAR PERFIL");
-			dialogStage.getIcons().add(new Image("file:resources/logotorgeiconoventana.png"));
 			dialogStage.initModality(Modality.WINDOW_MODAL);
 			dialogStage.initOwner(primaryStage);
 			Scene scene = new Scene(page);
@@ -432,15 +465,13 @@ public class MainAPP extends Application {
 			// Set the person into the controller.
 			ControladorVistaModificarPerfil controller = loader.getController();
 			controller.setDialogStage(dialogStage);
+			controller.setMainApp(this, modelo);
+			controller.establecerDatos();
 
 			// Show the dialog and wait until the user closes it
 			dialogStage.showAndWait();
-
-			return controller.isOkClicked();
-
 		} catch (IOException e) {
 			e.printStackTrace();
-			return false;
 		}
 	}
 

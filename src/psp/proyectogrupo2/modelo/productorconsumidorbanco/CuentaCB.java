@@ -31,6 +31,7 @@ public class CuentaCB {
 
 
     public synchronized void ingreso(double cantidad, String nombre) {
+
         while (!disponible) {
             try {
                 wait();
@@ -50,11 +51,13 @@ public class CuentaCB {
     }
 
     public synchronized void reintegro(double cantidad, String nombre) {
+
         while (disponible){
             try {
                 wait();
             } catch (InterruptedException e) { }
         }
+
         disponible = true;
         if ((this.saldo - cantidad) < 0)
             System.out.println("ERROR /!\\ NO PUEDE SACAR " + cantidad + " POR QUE EL SALDO ACTUAL ES " + this.saldo);
@@ -62,6 +65,7 @@ public class CuentaCB {
             this.saldo = this.saldo - cantidad;
             System.out.println(nombre+" RETIRA " + cantidad + " => EL SALDO ACTUAL ES: " + this.saldo);
         }
+
         notifyAll();
     }
 }

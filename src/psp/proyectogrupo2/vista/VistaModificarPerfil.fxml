@@ -23,6 +23,8 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
             <Label text="Nombre">
@@ -45,13 +47,25 @@
                   <Font size="14.0" />
                </font>
             </Label>
-            <TextField GridPane.columnIndex="1" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="nombreField" GridPane.columnIndex="1" />
+            <TextField fx:id="apellidoField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="nicknameField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="contraField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label text="Tipo" GridPane.rowIndex="4">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="Email" GridPane.rowIndex="5">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tipoField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="emailField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
          </children>
       </GridPane>
       <Button layoutX="300.0" layoutY="260.0" mnemonicParsing="false" text="Cancelar" />
-      <Button layoutX="228.0" layoutY="260.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="62.0" text="Aceptar" />
+      <Button defaultButton="true" layoutX="228.0" layoutY="260.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="62.0" text="Aceptar" />
    </children>
 </AnchorPane>

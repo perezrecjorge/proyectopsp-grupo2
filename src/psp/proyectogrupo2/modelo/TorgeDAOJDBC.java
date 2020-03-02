@@ -16,11 +16,12 @@ import psp.proyectogrupo2.util.ExcepcionTorge;
 public class TorgeDAOJDBC implements TorgeDAO {
 
 
-    private final String RETRIEVE_ALL_USERS = "SELECT id, nombre, apellido, nickname, contra, tipo FROM usuario;",
-            RETRIEVE_SINGLE_USER = "SELECT id, nombre, apellido, nickname, contra, tipo FROM usuario WHERE nickname = ? and contra = ?;",
+    private final String RETRIEVE_ALL_USERS = "SELECT id, nombre, apellido, nickname, contra, tipo, email FROM usuario;",
+            RETRIEVE_SINGLE_USER = "SELECT id, nombre, apellido, nickname, contra, tipo, email FROM usuario WHERE nickname = ? and contra = ?;",
+            RETRIEVE_SINGLE_USER_RECUPERAR_CUENTA = "SELECT id, nombre, apellido, nickname, contra, tipo, email FROM usuario WHERE nickname = ?;",
             DELETE_USER = "DELETE FROM USUARIOS WHERE id= ?",
             ADD_USER = "INSERT INTO usuario(nombre, apellido, nickname, contra, tipo) VALUES(?, ? ,?, ?, ?);",
-            UPDATE_USER = "UPDATE USUARIOS SET NOMBRE=?, APELLIDO=?, NICK=?, CONT=?, TIPO=? WHERE ID=?",
+            UPDATE_USER = "UPDATE USUARIOS SET NOMBRE=?, APELLIDO=?, NICKNAME=?, CONTRA=?, TIPO=?, EMAIL=? WHERE ID=?",
             RETRIEVE_ALL_NEWS = "SELECT id, titulo, cuerpo, autor, fecha FROM noticia;",
             RETRIEVE_SINGLE_NEW = "SELECT * FROM NOTICIAS WHERE ID=?",
             ADD_NEW = "INSERT INTO noticia(titulo, cuerpo, autor, fecha) VALUES(?, ? ,?, ?);",
@@ -57,7 +58,7 @@ public class TorgeDAOJDBC implements TorgeDAO {
 
             while (registro.next() == true) {
                 res.add(new UsuarioVO(registro.getInt("id"), registro.getString("nombre"), registro.getString("apellido"), registro.getString("nickname"),
-                        registro.getString("contra"), registro.getString("tipo")));
+                        registro.getString("contra"), registro.getString("tipo") , registro.getString("email")));
             }
 
             conn.closeConnection();
@@ -90,6 +91,38 @@ public class TorgeDAOJDBC implements TorgeDAO {
                 res.setNick(registro.getString(4));
                 res.setCont(registro.getString(5));
                 res.setTipo(registro.getString(6));
+                res.setEmail(registro.getString(7));
+            }
+
+            conn.closeConnection();
+
+        } catch (SQLException e) {
+            throw new ExcepcionTorge(e.getMessage());
+        }
+
+        return res;
+    }
+
+    @Override
+    public UsuarioVO getUsuarioRecuperarCuenta(String nick) throws ExcepcionTorge {
+
+        conn.openConnection();
+        UsuarioVO res = new UsuarioVO();
+
+        PreparedStatement comando;
+        try {
+            comando = conn.openConnection().prepareStatement(RETRIEVE_SINGLE_USER_RECUPERAR_CUENTA);
+            comando.setString(1, nick);
+            ResultSet registro = comando.executeQuery();
+
+            while (registro.next()) {
+                res.setId(registro.getInt(1));
+                res.setNombre(registro.getString(2));
+                res.setAp(registro.getString(3));
+                res.setNick(registro.getString(4));
+                res.setCont(registro.getString(5));
+                res.setTipo(registro.getString(6));
+                res.setEmail(registro.getString(7));
             }
 
             conn.closeConnection();
@@ -112,11 +145,13 @@ public class TorgeDAOJDBC implements TorgeDAO {
         PreparedStatement comando;
         try {
             comando = conn.openConnection().prepareStatement(UPDATE_USER);
-            comando.setString(2, p.getNombreUser());
-            comando.setString(3, p.getApellido());
-            comando.setString(4, p.getNick());
-            comando.setString(5, p.getCont());
-            comando.setString(6, p.getTipo());
+            comando.setString(1, p.getNombreUser());
+            comando.setString(2, p.getApellido());
+            comando.setString(3, p.getNick());
+            comando.setString(4, p.getCont());
+            comando.setString(5, p.getTipo());
+            comando.setString(6, p.getEmail());
+            comando.setInt(7, p.getId());
             comando.executeUpdate();
 
 
@@ -125,8 +160,6 @@ public class TorgeDAOJDBC implements TorgeDAO {
         } catch (SQLException e) {
             throw new ExcepcionTorge(e.getErrorCode());
         }
-
-
     }
 
 

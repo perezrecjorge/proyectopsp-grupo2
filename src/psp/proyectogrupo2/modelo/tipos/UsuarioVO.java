@@ -11,36 +11,38 @@ import javafx.beans.property.StringProperty;
 public class UsuarioVO {
 
 	private Integer id;
-	private final StringProperty nombre , apellido, nick, cont;
+	private final StringProperty nombre , apellido, nick, cont, email;
 	private final StringProperty tipo;
 
 	/**
 	 * Default constructor.
 	 */
 	public UsuarioVO() {
-		this(0, null, null, null, null, null );
+		this(0, null, null, null, null, null, null);
 	}
 
-	public UsuarioVO(Integer id, String n, String ap, String nick, String cont, String tipo) {
+	public UsuarioVO(Integer id, String n, String ap, String nick, String cont, String tipo, String email) {
 		this.id = id;
 		this.nombre = new SimpleStringProperty(n);
 		this.apellido = new SimpleStringProperty(ap);
 		this.nick = new SimpleStringProperty(nick);
 		this.cont = new SimpleStringProperty(cont);
 		this.tipo = new SimpleStringProperty(tipo);
+		this.email = new SimpleStringProperty(email);
 
 		// this.ni = new SimpleIntegerProperty(ni);
 		// this.tx = new SimpleObjectProperty<TipoX>(tx);
 		// this.nf = new SimpleFloatProperty(nf);
 	}
 
-	public UsuarioVO(String n, String ap, String nick, String cont, String tipo) {
+	public UsuarioVO(String n, String ap, String nick, String cont, String tipo, String email) {
 		this.id = null;
 		this.nombre = new SimpleStringProperty(n);
 		this.apellido = new SimpleStringProperty(ap);
 		this.nick = new SimpleStringProperty(nick);
 		this.cont = new SimpleStringProperty(cont);
 		this.tipo = new SimpleStringProperty(tipo);
+		this.email = new SimpleStringProperty(email);
 
 		// this.ni = new SimpleIntegerProperty(ni);
 		// this.tx = new SimpleObjectProperty<TipoX>(tx);
@@ -117,6 +119,19 @@ public class UsuarioVO {
 
 	public void setCont(String cont) {
 		this.cont.set(cont);
+	}
+
+	//Getters y setter del email
+	public String getEmail() {
+		return email.get();
+	}
+
+	public StringProperty getEmailProperty() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email.set(email);
 	}
 
 	//Getters y setter del tipo de usuario (Alumno o profesor; solo puede haber un alumno profesor)

@@ -10,9 +10,14 @@ import java.util.List;
 
 public class ModeloTorge {
 
+	public int idconectado;
 	public String nicknameconectado = "";
 	public String contraconectado = "";
 	public String tipoconectado= "";
+	public String apellidoconectado = "";
+	public String nombreconectado = "";
+	public String emailconectado= "";
+
 
 	private final TorgeDAOJDBC daojdbc;
 
@@ -46,6 +51,11 @@ public class ModeloTorge {
 		return user;
 	}
 
+	public UsuarioVO getUsuarioRecuperarCuenta(String nick) throws ExcepcionTorge {
+		UsuarioVO user = daojdbc.getUsuarioRecuperarCuenta(nick);
+		return user;
+	}
+
 	/**
 	 * MODELO PARA NOTICIA
 	 */
@@ -73,14 +83,17 @@ public class ModeloTorge {
 	}
 
 
-
-
-
-
-
 	/**
 	 * GETTERS AND SETTERS USUARIO CONECTADO
 	 */
+	public int getIdconectado() {
+		return idconectado;
+	}
+
+	public void setIdconectado(int idconectado) {
+		this.idconectado = idconectado;
+	}
+
 	public String getNicknameconectado() {
 		return nicknameconectado;
 	}
@@ -103,5 +116,29 @@ public class ModeloTorge {
 
 	public void setTipoconectado(String tipoconectado) {
 		this.tipoconectado = tipoconectado;
+	}
+
+	public String getApellidoconectado() {
+		return apellidoconectado;
+	}
+
+	public void setApellidoconectado(String apellidoconectado) {
+		this.apellidoconectado = apellidoconectado;
+	}
+
+	public String getNombreconectado() {
+		return nombreconectado;
+	}
+
+	public void setNombreconectado(String nombreconectado) {
+		this.nombreconectado = nombreconectado;
+	}
+
+	public String getEmailconectado() {
+		return emailconectado;
+	}
+
+	public void setEmailconectado(String emailconectado) {
+		this.emailconectado = emailconectado;
 	}
 }

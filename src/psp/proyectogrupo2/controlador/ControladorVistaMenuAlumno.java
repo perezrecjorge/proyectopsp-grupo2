@@ -110,13 +110,8 @@ public class ControladorVistaMenuAlumno {
 	@FXML
 	private void manejaModificarPerfil() {
 
-		boolean okClicked = mainApp.muestraModificarPerfil();
+		mainApp.muestraModificarPerfil();
 
-		if (okClicked) {
-
-			System.out.println("MODIFICAR OK BIEN");
-			
-		}
 	}
 
 
