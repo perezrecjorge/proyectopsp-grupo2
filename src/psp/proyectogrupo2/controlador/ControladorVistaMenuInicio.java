@@ -147,7 +147,6 @@ public class ControladorVistaMenuInicio {
                         alert.setContentText(e.getMessage());
 
                         alert.showAndWait();
-
                     }
                 }
             } catch (ExcepcionTorge excepcionTorge) {

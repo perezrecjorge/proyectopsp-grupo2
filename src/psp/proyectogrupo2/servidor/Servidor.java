@@ -40,7 +40,6 @@ public class Servidor {
                 hilo.start(); //Ejecutamos el hilo
             } catch (IOException e) {
                 System.out.println(e.getMessage());
-                System.exit(0);
             }
         }
     }
