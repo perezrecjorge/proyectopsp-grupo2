@@ -20,7 +20,8 @@
       <Button layoutX="158.0" layoutY="397.0" mnemonicParsing="false" onAction="#manejaModificarPerfil" prefHeight="53.0" prefWidth="283.0" text="MODIFICAR PERFIL" />
       <Line endX="100.0" fill="BLACK" layoutX="200.0" layoutY="116.0" startX="-100.0" stroke="#8d8d8d" strokeLineCap="BUTT" />
       <Line endX="100.0" fill="BLACK" layoutX="400.0" layoutY="116.0" startX="-100.0" stroke="#8d8d8d" strokeLineCap="BUTT" />
-      <Button layoutX="158.0" layoutY="334.0" mnemonicParsing="false" onAction="#manejaClienteFTP" prefHeight="53.0" prefWidth="283.0" text="CLIENTE FTP" />
+      <Button layoutX="158.0" layoutY="334.0" mnemonicParsing="false" onAction="#manejaClienteFTP" prefHeight="53.0" prefWidth="134.0" text="CLIENTE FTP" />
       <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#manejaCerrarSesion" text="CERRAR SESIÓN" />
+      <Button layoutX="309.0" layoutY="334.0" mnemonicParsing="false" onAction="#manejaServidor" prefHeight="53.0" prefWidth="134.0" text="SERVIDOR" />
    </children>
 </AnchorPane>

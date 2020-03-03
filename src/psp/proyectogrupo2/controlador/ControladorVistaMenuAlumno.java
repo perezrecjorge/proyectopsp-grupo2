@@ -1,6 +1,7 @@
 package psp.proyectogrupo2.controlador;
 
 import java.io.FileInputStream;
+import java.io.IOException;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -8,6 +9,7 @@ import javafx.scene.control.Alert.AlertType;
 import psp.proyectogrupo2.MainAPP;
 import psp.proyectogrupo2.modelo.ModeloTorge;
 import psp.proyectogrupo2.modelo.tipos.UsuarioVO;
+import psp.proyectogrupo2.servidor.Servidor;
 import psp.proyectogrupo2.util.ExcepcionTorge;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
@@ -101,6 +103,20 @@ public class ControladorVistaMenuAlumno {
 	private void manejaClienteFTP() {
 
 		mainApp.muestraClienteFTP();
+
+	}
+
+	/**
+	 * Botón SERVIDOR
+	 */
+	@FXML
+	private void manejaServidor() {
+
+		try {
+			Servidor.ejecurtarServidor();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 
 	}
 	
