@@ -426,6 +426,7 @@ public class MainAPP extends Application {
 
 				Stage dialogStage = new Stage();
 				dialogStage.setTitle("Nueva/Editar Noticia");
+				dialogStage.getIcons().add(new Image("file:resources/logotorgeiconoventana.png"));
 				dialogStage.initModality(Modality.WINDOW_MODAL);
 				dialogStage.initOwner(primaryStage);
 				Scene scene = new Scene(page);
@@ -457,6 +458,7 @@ public class MainAPP extends Application {
 			// Create the dialog Stage.
 			Stage dialogStage = new Stage();
 			dialogStage.setTitle("MODIFICAR PERFIL");
+			dialogStage.getIcons().add(new Image("file:resources/logotorgeiconoventana.png"));
 			dialogStage.initModality(Modality.WINDOW_MODAL);
 			dialogStage.initOwner(primaryStage);
 			Scene scene = new Scene(page);
