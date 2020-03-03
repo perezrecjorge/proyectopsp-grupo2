@@ -27,9 +27,13 @@ public class ControladorVistaModificarPerfil {
 	@FXML
 	private TextField contraField;
 	@FXML
-	private TextField tipoField;
+	private TextField tipoCuentaField;
 	@FXML
 	private TextField emailField;
+
+	public ControladorVistaModificarPerfil() {
+
+	}
 
 	/**
 	 * Initializes the controller class. This method is automatically called after
@@ -61,13 +65,13 @@ public class ControladorVistaModificarPerfil {
 		this.modelo = m;
 	}
 
-	public void establecerDatos() {
+	public void establecerDatosUsuario() {
 
 		nombreField.setText(modelo.getNombreconectado());
 		apellidoField.setText(modelo.getApellidoconectado());
 		nicknameField.setText(modelo.getNicknameconectado());
 		contraField.setText(modelo.getContraconectado());
-		tipoField.setText(modelo.getTipoconectado());
+		tipoCuentaField.setText(modelo.getTipoconectado());
 		emailField.setText(modelo.getEmailconectado());
 
 	}

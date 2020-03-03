@@ -466,7 +466,7 @@ public class MainAPP extends Application {
 			ControladorVistaModificarPerfil controller = loader.getController();
 			controller.setDialogStage(dialogStage);
 			controller.setMainApp(this, modelo);
-			controller.establecerDatos();
+			controller.establecerDatosUsuario();
 
 			// Show the dialog and wait until the user closes it
 			dialogStage.showAndWait();

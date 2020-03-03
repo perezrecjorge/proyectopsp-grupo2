@@ -35,6 +35,8 @@ public class ControladorVistaRegistro {
 	private TextField contraField;
 	@FXML
 	private TextField tipoField;
+	@FXML
+	private TextField emailField;
 
 	/**
 	 * Initializes the controller class. This method is automatically called after
@@ -91,6 +93,7 @@ public class ControladorVistaRegistro {
 			user.setNick(nicknameField.getText());
 			user.setCont(contraField.getText());
 			user.setTipo(tipoField.getText());
+			user.setEmail(emailField.getText());
 
 			okClicked = true;
 			dialogStage.close();
