@@ -1,14 +1,13 @@
 package psp.proyectogrupo2.controlador;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.TextField;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import psp.proyectogrupo2.MainAPP;
 import psp.proyectogrupo2.modelo.ModeloTorge;
 import psp.proyectogrupo2.modelo.tipos.UsuarioVO;
-
-import java.awt.*;
-
+import psp.proyectogrupo2.util.ExcepcionTorge;
 
 public class ControladorVistaModificarPerfil {
 
@@ -30,10 +29,6 @@ public class ControladorVistaModificarPerfil {
 	private TextField tipoCuentaField;
 	@FXML
 	private TextField emailField;
-
-	public ControladorVistaModificarPerfil() {
-
-	}
 
 	/**
 	 * Initializes the controller class. This method is automatically called after
@@ -77,11 +72,45 @@ public class ControladorVistaModificarPerfil {
 	}
 
 	/**
+	 * Returns true if the user clicked OK, false otherwise.
+	 *
+	 * @return
+	 */
+	public boolean isOkClicked() {
+		return okClicked;
+	}
+
+	/**
 	 * Called when the user clicks cancel.
 	 */
 	@FXML
 	private void manejaCancelar() {
 		dialogStage.close();
+	}
+
+	/**
+	 * Called when the user clicks accept.
+	 */
+	@FXML
+	private void manejaAceptar() {
+
+		try {
+			p = new UsuarioVO(modelo.getIdconectado(), nombreField.getText(), apellidoField.getText(), nicknameField.getText(), contraField.getText(), tipoCuentaField.getText(), emailField.getText());
+			modelo.modificarUsuario(p);
+
+			modelo.setNombreconectado(p.getNombreUser());
+			modelo.setApellidoconectado(p.getApellido());
+			modelo.setNicknameconectado(p.getNick());
+			modelo.setContraconectado(p.getCont());
+			modelo.setTipoconectado(p.getTipo());
+			modelo.setEmailconectado(p.getEmail());
+
+		} catch (ExcepcionTorge excepcionTorge) {
+			excepcionTorge.printStackTrace();
+		}
+
+		dialogStage.close();
+
 	}
 
 

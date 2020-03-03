@@ -82,6 +82,11 @@ public class ModeloTorge {
 
 	}
 
+	public void modificarUsuario(UsuarioVO p) throws ExcepcionTorge {
+		System.out.println("ENTRA NODELO MODIFICAR USUARIO");
+		daojdbc.modificarUsuario(p);
+	}
+
 
 	/**
 	 * GETTERS AND SETTERS USUARIO CONECTADO

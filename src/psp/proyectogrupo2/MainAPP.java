@@ -447,7 +447,7 @@ public class MainAPP extends Application {
 		}
 	}
 
-	public void muestraModificarPerfil() {
+	public boolean muestraModificarPerfil() {
 		try {
 			// Load the fxml file and create a new stage for the popup dialog.
 			FXMLLoader loader = new FXMLLoader();
@@ -470,8 +470,11 @@ public class MainAPP extends Application {
 
 			// Show the dialog and wait until the user closes it
 			dialogStage.showAndWait();
+
+			return controller.isOkClicked();
 		} catch (IOException e) {
 			e.printStackTrace();
+			return false;
 		}
 	}
 

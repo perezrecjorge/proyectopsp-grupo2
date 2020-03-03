@@ -21,7 +21,7 @@ public class TorgeDAOJDBC implements TorgeDAO {
             RETRIEVE_SINGLE_USER_RECUPERAR_CUENTA = "SELECT id, nombre, apellido, nickname, contra, tipo, email FROM usuario WHERE nickname = ?;",
             DELETE_USER = "DELETE FROM USUARIOS WHERE id= ?",
             ADD_USER = "INSERT INTO usuario(nombre, apellido, nickname, contra, tipo, email) VALUES(?, ? ,?, ?, ?, ?);",
-            UPDATE_USER = "UPDATE USUARIOS SET NOMBRE=?, APELLIDO=?, NICKNAME=?, CONTRA=?, TIPO=?, EMAIL=? WHERE ID=?",
+            UPDATE_USER = "UPDATE USUARIO SET NOMBRE=?, APELLIDO=?, NICKNAME=?, CONTRA=?, TIPO=?, EMAIL=? WHERE ID=?",
             RETRIEVE_ALL_NEWS = "SELECT id, titulo, cuerpo, autor, fecha FROM noticia;",
             RETRIEVE_SINGLE_NEW = "SELECT * FROM NOTICIAS WHERE ID=?",
             ADD_NEW = "INSERT INTO noticia(titulo, cuerpo, autor, fecha) VALUES(?, ? ,?, ?);",

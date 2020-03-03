@@ -65,7 +65,7 @@
             <TextField fx:id="emailField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
          </children>
       </GridPane>
-      <Button layoutX="300.0" layoutY="260.0" mnemonicParsing="false" text="Cancelar" />
-      <Button defaultButton="true" layoutX="228.0" layoutY="260.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="62.0" text="Aceptar" />
+      <Button layoutX="300.0" layoutY="260.0" mnemonicParsing="false" onAction="#manejaCancelar" text="Cancelar" />
+      <Button defaultButton="true" layoutX="228.0" layoutY="260.0" mnemonicParsing="false" onAction="#manejaAceptar" prefHeight="25.0" prefWidth="62.0" text="Aceptar" />
    </children>
 </AnchorPane>
