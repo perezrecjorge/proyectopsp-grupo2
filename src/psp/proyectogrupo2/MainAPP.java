@@ -403,8 +403,8 @@ public class MainAPP extends Application {
 			FileInputStream inputstream = new FileInputStream("resources/logotorgeiconoventana.png");
 			Image imagenlogo = new Image(inputstream);
 			controller.ponerFoto(imagenlogo);
-
 			controller.setMainApp(this, modelo);
+			controller.ocultarBotones();
 
 		} catch (IOException e) {
 			e.printStackTrace();

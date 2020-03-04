@@ -7,6 +7,7 @@ import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.image.Image;
@@ -43,6 +44,33 @@ public class ControladorVistaClienteFTP {
     private ListView<String> listDir;
     @FXML
     private ImageView imagenView;
+    @FXML
+    private Button btnsubir;
+    @FXML
+    private Button btndescargar;
+    @FXML
+    private Button btneliminar;
+    @FXML
+    private Button btncrearcarpeta;
+    @FXML
+    private Button btneliminarcarpeta;
+
+    public void ocultarBotones() {
+        if (modelo.getTipoconectado().equalsIgnoreCase("alumno")) {
+
+            btnsubir.setDisable(true);
+            btndescargar.setDisable(true);
+            btneliminar.setDisable(true);
+            btneliminarcarpeta.setDisable(true);
+            btncrearcarpeta.setDisable(true);
+
+            btnsubir.setVisible(false);
+            btndescargar.setVisible(false);
+            btneliminar.setVisible(false);
+            btneliminarcarpeta.setVisible(false);
+            btncrearcarpeta.setVisible(false);
+        }
+    }
 
 
     //Datos del servidor FTP
