@@ -76,7 +76,7 @@ Si pulsamos sobre File -> Project Structure podremos configurar el proyecto tal 
 En el apartado Project seleccionamos el SDK 1.8, en ‘Project language level’ seleccionaremos el 8 y definimos la carpeta out.
 </p>
 <p align="center">
-<img src="/resources/manual/estructureserver.PNG"/>
+<img src="/resources/manual/estructureserver.png"/>
 </p>
 
 <br>
