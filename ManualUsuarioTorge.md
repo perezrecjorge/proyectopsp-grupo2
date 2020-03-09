@@ -17,7 +17,7 @@
           
 <p>Descargar el proyecto de GitHub actualizado de la rama “develop”.</p>
 </br>
-<p>Enlace del proyecto: https://github.com/AlexisRuiz00/Proyectopsp-grupo1.git</p>
+<p>Enlace del proyecto: https://github.com/perezrecjorge/proyectopsp-grupo2</p>
 
 </p>
 
@@ -52,13 +52,13 @@ La finalidad de este programa, es actuar como servidor FTP para poder transferir
 </p>
 
 <p align="center">
-<img src="/resources/manual/initfilezilla.PNG"/>
+<img src="/resources/manual/initfilezilla.png"/>
 </p>
 
 <p>Creamos un usuario con una serie de permisos para que pueda acceder al directorio de nuestro pc que le indicaremos a continuación. El usuario debe ser con nombre usuario1 y contraseña usuario1.</p>
 
 <p align="center">
-<img src="/resources/manual/usersfilezilla.PNG"/>
+<img src="/resources/manual/usersfilezilla.png"/>
 </p>
 
 #### Paso 4:
@@ -82,7 +82,7 @@ En el apartado Project seleccionamos el SDK 1.8, en ‘Project language level’
 <br>
 
 <p align="center">
-<img src="/resources/manual/estructurecliente.PNG"/>
+<img src="/resources/manual/estructurecliente.png"/>
 </p>
 
 #### Paso 5:
