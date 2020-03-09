@@ -108,7 +108,6 @@ public class ControladorVistaMenuInicio {
                 finput = new ObjectInputStream(s.getInputStream());
 
                 try {
-
                     try {
 
                         //veri = (UsuarioVO) finput.readObject();
