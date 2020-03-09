@@ -31,11 +31,11 @@
          </font>
       </Label>
       <ListView fx:id="listDir" layoutX="16.0" layoutY="109.0" prefHeight="318.0" prefWidth="285.0" />
-      <Button layoutX="341.0" layoutY="231.0" mnemonicParsing="false" onAction="#manejaSubirFichero" prefHeight="25.0" prefWidth="213.0" text="SUBIR FICHERO" />
-      <Button layoutX="341.0" layoutY="271.0" mnemonicParsing="false" onAction="#manejaDescargarFichero" prefHeight="25.0" prefWidth="213.0" text="DESCAGAR FICHERO" />
-      <Button layoutX="341.0" layoutY="314.0" mnemonicParsing="false" onAction="#manejaEliminarFichero" prefHeight="25.0" prefWidth="213.0" text="ELIMINAR FICHERO" />
-      <Button layoutX="341.0" layoutY="358.0" mnemonicParsing="false" onAction="#manejaCrearCarpeta" prefHeight="25.0" prefWidth="213.0" text="CREAR CARPETA" />
-      <Button layoutX="341.0" layoutY="402.0" mnemonicParsing="false" onAction="#manejaEliminarCarpeta" prefHeight="25.0" prefWidth="213.0" text="ELIMINAR CARPETA" />
+      <Button fx:id="btnsubir" layoutX="341.0" layoutY="231.0" mnemonicParsing="false" onAction="#manejaSubirFichero" prefHeight="25.0" prefWidth="213.0" text="SUBIR FICHERO" />
+      <Button fx:id="btndescargar" layoutX="341.0" layoutY="271.0" mnemonicParsing="false" onAction="#manejaDescargarFichero" prefHeight="25.0" prefWidth="213.0" text="DESCAGAR FICHERO" />
+      <Button fx:id="btneliminar" layoutX="341.0" layoutY="314.0" mnemonicParsing="false" onAction="#manejaEliminarFichero" prefHeight="25.0" prefWidth="213.0" text="ELIMINAR FICHERO" />
+      <Button fx:id="btncrearcarpeta" layoutX="341.0" layoutY="358.0" mnemonicParsing="false" onAction="#manejaCrearCarpeta" prefHeight="25.0" prefWidth="213.0" text="CREAR CARPETA" />
+      <Button fx:id="btneliminarcarpeta" layoutX="341.0" layoutY="402.0" mnemonicParsing="false" onAction="#manejaeliminarcarpeta" prefHeight="25.0" prefWidth="213.0" text="ELIMINAR CARPETA" />
       <Label fx:id="labelFicheroSeleccionado" layoutX="16.0" layoutY="436.0" text="FICHERO SELECCIONADO: ">
          <font>
             <Font size="14.0" />
