@@ -1,3 +1,8 @@
+<p align="center">
+<img src="/resources/cabeies5.PNG"/>
+</p>
+
+<br>
 
 ## MANUAL DE USUARIO TORGE
 
