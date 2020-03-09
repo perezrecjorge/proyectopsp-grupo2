@@ -4,11 +4,13 @@ package psp.proyectogrupo2.modelo.tipos;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
+import java.io.Serializable;
+
 /**
  * @author Jorge y Vic
  */
 
-public class UsuarioVO {
+public class UsuarioVO implements Serializable {
 
 	private Integer id;
 	private final StringProperty nombre , apellido, nick, cont, email;

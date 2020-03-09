@@ -1,8 +1,7 @@
 package psp.proyectogrupo2.controlador;
 
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.Writer;
+import java.io.*;
+import java.net.Socket;
 import java.security.InvalidKeyException;
 import java.security.KeyStoreException;
 import java.security.NoSuchAlgorithmException;
@@ -27,6 +26,7 @@ import javafx.scene.image.ImageView;
 
 import javax.net.ssl.KeyManager;
 import javax.net.ssl.KeyManagerFactory;
+import javax.swing.*;
 
 public class ControladorVistaMenuInicio {
 
@@ -35,8 +35,13 @@ public class ControladorVistaMenuInicio {
 
     // Reference to the main application.
     private MainAPP mainApp;
-
     private ModeloTorge modelo;
+
+    //NET Objects
+    private static Socket s = null;
+    private ObjectOutputStream oop;
+    private ObjectInputStream finput;
+    private DataOutputStream foutput;
 
     /**
      * El constructor se llama antes de la inicialización.
@@ -78,6 +83,102 @@ public class ControladorVistaMenuInicio {
 
         if (okClicked == true) {
 
+            int puerto = 13300;
+
+            try {
+
+                s = new Socket("localhost", puerto);
+
+                //UsuarioVO veri = new UsuarioVO();
+                ArrayList<String> usuariologin;
+
+                foutput = new DataOutputStream(s.getOutputStream());
+
+                foutput.writeInt(10);
+
+                ArrayList<String> credentials = new ArrayList<String>();;
+                credentials.add(aux.getNick());
+                credentials.add(aux.getCont());
+
+                oop = new ObjectOutputStream(s.getOutputStream());
+                oop.writeObject(credentials);
+
+                System.out.println("ENVIO" + credentials.get(0) + credentials.get(1));
+
+                finput = new ObjectInputStream(s.getInputStream());
+
+                try {
+
+                    try {
+
+                        //veri = (UsuarioVO) finput.readObject();
+                        usuariologin = (ArrayList<String>) finput.readObject();
+
+                        if (usuariologin.get(0).equalsIgnoreCase("noencontrado") || usuariologin.get(0) == "noencontrado") {
+                            Alert alert = new Alert(AlertType.WARNING);
+                            alert.setTitle("LOGIN INCORRECTO");
+                            alert.setHeaderText("ERROR");
+                            alert.setContentText("Nickname o contraseña erroneos.");
+
+                            alert.showAndWait();
+
+                        } else {
+                            modelo.setIdconectado(Integer.valueOf(usuariologin.get(0)));
+                            modelo.setNombreconectado(usuariologin.get(1));
+                            modelo.setApellidoconectado(usuariologin.get(2));
+                            modelo.setNicknameconectado(usuariologin.get(3));
+                            modelo.setContraconectado(usuariologin.get(4));
+                            modelo.setTipoconectado(usuariologin.get(5));
+                            modelo.setEmailconectado(usuariologin.get(6));
+
+                            System.out.println("SE HA CONECTADO EL USUARIO NICK: " + modelo.getNicknameconectado()
+                                    + " CONTRA: " + modelo.getContraconectado() + " TIPO: " + modelo.getTipoconectado());
+
+                            mainApp.muestraVistaMenuAlumnos();
+
+                        }
+                        /*
+                        if (veri.getCont() == null) {
+                            Alert alert = new Alert(AlertType.WARNING);
+                            alert.setTitle("LOGIN INCORRECTO");
+                            alert.setHeaderText("ERROR");
+                            alert.setContentText("Nickname o contraseña erroneos.");
+
+                            alert.showAndWait();
+
+                        } else {
+                            modelo.setIdconectado(veri.getId());
+                            modelo.setNicknameconectado(veri.getNick());
+                            modelo.setContraconectado(veri.getCont());
+                            modelo.setTipoconectado(veri.getTipo());
+                            modelo.setNombreconectado(veri.getNombreUser());
+                            modelo.setApellidoconectado(veri.getApellido());
+                            modelo.setEmailconectado(veri.getEmail());
+
+                            System.out.println("SE HA CONECTADO EL USUARIO NICK: " + modelo.getNicknameconectado()
+                                    + " CONTRA: " + modelo.getContraconectado() + " TIPO: " + modelo.getTipoconectado());
+
+                            mainApp.muestraVistaMenuAlumnos();
+
+                        }
+
+                         */
+
+                    } catch (NullPointerException e) {
+                        e.printStackTrace();
+                        JOptionPane.showMessageDialog(null, "Invalid username / password", "Error", JOptionPane.ERROR_MESSAGE);
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    JOptionPane.showMessageDialog(null, "Connection refused, there has been a problem" + e.getMessage(), "ERROR", JOptionPane.ERROR_MESSAGE);
+                }
+
+            } catch (Exception e) {
+                e.printStackTrace();
+                JOptionPane.showMessageDialog(null, "Connection refused, there has been a problem" + e.getMessage(), "ERROR", JOptionPane.ERROR_MESSAGE);
+            }
+
+            /*
             System.out.println("INICIAR SESION OK BIEN");
             try {
                 UsuarioVO veri = modelo.getUsuario(aux.getNick(), aux.getCont());
@@ -108,6 +209,7 @@ public class ControladorVistaMenuInicio {
             } catch (ExcepcionTorge excepcionTorge) {
                 excepcionTorge.printStackTrace();
             }
+             */
 
         }
     }
