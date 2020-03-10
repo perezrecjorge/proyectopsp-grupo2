@@ -23,5 +23,6 @@
       <Button layoutX="158.0" layoutY="334.0" mnemonicParsing="false" onAction="#manejaClienteFTP" prefHeight="53.0" prefWidth="134.0" text="CLIENTE FTP" />
       <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#manejaCerrarSesion" text="CERRAR SESIÓN" />
       <Button layoutX="309.0" layoutY="334.0" mnemonicParsing="false" onAction="#manejaServidor" prefHeight="53.0" prefWidth="134.0" text="SERVIDOR" />
+      <Button layoutX="491.0" layoutY="10.0" mnemonicParsing="false" onAction="#manejaCalculadora" text="CALCULADORA" />
    </children>
 </AnchorPane>

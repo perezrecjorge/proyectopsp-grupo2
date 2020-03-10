@@ -20,117 +20,133 @@ import javafx.scene.image.ImageView;
 
 public class ControladorVistaMenuAlumno {
 
-	// Reference to the main application.
-	private MainAPP mainApp;
+    // Reference to the main application.
+    private MainAPP mainApp;
 
-	private ModeloTorge modelo;
+    private ModeloTorge modelo;
 
-	/**
-	 * El constructor se llama antes de la inicialización.
-	 */
-	public ControladorVistaMenuAlumno() {
+    /**
+     * El constructor se llama antes de la inicialización.
+     */
+    public ControladorVistaMenuAlumno() {
 
-	}
+    }
 
-	/**
-	 * Incializa el controlador justo depsués de que se cargue la vista .fxml
-	 */
-	@FXML
-	private void initialize() {
-		
-	}
+    /**
+     * Incializa el controlador justo depsués de que se cargue la vista .fxml
+     */
+    @FXML
+    private void initialize() {
 
-	/**
-	 * Instancia el supercontrolador Main y el modelo de la aplicación
-	 * 
-	 * @param mainApp
-	 */
-	public void setMainApp(MainAPP mainApp, ModeloTorge m) {
-		this.mainApp = mainApp;
-		this.modelo = m;
-	}
+    }
 
-	/**
-	 * Botón CERRAR SESION
-	 */
-	@FXML
-	private void manejaCerrarSesion() {
+    /**
+     * Instancia el supercontrolador Main y el modelo de la aplicación
+     *
+     * @param mainApp
+     */
+    public void setMainApp(MainAPP mainApp, ModeloTorge m) {
+        this.mainApp = mainApp;
+        this.modelo = m;
+    }
 
-		modelo.setNicknameconectado("");
-		modelo.setContraconectado("");
-		modelo.setTipoconectado("");
+    /**
+     * Botón CERRAR SESION
+     */
+    @FXML
+    private void manejaCerrarSesion() {
 
-		mainApp.muestraVistaMenuInicio();
+        modelo.setNicknameconectado("");
+        modelo.setContraconectado("");
+        modelo.setTipoconectado("");
 
-	}
+        mainApp.muestraVistaMenuInicio();
 
-	/**
-	 * Botón NOTICIAS
-	 */
-	@FXML
-	private void manejaTablonNoticias() {
-		
-		mainApp.muestraNoticias();
-			
-	}
-	
-	/**
-	 * Botón CHAT ALUMNOS
-	 */
-	@FXML
-	private void manejaChatAlumnos() {
+    }
 
-		//mainApp.muestraVistaChatGrupal();
-		//mainApp.muestraVistaChatGrupalUDPJorge();
-		//mainApp.muestraVistaChatGrupalUDPVictor();
-		mainApp.muestraChatGrupalInicio();
-	}
-	
-	/**
-	 * Botón CHAT CUENTA BANCARIA
-	 */
-	@FXML
-	private void manejaCuentaBancaria() {
+    /**
+     * Botón NOTICIAS
+     */
+    @FXML
+    private void manejaTablonNoticias() {
 
-		mainApp.muestraCuentaBancaria();
+        mainApp.muestraNoticias();
 
-	}
+    }
 
-	/**
-	 * Botón CLIENTE FTP
-	 */
-	@FXML
-	private void manejaClienteFTP() {
+    /**
+     * Botón CHAT ALUMNOS
+     */
+    @FXML
+    private void manejaChatAlumnos() {
 
-		mainApp.muestraClienteFTP();
+        //mainApp.muestraVistaChatGrupal();
+        //mainApp.muestraVistaChatGrupalUDPJorge();
+        //mainApp.muestraVistaChatGrupalUDPVictor();
+        mainApp.muestraChatGrupalInicio();
+    }
 
-	}
+    /**
+     * Botón CHAT CUENTA BANCARIA
+     */
+    @FXML
+    private void manejaCuentaBancaria() {
 
-	/**
-	 * Botón SERVIDOR
-	 */
-	@FXML
-	private void manejaServidor() {
+        mainApp.muestraCuentaBancaria();
 
-		try {
-			Servidor.ejecurtarServidor();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+    }
 
-	}
-	
-	/**
-	 * Botón MODIFICAR PERFIL
-	 */
-	@FXML
-	private void manejaModificarPerfil() {
+    /**
+     * Botón CLIENTE FTP
+     */
+    @FXML
+    private void manejaClienteFTP() {
 
-		mainApp.muestraModificarPerfil();
+        mainApp.muestraClienteFTP();
 
-	}
+    }
 
+    /**
+     * Botón SERVIDOR
+     */
+    @FXML
+    private void manejaServidor() {
 
+        try {
+            Servidor.ejecurtarServidor();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    /**
+     * Botón MODIFICAR PERFIL
+     */
+    @FXML
+    private void manejaModificarPerfil() {
+
+        mainApp.muestraModificarPerfil();
+
+    }
+
+    /**
+     * Botón CALCULADORA
+     */
+    @FXML
+    private void manejaCalculadora() {
+
+        try {
+            Runtime rt = Runtime.getRuntime();
+            Process p = rt.exec("calc");
+            p.waitFor();
+        } catch (IOException ioe) {
+            ioe.printStackTrace();
+        } catch (InterruptedException ie) {
+            ie.printStackTrace();
+        }
+
+    }
 
 
 }
