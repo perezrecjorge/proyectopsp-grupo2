@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.ChatView">
+   <children>
+      <TextField layoutX="25.0" layoutY="328.0" prefHeight="42.0" prefWidth="258.0" />
+      <Button layoutX="309.0" layoutY="328.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="79.0" text="SEND" />
+      <Button layoutX="472.0" layoutY="327.0" mnemonicParsing="false" text="Exit">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Button>
+      <Label layoutX="424.0" layoutY="9.0" text="Active users">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <TextArea layoutX="26.0" layoutY="26.0" prefHeight="294.0" prefWidth="356.0" />
+      <TextArea layoutX="405.0" layoutY="48.0" prefHeight="271.0" prefWidth="171.0" />
+   </children>
+</AnchorPane>

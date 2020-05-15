@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.App">
+   <children>
+      <Button layoutX="243.0" layoutY="185.0" mnemonicParsing="false" onAction="#showSignInView" prefHeight="51.0" prefWidth="113.0" text="Sign in">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button layoutX="247.0" layoutY="251.0" mnemonicParsing="false" onAction="#showSignUpView" text="Sign up">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button layoutX="200.0" layoutY="318.0" mnemonicParsing="false" onAction="#showRecoveryView" text="Recover account">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="173.0" fitWidth="241.0" layoutX="166.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</AnchorPane>
