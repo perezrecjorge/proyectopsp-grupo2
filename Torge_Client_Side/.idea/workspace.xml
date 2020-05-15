@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ccda9ed0-dd79-40e0-b023-a5595b9b2e21" name="Default Changelist" comment="" />
+    <list default="true" id="ccda9ed0-dd79-40e0-b023-a5595b9b2e21" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/commons_net_3_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controller/ClientFTP/EnviaFichero.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controller/ClientFTP/EstructuraFicheros.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controller/ClientFTP/HiloServidor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controller/ClientFTP/ObtieneFichero.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controller/ClientFTP/PideFichero.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controller/ClientFTP/Servidor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controller/ClientFTPController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controller/ClientSMTP/ClientSMTPController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/ClientFTPView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Torge_Client_Side.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Torge_Client_Side.iml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,9 +31,17 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="1ali0NOv5MUvlK9i8kJdCmcpEy5" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Programas-librerias-jars-etc/jar_files/commons-net-3.6.jar!/" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -62,8 +84,8 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Compound.torgeconf" />
       <item itemvalue="Application.App" />
+      <item itemvalue="Compound.torgeconf" />
     </list>
     <recent_temporary>
       <list>
@@ -83,5 +105,16 @@
       <updated>1587316356488</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
